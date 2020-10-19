@@ -1,0 +1,44 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI in Communications, Media & Tech | Cognizant"
+  - var metaDescription= "See how Cognizant helps Communications, Media and Technology clients leverage data and AI to improve processes, interactions and sales impact."
+  - var metaKeywords= "ai in communications, ai in media, ai in technology"
+  - var backgroundImage = "images/case-studies-landing-backgrounds-assets/bg-caseStudyLanding-communications.png"
+  - var eyebrowIcon = "images/icons/icon-communication-white.svg"
+  - var eyebrow = "COMMUNICATIONS, MEDIA AND TECHNOLOGY"
+  - var headline = "Improve processes, interactions and sales impact"
+  - var introParagraph01 = "Organizations are increasingly trying to drive new value to meet customer expectations, and adapt to disruptive influencers. Operationally, AI can help mitigate these disruptions by reducing capital expenditure and optimizing performance gains, allowing companies to retake control in the areas of complex network planning and performance management."
+  - var introParagraph02 = "Recouping the heavy load of technological investment promises to be the defining feature of the coming years across this competitive sector. Cognizant is helping the world’s biggest providers bring AI into their networks, reducing costs, and developing entirely new revenue streams that enhance customer experience and service."
+
+block content
+  .bg-grd-blue-radial-bottom
+    .py3.bg-pos-top-center.bg-size-contain.lazyload(data-bg=backgroundImage)
+      .grid-container.medium-pt3.large-pt5
+        .grid-x.grid-padding-x.text-white.align-center
+          +caseStudy-intro
+
+          .large-8.cell.mb10
+            .grid-x.grid-padding-x.text-white.flex-container.pb2.medium-pb3
+              .cell.text-center
+                h3.medium-mb3 Case Studies
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-communications-01.jpg",
+                title: "Telecom Infrastructure Provider Improves Contact Center Productivity",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-communications-02.jpg",
+                title: "Automation Boosts Conversion Rates for Digital Marketing Campaigns",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-communications-03.jpg",
+                title: "AI Automates Media Asset Deduplication Process",
+                url: "CHANGE_ME"
+                })
+

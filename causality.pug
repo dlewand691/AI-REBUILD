@@ -1,0 +1,107 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI Causality - Understanding Predictive Data | Cognizant"
+  - var metaDescription= "Cognizant's Causality Engine helps businesses detect and grasp the \"why\" factors, allowing them to solve the mysteries behind customer behavior. Learn more."
+  - var metaKeywords= "ai causality, predictive data, causality engine"
+
+block content
+
+  +intro-panel({
+    backgroundImage: "",
+    logo: true,
+    icon: "images/icons/icon-causality-white.svg",
+    eyebrow: "CAUSALITY",
+    headline: "What drives behavior?",
+    bodyCopy: "The key to understanding the reasons behind choices and decision-making is an intelligent causal engine.",
+    button: false,
+    url: "CHANGE_ME",
+    buttonText: "CHANGE_ME"
+  })
+
+  +sideBox({
+    bodyCopy: "<p>Cognizant helps businesses detect and grasp the “why” factors, allowing them to solve the mysteries behind customer engagement, bounce rate and purchase decisions.</p>"
+  })
+
+  // ===================================================================================
+  // IMAGE
+  // ===================================================================================
+  .text-center.px2
+    //- img.w100.lazyload(data-sizes="auto" data-src="images/depth-pages-assets/bg-causality.jpg" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover(loop muted data-poster="images/video/causality.jpg" preload="")
+      source(src="images/video/causality.mp4" type="video/mp4")
+      source(src="images/video/causality.webm" type="video/webm")
+      source(src="images/video/causality.ogg" type="video/ogg")
+
+
+  //- .grid-container.bg-grd-dark-blue-dark.mb3.text-white
+  //-   .grid-x.align-center.p3
+  //-     .large-8.cell
+  .grid-container.bg-grd-dark-blue-dark.text-white
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3.m0(data-aos="fade-up") Understanding Predictive Data
+          +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Most automated machine learning platforms only take existing known model structures and attempt to fit data into them. When results are based on correlation, not causation, they lack the right actionable insights and models to explain the actual predictions being made, and they don’t identify the quality of behaviors in the data that are predictive in nature.
+
+          Using predictive analytics, the Cognizant Causality Service assumption-free engine learns, understands and adapts its conclusions.This enables our clients to understand bias and to harness predictive signals in their data to quickly home in on what matters most: identifying the best actions to achieve business outcomes.
+
+
+  .grid-container
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3.m0(data-aos="fade-up") Our Approach
+        +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Dealing with bias and causality requires a practical, proven mathematical approach. Our causality engine simplifies the process, reduces bias, and provides strategic and tactical actions that can be taken in response to change. 
+
+          It identifies relationships in the variables and builds a customized model. That model then refines, trains and corrects itself, providing true causal factors.
+
+          The engine discovers which variables are the best predictive drivers for the user-defined business objective from thousands of variables. In so doing, it powerfully discovers combination effects where factors that are weak predictors individually are strongly predictive in combination. 
+
+          This system automatically provides multiple recommendations to achieve the targeted goal.
+
+  // ===================================================================================
+  // REPORT
+  // ===================================================================================
+  +callout-panel({
+    useVideo: false,
+    width: "large-10",
+    icon: "images/icons/icon-download-report-circle-blue.svg",
+    headline: "Identify Relationships - Answer Causal “Why” Questions",
+    bodyCopy: "Understanding “why” specific outcomes occur remains frustratingly hard to gauge. Results based on correlation alone lack the right actionable insights and the models to explain the actual predictions and the quality of behaviors that are predictive in nature.",
+    buttonText: "DOWNLOAD PAPER",
+    link: "https://www.cognizant.com/content/dam/cognizant_foundation/aicom/documents/causality-service-overview.pdf",
+    revealID : null,
+    youtubeUrl: "CHANGE_ME"
+    })(class="")
+
+  // ===================================================================================
+  // ADDITIONAL RESOURCES
+  // ===================================================================================
+  .grid-container.bg-grd-dark-blue-dark.my3.text-white.medium-mtn10.medium-pt10(data-aos="fade-up")
+    .grid-x.grid-padding-x.align-center.pt3.pb2.px2.medium-px3
+      .cell.text-center
+        img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-read-report-white.svg" alt="CHANGE_ME")
+        h2.h3.mb2 Additional Resources
+
+      // ===================================================================================
+      // TILES
+      // ===================================================================================
+      .grid-x.grid-margin-x.align-center
+        +additional-resource-tile({
+          useVideo: true,
+          background : "images/additional-resources-assets/bg-additional-resources02.jpg",
+          eyebrow: "CASE STUDY",
+          title : "Causality AI Informs Credit Card Collections",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+  include includes/global/_take-the-first-step.pug
+

@@ -1,0 +1,106 @@
+// ===================================================================================
+// ██   ██  ██████  ██████  ██ ███████  ██████  ███    ██ ████████  █████  ██
+// ██   ██ ██    ██ ██   ██ ██    ███  ██    ██ ████   ██    ██    ██   ██ ██
+// ███████ ██    ██ ██████  ██   ███   ██    ██ ██ ██  ██    ██    ███████ ██
+// ██   ██ ██    ██ ██   ██ ██  ███    ██    ██ ██  ██ ██    ██    ██   ██ ██
+// ██   ██  ██████  ██   ██ ██ ███████  ██████  ██   ████    ██    ██   ██ ███████
+//  █████   ██████  ██████  ██████  ██████  ██████  ██  ██████  ███    ██ ███████
+// ██   ██ ██      ██      ██    ██ ██   ██ ██   ██ ██ ██    ██ ████   ██ ██
+// ███████ ██      ██      ██    ██ ██████  ██   ██ ██ ██    ██ ██ ██  ██ ███████
+// ██   ██ ██      ██      ██    ██ ██   ██ ██   ██ ██ ██    ██ ██  ██ ██      ██
+// ██   ██  ██████  ██████  ██████  ██   ██ ██████  ██  ██████  ██   ████ ███████
+// ===================================================================================
+
+/* easeInOutCubic */
+$accordion-horizontal-transition: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$accordion-horizontal-transition-speed: 0.5s;
+
+// OVERALL ACCORDION SECTION
+.accordion-horizontal {
+  overflow-y    : scroll;
+  flex-direction: column;
+  // height: 100vh;
+
+  @include breakpoint(small) {
+    > .cell:nth-of-type(2) {
+      border-top   : 1px solid $white;
+      border-right : none;
+      border-bottom: 1px solid $white;
+      border-left  : none;
+    }
+  }
+  // MEDIUM UP, DISPLAY DIRECTION IN ROW
+  @include breakpoint(medium) {
+    flex-direction: row;
+
+    // .grid-x {
+    //   flex-direction: row !important;
+    // }
+
+    > .cell:nth-of-type(2) {
+      border-top   : none;
+      border-right : 1px solid $white;
+      border-bottom: none;
+      border-left  : 1px solid $white;
+    }
+  }
+
+  .cell {
+    // height: 100%;
+    height: xy-cell-size(4);
+    @include breakpoint(small) {
+      // height: xy-cell-size(4);
+    }
+
+    @include breakpoint(medium) {
+      height: 100%;
+    }
+  }
+}
+.content-closed {
+  transition: all $accordion-horizontal-transition-speed $accordion-horizontal-transition;
+  & > div:nth-of-type(2) {
+    transition: all $accordion-horizontal-transition-speed $accordion-horizontal-transition;
+    opacity: 0;
+  }
+  
+  &.content-open {
+    & > div:nth-of-type(1) {
+      transition: all $accordion-horizontal-transition-speed $accordion-horizontal-transition;
+      opacity: 0;
+      height: 100%;
+    }
+    & > div:nth-of-type(2) {
+      transition: all $accordion-horizontal-transition-speed $accordion-horizontal-transition;
+      opacity: 1;
+      height: 100%;
+    }
+  }
+}
+
+.content-open{
+  transition: all $accordion-horizontal-transition-speed $accordion-horizontal-transition;
+  @include breakpoint(small) {
+    height: xy-cell-size(8) !important;
+  }
+  @include breakpoint(medium) {
+    flex-basis: xy-cell-size(8) !important;
+    height: 100% !important;
+  }
+}
+
+.content-shrink {
+  @include breakpoint(small) {
+    height: xy-cell-size(2) !important;
+  };
+}
+
+// ======================================================================
+// 1366x653 MEDIA QUERIES
+// ======================================================================
+
+@media screen and (max-height: 653px) {
+  .hide-for-cog-laptop {
+    display: none !important;
+  }
+}

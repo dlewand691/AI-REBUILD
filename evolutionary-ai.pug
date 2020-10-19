@@ -1,0 +1,180 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "Evolutionary AI | Cognizant"
+  - var metaDescription= "Cognizant Evolutionary AI technologies make it possible to maximize a given objective and yield solutions that do not yet exist. See how."
+  - var metaKeywords= "evolutionary ai, evolutionary ai technologies, evolutionary ai solutions"
+
+block content
+
+  +intro-panel({
+    backgroundImage: "",
+    logo: true,
+    icon: "images/icons/icon-evolutionary-ai-white.svg",
+    eyebrow: "EVOLUTIONARY AI&trade;",
+    headline: "Model and prescribe optimal outcomes",
+    bodyCopy: "Cognizant Evolutionary AI&trade; technologies are making it possible to discover entirely new objects and behaviors to maximize a given objective and yield solutions that do not yet exist.",
+    button: false,
+    url: "CHANGE_ME",
+    buttonText: "CHANGE_ME"
+  })
+
+  +sideBox({
+  bodyCopy: "<p>Our solutions are creating opportunities for AI to automatically generate complex models, creatively solving problems and developing new business outcomes – by augmenting decision-making based on massive datasets, millions of variables and enormous distributed computational capacity.</p>"
+  })
+
+  //- ===================================================================================
+  //- IMAGE
+  //- ===================================================================================
+  .text-center.px2
+    //- img.w100.lazyload(data-sizes="auto" data-src="images/depth-pages-assets/bg-evolutionary-ai.jpg" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover(loop muted data-poster="images/video/evolutionary.jpg" preload="")
+      source(src="images/video/evolutionary.mp4" type="video/mp4")
+      source(src="images/video/evolutionary.webm" type="video/webm")
+      source(src="images/video/evolutionary.ogg" type="video/ogg")
+
+
+  .grid-container.bg-grd-dark-blue-dark.text-white
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-leaf-white.svg" alt="CHANGE_ME")
+          p.small.font-wide.text-heavy.mb2 LEAF
+          h2.h3(data-aos="fade-up") Our Approach
+        +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Cognizant’s powerful Learning Evolutionary Algorithm Framework (LEAF) system begins by generating—and then comparing—diverse candidate agents (genes) to distinguish which ones are better suited to solve a particular problem. 
+
+          A “fitness score” is assigned to each candidate based on how well it performs relative to its peers.  
+
+          Through masses of generations, distributed over millions of CPUs, the system gradually converges on solutions, resulting in code that works to solve the complex problems across all industries. 
+
+          This breakthrough technology allows businesses to scale evolutionary AI techniques to solve the most complex business problems. 
+
+          **Improve Predictions:** Evolving deep network architectures means the LEAF AI can automatically design AI solutions that are better than the alternatives designed using many Ph.D.-days of human labor.
+
+          **Drive Impactful Outcomes:** Evolving and iteratively improving a decision prescription system with a goal to impact outcomes important to your industry is a unique feature in LEAF.
+
+          **Facilitate Effective Experimentation:**
+          1. To AI-enable a business, it must go through many experiments, trying out different approaches, measuring success and learning from each iteration. 
+          2. LEAF can augment or even replace this process using a principled AI-based approach.
+
+  //- ===================================================================================
+  //- IMAGE
+  //- ===================================================================================
+  .text-center.px2.medium-mbn5.relative.z1
+    img.lazyload.large-6(data-sizes="auto" data-src="images/depth-pages-assets/bg-evolutionary-ai02.jpg" alt="CHANGE_ME")
+
+  //- ===================================================================================
+  //- CONTENT
+  //- ===================================================================================
+  //- .bg-grd-dark-blue-dark.medium-pt7.medium-p3.text-white.medium-pb8.medium-mbn5
+  .bg-grd-dark-blue-dark
+    .grid-container.text-white.medium-myn5
+      .grid-x.grid-padding-x.align-center.py3.medium-py8.px2.large-px0
+        .cell.medium-9.large-7
+          +dividerDash(data-aos="flip-left")
+          :markdown-it(html typographer)
+            #### Model Optimization 
+            Cognizant Evolutionary AI Model Optimization, evolutionary AutoML, creates models with high performance and accuracy.  These models reduce the need for expert in-house talent and extend to a wide range of applications, including those where little data exists and when only limited computing and memory is available. Tens of thousands or even millions of potential outcomes can be tested by the model to identify the best outcomes to implement in the real world. AI and model building is all about finding the right architectures and meta-level parameters, and now this can be done automatically.
+
+            #### &nbsp;
+            #### Business Optimization
+            Cognizant Evolutionary AI Business Optimization augments and improves decision-making in a very principled data-driven manner. It builds a predictive engine that helps business managers maximize business outcomes by recommending optimal decisions that apply directly to their goals.
+
+            It runs a continuous learning and optimization life cycle loop on a surrogate model of the real world, saving both time and money. Each evolution, or loop, identifies and selects better outcomes. Our optimization engine is ideal in situations where the need to evaluate multiple complex variables is beyond the capability of humans. It doesn’t replace humans, it expands their ability to identify the- sometimes very complicated - relationships within their data and pinpoint best actions.
+
+
+  .medium-mbn5.relative.z1
+    //- ===================================================================================
+    //- REPORT
+    //- ===================================================================================
+    +callout-panel({
+      useVideo: true,
+      width: "large-10",
+      icon: "images/icons/icon-video-blue.svg",
+      headline: "Achieve Optimal Business Strategies With Evolutionary AI",
+      bodyCopy: "As business problems become more complex, so do the processes necessary to solve them",
+      buttonText: "WATCH VIDEO",
+      link: null,
+      revealID : "video1",
+      youtubeUrl: "https://www.youtube.com/watch?v=7ZzVyL_OpSI"
+      })(class="")
+
+  .grid-container.fluid.p2.medium-py10.lazyload.text-white.text-center.medium-mbn5(style="background: url(images/depth-pages-assets/bg-evolutionary-ai03.jpg)")
+    .grid-x.grid-padding-x.align-center
+      .large-8.cell
+        img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-evolutionary-ai-white.svg" alt="CHANGE_ME")
+        p.small.font-wide EVOLUTIONARY AI&trade;
+        h2(data-aos="fade-up") Explore, experiment, evolve
+        +dividerDash(data-aos="flip-left")
+        h5.mb2 Our data scientists work across disciplines to push the cutting edge and find hidden depths in Artificial Intelligence.
+        a.button.arrow(href="CHANGE_ME") FOLLOW OUR RESEARCH
+
+  +callout-panel({
+    useVideo: true,
+    width: "large-10",
+    icon: "images/icons/icon-video-blue.svg",
+    headline: "Simulate and Solve Real World Problems with Digital Twins",
+    bodyCopy: "Human decision making is often flawed. Our assumptions, biases, and fixed mindsets limit our ability to solve problems.",
+    buttonText: "WATCH VIDEO",
+    link: null,
+    revealID : "video02",
+    youtubeUrl: "https://www.youtube.com/watch?v=7ZzVyL_OpSI"
+  })(class="")
+
+  // ===================================================================================
+  // ADDITIONAL RESOURCES
+  // ===================================================================================
+  .grid-container.bg-grd-dark-blue-dark.my3.text-white(data-aos="fade-up")
+    .grid-x.grid-padding-x.align-center.pt3.pb2.px2.medium-px3
+      .cell.text-center
+        img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-read-report-white.svg" alt="CHANGE_ME")
+        h2.h3.mb2 Additional Resources
+
+      //- ===================================================================================
+      //- TILES
+      //- ===================================================================================
+      .grid-x.grid-margin-x.align-center
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources03.jpg",
+          eyebrow: "OFFERING OVERVIEW",
+          title : "Evolutionary AI: Go Beyond Prediction with LEAF",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources04.jpg",
+          eyebrow: "BLOG",
+          title : "How Evolutionary AI will inform future business decisions",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources03.jpg",
+          eyebrow: "VIDEO",
+          title : "Evolutionary AI: The Next Big Thing After Deep Learning",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources04.jpg",
+          eyebrow: "VIDEO",
+          title : "Evolutionary Computation Enables Truly Creative AI",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+  include includes/global/_take-the-first-step.pug

@@ -1,0 +1,58 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI in Banking & Capital Markets | Cognizant"
+  - var metaDescription= "See how Cognizant helps Banking and Capital Markets clients leverage data and AI to increase competitiveness in crowded, dynamic financial markets."
+  - var metaKeywords= "ai in banking, ai in capital markets, banking ai"
+  - var backgroundImage = "images/case-studies-landing-backgrounds-assets/bg-caseStudyLanding-banking-capital-markets.png"
+  - var eyebrowIcon = "images/icons/icon-banking-markets-white.svg"
+  - var eyebrow = "BANKING & CAPITAL MARKETS"
+  - var headline = "Increase financial intelligence"
+  - var introParagraph01 = "Technology-led customer expectations, nimble fin-tech disruptors, challenging regulatory frameworks and the blurring of lines between bank, IT, retail and Telco businesses keeps life interesting in the financial sector."
+  - var introParagraph02 = "Enhanced ability to leverage human and machine attributes enables anything from chatbot-enabled customer interactions, customer behavior identification and fraud reduction through to non-biased outcome based decision-making, compliance testing, as well as complex market prediction and insight. Cognizant AI levels the playing field and increases competitiveness in crowded, dynamic financial markets."
+
+block content
+  .bg-grd-blue-radial-bottom
+    .py3.bg-pos-top-center.bg-size-contain.lazyload(data-bg=backgroundImage)
+      .grid-container.medium-pt3.large-pt5
+        .grid-x.grid-padding-x.text-white.align-center
+          +caseStudy-intro
+
+          .large-8.cell.mb10
+            .grid-x.grid-padding-x.text-white.flex-container.pb2.medium-pb3
+              .cell.text-center
+                h3.medium-mb3 Case Studies
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-banking-capital-markets-01.jpg",
+                title: "Wealth Manager Reduces Costs with Conversational AI",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-banking-capital-markets-02.jpg",
+                title: "Employees Speed Finance Claims with Azure Virtual Agent",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-banking-capital-markets-03.jpg",
+                title: "AI/ML Solution Detects Check Fraud for Global Bank",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-banking-capital-markets-04.jpg",
+                title: "Causality AI Predicitons Help Maximize Debt Collection Revenue",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-banking-capital-markets-05.jpg",
+                title: "Accomplishing Exhaustive Due Diligence in a Fraction of the Time",
+                url: "CHANGE_ME"
+                })
+
+
+

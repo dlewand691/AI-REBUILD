@@ -1,0 +1,124 @@
+// ===================================================================================
+//  ██████  █████  ██████   █████  ██████  ██ ██      ██ ████████ ██ ███████ ███████
+// ██      ██   ██ ██   ██ ██   ██ ██   ██ ██ ██      ██    ██    ██ ██      ██
+// ██      ███████ ██████  ███████ ██████  ██ ██      ██    ██    ██ █████   ███████
+// ██      ██   ██ ██      ██   ██ ██   ██ ██ ██      ██    ██    ██ ██           ██
+//  ██████ ██   ██ ██      ██   ██ ██████  ██ ███████ ██    ██    ██ ███████ ███████
+// ===================================================================================
+.align-middle.relative.bg-grd-dark-blue-dark
+  .z1.relative
+    include _ebook-sticky.pug
+    include _ebook.pug
+    .grid-container.py5.text-white
+      .grid-x.grid-margin-x.align-justify.align-middle
+        .small-12.medium-5.large-5.cell(data-aos="fade-right")
+          img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-multiple-capabilities-white.svg" alt="CHANGE_ME")
+          p.font-wide.medium-mb2 MULTIPLE CAPABILITIES
+          h2 Intelligence takes many forms
+          P Business challenges come in all shapes and sizes. Tackling them requires a range of capabilities. Cognizant’s AI is structured around three distinct capability profiles, helping you to explain, predict and respond across the business ecosystem. 
+        .small-12.medium-5.large-5.cell 
+          .media-object.mb1.medium-mb3(data-aos="fade-left")
+            .media-object-section
+              img.lazyload(data-sizes="auto" data-src="images/icons/icon-evolutionary-ai-white.svg" width="40" alt="CHANGE_ME")
+            .media-object-section
+              img.lazyload.mb-half(data-sizes="auto" data-src="images/cog-logo-white.svg" width="130" style="filter: grayscale(1) brightness(100)" alt="CHANGE_ME")
+              h4.text-heavy Evolutionary AI&trade;
+              p Discover entirely new objects and behaviours to yield solutions that do not yet exist. 
+              a.arrow.small(href="./evolutionary-ai.html" target="_blank" rel="noopener") DISCOVER MORE
+          .media-object.mb1.medium-mb3(data-aos="fade-left")
+            .media-object-section
+              img.lazyload(data-sizes="auto" data-src="images/icons/icon-conversational-ai-white.svg" width="40" alt="CHANGE_ME")
+            .media-object-section
+              img.lazyload.mb-half(data-sizes="auto" data-src="images/cog-logo-white.svg" width="130" style="filter: grayscale(1) brightness(100)" alt="CHANGE_ME")
+              h4.text-heavy Conversational AI
+              p Enable transformative voice-based interactive services. 
+              a.arrow.small(href="conversational-ai.html") DISCOVER MORE
+          .media-object.mb1.medium-mb3(data-aos="fade-left")
+            .media-object-section
+              img.lazyload(data-sizes="auto" data-src="images/icons/icon-causality-white.svg" width="40" alt="CHANGE_ME")
+            .media-object-section
+              img.lazyload.mb-half(data-sizes="auto" data-src="images/cog-logo-white.svg" width="130" style="filter: grayscale(1) brightness(100)" alt="CHANGE_ME")
+              h4.text-heavy Causality
+              p Assumption-free engine that learns and understands what drives behaviour and decision-making. 
+              a.arrow.small(href="./causality.html") DISCOVER MORE
+          .media-object.mb1.medium-mb3(data-aos="fade-left")
+            .media-object-section
+              img.lazyload(data-sizes="auto" data-src="images/icons/icon-deep-learning-white.svg" width="40" alt="CHANGE_ME")
+            .media-object-section
+              img.lazyload.mb-half(data-sizes="auto" data-src="images/cog-logo-white.svg" width="130" style="filter: grayscale(1) brightness(100)" alt="CHANGE_ME")
+              h4.text-heavy Deep Learning
+              p Infuse cognitive, human-like capabilities and intelligence into enterprise business functions and systems. 
+              a.arrow.small(href="./deep-learning.html") DISCOVER MORE
+  //- img.absolute.pos-top.wh100.lazyload.object-fit-contain(data-sizes="auto" data-src="images/video/tendrils.gif" alt="CHANGE_ME")
+  video.absolute.pos-top.pos-center.wh100.lazyload.object-fit-cover(autoplay muted data-poster="images/video/tendrils.jpg" preload="none")
+    source(src="images/video/tendrils.mp4" type="video/mp4")
+    source(src="images/video/tendrils.webm" type="video/webm")
+    source(src="images/video/tendrils.ogg" type="video/ogg")
+
+// ===================================================================================
+// ██   ████████      ██████  █████  ██████   ██████  ██    ██ ███████ ███████ ██
+// ██      ██        ██      ██   ██ ██   ██ ██    ██ ██    ██ ██      ██      ██
+// ██      ██        ██      ███████ ██████  ██    ██ ██    ██ ███████ █████   ██
+// ██      ██        ██      ██   ██ ██   ██ ██    ██ ██    ██      ██ ██      ██
+// ███████ ██         ██████ ██   ██ ██   ██  ██████   ██████  ███████ ███████ ███████
+// ===================================================================================
+#thoughtLeadership.bg-size-cover.bg-pos-fixed.lazyload(data-bg="images/bg/bg-thought-leadership.jpg")
+  .off-canvas.position-right#offCanvas(data-off-canvas data-content-overlay="true" data-close-on-click="true")
+    p.text-white Loading...
+  .off-canvas-content(data-off-canvas-content)
+    .grid-container.fluid.py2.medium-p3.large-p6
+      .grid-x.grid-margin-x.align-middle
+        .cell.large-3.large-py5
+          img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-thought-leadership-blue.svg" width="80" alt="CHANGE_ME")
+          p.text-blue.font-wide.medium-mb2 THOUGHT LEADERSHIP
+          h3 Implement change with game-changing thinking
+          p Understand the now and look to the future with ground breaking content.
+        .cell.auto.align-self-stretch.overflow-hidden.thoughtLeadership-container
+          .thoughtLeadership.pb3.medium-py3.h100
+            .swiper-wrapper
+              +ltCarousel({
+                bgImage: "images/thought-leadership-assets/ai-tl-symbiosis.jpg",
+                ltLogo: true,
+                title: "Getting Your Assets Ready for AI",
+                subhead: "Here’s how organizations can modernize their data and IT asets to realize the full promise of AI.",
+                url: "includes/landing/thought-leadership-carousel/thought-leadership-getting-assets-ready.html"
+              })
+              +ltCarousel({
+                bgImage: "images/thought-leadership-assets/ai-tl-forrester-wave.jpg",
+                ltLogo: true,
+                title: "The Forrester Wave: AI Consultancies, Q3 2019",
+                subhead: "The 13 providers that matter most and how they stack up.",
+                url: "includes/landing/thought-leadership-carousel/thought-leadership-forrester-wave.html"
+              })
+              +ltCarousel({
+                bgImage: "images/thought-leadership-assets/ai-tl-data-modernization.jpg",
+                ltLogo: true,
+                title: "Data Modernization: The Big Hurdles — and How to Clear Them",
+                subhead: "",
+                url: "includes/landing/thought-leadership-carousel/thought-leadership-hurdles.html"
+              })
+              +ltCarousel({
+                bgImage: "images/thought-leadership-assets/ai-tl-forrester-accelerate-business.jpg",
+                ltLogo: true,
+                title: "How to Accelerate Business Change Using Data and AI",
+                subhead: "",
+                url: "includes/landing/thought-leadership-carousel/thought-leadership-accelerate-business-change.html"
+              })
+              +ltCarousel({
+                bgImage: "images/thought-leadership-assets/ai-tl-investing-in-ai.jpg",
+                ltLogo: true,
+                title: "Investing in AI: Moving Along the Digital Maturity Curve",
+                subhead: "",
+                url: "includes/landing/thought-leadership-carousel/thought-leadership-digital-maturity-curve.html"
+              })
+              +ltCarousel({
+                bgImage: "images/thought-leadership-assets/ai-tl-idc-report.jpg",
+                ltLogo: true,
+                title: "IDC Marketscape",
+                subhead: "Worldwide Artificial Intelligence Services 2019 Vendor Assessment",
+                url: "includes/landing/thought-leadership-carousel/thought-leadership-idc-report.html"
+              })
+
+            .swiper-pagination
+            .swiper-button-prev
+            .swiper-button-next

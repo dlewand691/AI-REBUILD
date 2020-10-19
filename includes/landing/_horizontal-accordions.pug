@@ -1,0 +1,156 @@
+// ===================================================================================
+//  ██████  ██████  ██      ██    ██ ███    ███ ███    ██ ███████
+// ██      ██    ██ ██      ██    ██ ████  ████ ████   ██ ██
+// ██      ██    ██ ██      ██    ██ ██ ████ ██ ██ ██  ██ ███████
+// ██      ██    ██ ██      ██    ██ ██  ██  ██ ██  ██ ██      ██
+//  ██████  ██████  ███████  ██████  ██      ██ ██   ████ ███████
+// ===================================================================================
+.grid-x.grid-padding-x.grid-y.grid-padding-y.grid-frame.text-white.medium-h90vh.medium-xl-h70vh.medium-xxl-h100vh.large-h90vh.xlarge-h100vh.xxlarge-h90vh.accordion-horizontal.p-half.large-p1.bg-white
+  //   ===================================================================================
+  //  ██████  ███    ██ ███████
+  // ██    ██ ████   ██ ██
+  // ██    ██ ██ ██  ██ █████
+  // ██    ██ ██  ██ ██ ██
+  //  ██████  ██   ████ ███████
+  // ===================================================================================
+  .cell.medium-auto.relative.bg-size-cover.gradient-overlay-black-full.bg-pos-top-right.bg-pos-top.overflow-hidden.lazyload(data-bg="images/horizontal-accordions-assets/column-ai-driven-company.jpg")
+    // ===================================================================================
+    // CLOSED
+    // ===================================================================================
+    .content.z1.p1.large-p2.absolute.pos-top.pos-left.wh100.flex-container.align-middle
+      .grid-x.grid-padding-x.grid-y.grid-padding-y.flex-container.align-middle
+        .cell.flex-container
+          .card.bg-none.bd0.m0
+            .card-divider.p0.mb-half.medium-mb1.flex-container.align-middle
+              img.icon.lazyload.mr-half.medium-mb-half(data-sizes="auto" data-src="images/icons/icon-ai-company-white.svg" alt="CHANGE_ME")
+              p.small.font-wide THE AI DRIVEN COMPANY
+            .card-section.p0
+              h3.mb1.medium-xl-mb3 Be ready for a world of change
+            .card-divider.p0
+              a.arrow.link-coverAll(data-open="reveal-video") PLAY VIDEO
+
+      //- // ===================================================================================
+      //- // OPEN
+      //- // ===================================================================================
+      //- .content.z1.p1.large-p2.absolute.pos-top.pos-left.wh100.flex-container.align-middle
+      //-   .grid-x.grid-padding-x.grid-y.grid-padding-y.grid-frame
+      //-     .cell.medium-8.large-8
+      //-       .align-self-middle.mb1
+      //-         img.icon.lazyload.inline.mr-half.medium-mb1.medium-1(data-sizes="auto" data-src="images/icons/icon-ai-company-white.svg" alt="CHANGE_ME" style="width: 40px;")
+      //-         p.small.font-wide.mb0.inline THE AI DRIVEN COMPANY
+      //-       h3 Is the world ready for you?
+      //-       h5.text-normal Out-compete the herd with Evolutionary AI&trade;
+      //-       p Imagine a business that always stays ahead of market changes, anticipates customer desires and forecasts faster and more accurately than competitors.
+      //-       a.arrow(data-open="reveal-video") PLAY VIDEO
+      .reveal.bd0.medium-p3.full.ease-in-out#reveal-video(data-reveal data-animation-in="slide-in-right" data-animation-out="slide-out-right")
+        .plyr-video#YouTubeV2(data-plyr-provider="youtube" data-plyr-embed-id="J3oRUnKHG7w" data-id="YOUTUBEV4")
+        //- iframe.lazyload.wh100(width="560" height="315" data-src="https://www.youtube.com/embed/J3oRUnKHG7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        //- video.wh100.video-js.vjs-default-skin(controls width="640" height="264" data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=J3oRUnKHG7w"}], "youtube": { "customVars": { "wmode": "transparent" } } }')
+        //- .grid-container
+        //-   .grid-x
+        //-     .cell
+        //-       .plyr-video(data-plyr-provider="youtube" data-plyr-embed-id="J3oRUnKHG7w")
+        //- .plyr-video
+          iframe#YouTubeV2(width="560", height="315", src="https://www.youtube.com/embed/J3oRUnKHG7w?controls=0", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen="")
+
+          //- iframe(width="  560" height="315" src="https://www.youtube.com/embed/J3oRUnKHG7w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        button.close-button.z2(data-close="reveal-video" aria-label="Close modal" type="button")
+          h5.text-white
+            span(aria-hidden="true") 
+              i.close
+
+
+  // ===================================================================================
+  // ████████ ██     ██  ██████
+  //    ██    ██     ██ ██    ██
+  //    ██    ██  █  ██ ██    ██
+  //    ██    ██ ███ ██ ██    ██
+  //    ██     ███ ███   ██████
+  // ===================================================================================
+  .cell.medium-auto.relative.bg-size-cover.gradient-overlay-black-full.bg-pos-right.overflow-hidden.lazyload(data-bg="images/horizontal-accordions-assets/column-ai-and-your-data.jpg")
+    // ===================================================================================
+    // CLOSED
+    // ===================================================================================
+    .content.z1.p1.large-p2.absolute.pos-top.pos-left.wh100.flex-container.align-middle
+      .grid-x.grid-padding-x.grid-y.grid-padding-y.flex-container.align-middle
+        .cell.flex-container
+          .card.bg-none.bd0.m0
+            .card-divider.p0.mb-half.medium-mb1.flex-container.align-middle
+              img.icon.lazyload.mr-half.medium-mb-half(data-sizes="auto" data-src="images/icons/icon-data-white.svg" alt="CHANGE_ME")
+              p.small.font-wide COGNIZANT AI &amp; YOUR DATA
+            .card-section.p0
+              h3.mb1.medium-xl-mb3 Is your data ready to deliver?
+            .card-divider.p0
+              a.arrow MORE
+    // ===================================================================================
+    // OPEN
+    // ===================================================================================
+    .content.z1.p1.large-p2.absolute.pos-top.pos-left.wh100.flex-container.align-middle
+      .grid-x.grid-padding-x.grid-y.grid-padding-y.grid-frame
+        .cell.h100.flex-container.align-middle
+          div
+            .mb1
+              img.icon.lazyload.inline.mr-half.medium-mb1.medium-1(data-sizes="auto" data-src="images/icons/icon-data-white.svg" alt="CHANGE_ME")
+              p.small.font-wide.medium-mb0.inline DATA MODERNIZATION
+            h3 Data is  your most valuable resource
+            //- +dividerDash("left")(class="text-white hide-for-small show-for-medium-xl hide-for-medium-xxl-only")
+            h5.text-normal.hide-for-small.show-for-medium-xl.hide-for-medium-xxl-only Make sure it’s ready for AI
+            .grid-x.grid-padding-x.flex-container
+              .cell.large-auto.mb1.medium-mb2.hide-for-small-only.hide-for-small-xl-only.hide-for-medium-only.hide-for-medium-xxl-only.medium-pr2
+                p Your organization has been building data for months, years or even decades. Now, with new digital touch points emerging with growing regularity, organizations are swimming in actionable information. The answers are all in there…are you ready with the questions?
+                a.arrow.small(href="#") LEARN MORE
+
+              .cell.large-auto.large-bd-l-white-30-1.large-pl2
+                h6.small.font-wide.show-for-large QUICK LINKS
+                .grid-x.grid-padding-x.small-up-1.small-xl-up-2.medium-up-2.large-up-1
+                  .cell.mb1.medium-mb0.large-mb3.xlarge-mb2
+                    .flex-container.align-middle.mb-half
+                      img.icon.lazyload.mr-half.medium-mb-half.small-1(data-sizes="auto" data-src="images/icons/icon-data-method-white.svg" alt="CHANGE_ME")
+                      p.small.font-wide.m0 DATA METHOD
+                    p The infrastructure of the data-driven company.
+                    a.arrow.small(href="#") LEARN MORE
+                  .cell.medium-mb0
+                    .flex-container.align-middle.mb-half
+                      img.icon.lazyload.mr-half.medium-mb-half.small-1(data-sizes="auto" data-src="images/icons/icon-data-platform-white.svg" alt="CHANGE_ME")
+                      p.small.font-wide.m0 DATA PLATFORM
+                    p Gain insights, find solutions and deploy tools. 
+                    a.arrow.small(href="#") LEARN MORE
+
+  // ===================================================================================
+  // ████████ ██   ██ ██████  ███████ ███████
+  //    ██    ██   ██ ██   ██ ██      ██
+  //    ██    ███████ ██████  █████   █████
+  //    ██    ██   ██ ██   ██ ██      ██
+  //    ██    ██   ██ ██   ██ ███████ ███████
+  // ===================================================================================
+  .cell.medium-auto.relative.bg-size-cover.gradient-overlay-black-full.bg-pos-right.overflow-hidden.lazyload(data-bg="images/horizontal-accordions-assets/column-ai-strategy.jpg")
+    // ===================================================================================
+    // CLOSED
+    // ===================================================================================
+    .content.z1.p1.large-p2.absolute.pos-top.pos-left.wh100.flex-container.align-middle
+      .grid-x.grid-padding-x.grid-y.grid-padding-y.flex-container.align-middle
+        .cell.flex-container
+          .card.bg-none.bd0.m0
+            .card-divider.p0.mb-half.medium-mb1.flex-container.align-middle
+              img.icon.lazyload.mr-half.medium-mb-half(data-sizes="auto" data-src="images/icons/icon-consulting-white.svg" alt="CHANGE_ME")
+              p.small.font-wide AI STRATEGY
+            .card-section.p0
+              h3.mb1.medium-xl-mb3 We’re ready to shape your future
+            .card-divider.p0
+              a.arrow MORE
+    // ===================================================================================
+    // OPEN
+    // ===================================================================================
+    .content.z1.p1.large-p2.absolute.pos-top.pos-left.wh100.flex-container.align-middle
+      .grid-x.grid-padding-x.grid-y.grid-padding-y.grid-frame
+        .cell.h100.flex-container.align-middle.xlarge-9
+          div
+            .mb1
+              img.icon.lazyload.inline.mr-half.medium-mb1.medium-1(data-sizes="auto" data-src="images/icons/icon-consulting-white.svg" alt="CHANGE_ME")
+              p.small.font-wide.mb0.inline AI STRATEGY
+            h3 Collaborate and experiment
+            //- +dividerDash("left")(class="text-white hide-for-small show-for-medium-xl hide-for-medium-xxl-only")
+            h5.text-normal.hide-for-medium-only.hide-for-medium-xxl-only For successful AI deployments, create a culture of creativity and discovery
+            p.hide-for-small-only Cognizant people combine deep business insight and data-driven methodologies with insight and inspiration from across the academic spectrum to meet the challenges of Economy 4.0. From game theory to ethics, anthropology to psychology, we call on many disciplines to help define the strategy that lets your data thrive. 
+            h6.hide-for-small.show-for-medium-xl.hide-for-medium-xxl-only Take the first step…
+            a.arrow(href="#") FIND OUT MORE

@@ -1,0 +1,168 @@
+// ===================================================================================
+// ██   ██  ██████  ██████  ██ ███████  ██████  ███    ██ ████████  █████  ██
+// ██   ██ ██    ██ ██   ██ ██    ███  ██    ██ ████   ██    ██    ██   ██ ██
+// ███████ ██    ██ ██████  ██   ███   ██    ██ ██ ██  ██    ██    ███████ ██
+// ██   ██ ██    ██ ██   ██ ██  ███    ██    ██ ██  ██ ██    ██    ██   ██ ██
+// ██   ██  ██████  ██   ██ ██ ███████  ██████  ██   ████    ██    ██   ██ ███████
+//  █████   ██████  ██████  ██████  ██████  ██████  ██  ██████  ███    ██ ███████
+// ██   ██ ██      ██      ██    ██ ██   ██ ██   ██ ██ ██    ██ ████   ██ ██
+// ███████ ██      ██      ██    ██ ██████  ██   ██ ██ ██    ██ ██ ██  ██ ███████
+// ██   ██ ██      ██      ██    ██ ██   ██ ██   ██ ██ ██    ██ ██  ██ ██      ██
+// ██   ██  ██████  ██████  ██████  ██   ██ ██████  ██  ██████  ██   ████ ███████
+// ===================================================================================
+
+/* easeInOutCubic */
+$accordion-horizontal-transition: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$accordion-horizontal-transition-speed: 0.5s;
+
+// OVERALL ACCORDION SECTION
+.accordion-horizontal {
+  overflow-y    : scroll;
+  flex-direction: column;
+
+  @include breakpoint(small) {
+    > .cell:nth-of-type(2) {
+      border-top   : 1px solid $white;
+      border-right : none;
+      border-bottom: 1px solid $white;
+      border-left  : none;
+    }
+  }
+  // MEDIUM UP, DISPLAY DIRECTION IN ROW
+  @include breakpoint(medium) {
+    flex-direction: row;
+
+    // .grid-x {
+    //   flex-direction: row !important;
+    // }
+
+    > .cell:nth-of-type(2) {
+      border-top   : none;
+      border-right : 1px solid $white;
+      border-bottom: none;
+      border-left  : 1px solid $white;
+    }
+  }
+
+  .cell {
+    transition: all $accordion-horizontal-transition-speed $accordion-horizontal-transition;
+
+    @include breakpoint(small) {
+      height: xy-cell-size(4);
+    }
+
+    @include breakpoint(medium) {
+      height: 100%;
+    }
+
+    .content {
+      transition: all $accordion-horizontal-transition-speed $accordion-horizontal-transition;
+      opacity   : 1;
+    }
+  }
+
+  // HOVER ENTIRE ACCORDION SECTION, FADE OUT ALL FIRST/"CLOSED" CONTENT
+  &:hover {
+    .cell {
+      @include breakpoint(small) {
+        height: xy-cell-size(1);
+      };
+
+      @include breakpoint(medium) {
+        height: 100%;
+      };
+
+      .content {
+        opacity: 0;
+      }
+    }
+  }
+
+  // CELL 1 DIRECT CHILD OF .accordion-horizontal, SHOW CONTENT, HIDE OTHERS
+  > .cell:nth-child(1) {
+    &:hover {
+      @include breakpoint(small) {
+        height: xy-cell-size(10);
+      };
+
+      @include breakpoint(medium) {
+        height: 100%;
+      };
+
+      .content:nth-child(1) {
+        opacity: 1;
+      }
+    }
+  }
+
+  // CELL 2+ DIRECT CHILD OF .accordion-horizontal, SET SIZE AND BORDER
+  > .cell:nth-child(n+2) {
+    will-change: auto;
+
+    // @include breakpoint(small) {
+    //   height: xy-cell-size(4);
+    // }
+
+    // "CLOSED" CONTENT
+    .content:nth-child(1) {
+      transition: all $accordion-horizontal-transition-speed $accordion-horizontal-transition;
+    }
+
+    // "OPEN" CONTENT, HIDDEN
+    .content:nth-child(2) {
+      transition: all $accordion-horizontal-transition-speed $accordion-horizontal-transition;
+      opacity   : 0;
+    }
+
+    // HOVER DIRECT CHILD, ADD BORDER, SHOW "OPEN" CONTENT, HIDE OTHERS
+    &:hover {
+      @include breakpoint(small) {
+        height: xy-cell-size(10);
+      }
+      @include breakpoint(medium) {
+        height: 100%;
+      }
+      // border-top   : 1px solid $white-60;
+      // border-left  : none;
+      // border-bottom: 1px solid $white-60;
+      // border-right : none;
+
+      .content:nth-child(1) {
+        opacity: 0;
+      }
+      // HOVER, SHOW "OPEN" CONTENT
+      .content:nth-child(2) {
+        opacity: 1;
+      }
+    }
+
+    // MEDIUM UP HOVER DIRECT CHILD, EXPAND SIZE AND ADD BORDER
+    @include breakpoint(medium) {
+      // height       : auto;
+      // border-top   : none;
+      // border-bottom: none;
+
+      // MEDIUM UP HOVER, ADD BORDER
+      &:hover {
+        flex-basis: xy-cell-size(8);
+        @include breakpoint(medium) {
+          // height       : auto;
+          // border-top   : none;
+          // border-left  : 1px solid $white-60;
+          // border-bottom: none;
+          // border-right : 1px solid $white-60;
+        };
+      }
+    };
+  }
+}
+
+// ======================================================================
+// 1366x653 MEDIA QUERIES
+// ======================================================================
+
+@media screen and (max-height: 653px) {
+  .hide-for-cog-laptop {
+    display: none !important;
+  }
+}

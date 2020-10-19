@@ -1,0 +1,112 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "Data Method - Adaptive Data Foundation | Cognizant"
+  - var metaDescription= "The Cognizant Data Modernization Method uses an adaptive data foundation for agility and business innovation to unlock value in your unique assets. See how."
+  - var metaKeywords= "data method, adaptive data foundation, data modernization method"
+
+block content
+
+  +intro-panel({
+    backgroundImage: "",
+    logo: true,
+    icon: "images/icons/icon-data-method-white.svg",
+    eyebrow: "DATA MODERNIZATION METHOD",
+    headline: "Adaptive data foundation for agility & business innovation",
+    bodyCopy: "Unlock the business value in your unique data assets.",
+    button: false,
+    url: "CHANGE_ME",
+    buttonText: "CHANGE_ME"
+    })(class="")
+
+  +sideBox({
+  bodyCopy: "<p>Our reference model is the foundation for creating a cloud-first, data ecosystem that enables organizations to generate maximum business value from their unique data assets.</p><p>Data insights in traditional, non-digital-native businesses are hidden in massive amounts of data across a wide variety of digital touch points.</p><p>The reference model provides flexible data structures and a streamlined data architecture to quickly turn data resources into insightful, actionable intelligence.</p>"
+  })
+
+
+
+  //- ===================================================================================
+  //- IMAGE
+  //- ===================================================================================
+  .text-center.px2.medium-px4
+    //- img.w100.lazyload(data-sizes="auto" data-src="images/depth-pages-assets/bg-data-method.jpg" alt="CHANGE_ME" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover(loop muted data-poster="images/video/data-method.jpg" preload="")
+      source(src="images/video/data-method.mp4" type="video/mp4")
+      source(src="images/video/data-method.webm" type="video/webm")
+      source(src="images/video/data-method.ogg" type="video/ogg")
+
+  .grid-container.bg-grd-dark-blue-dark.text-white.medium-mbn5.medium-pb5
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3.m0(data-aos="fade-up") Accelerate Data Modernization
+          +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          The Cognizant Data Modernization Method is the leading-edge model to create a cloud-first data ecosystem, enabling organization to generate solutions that create maximum value. 
+
+          Our adaptive data foundation model enables cloud or on-site capabilities with pre-engineered platform  components, tools and accelerators to accelerate data monetization. 
+
+          Unlock the value in legacy data stores and improve time to market with faster insight delivery through AI-enabled data engineering.
+
+  //- ===================================================================================
+  //- REPORT
+  //- ===================================================================================
+  +callout-panel({
+    useVideo: true,
+    width: "large-10",
+    icon: "images/icons/icon-video-blue.svg",
+    headline: "Harness The Full Power Of Data",
+    bodyCopy: "Unlock the business value in your unique data assets.",
+    buttonText: "WATCH VIDEO",
+    link: null,
+    revealID : "video01",
+    youtubeUrl: "pZbnFnwmssc"
+    })(class="")
+
+
+  // ===================================================================================
+  // ADDITIONAL RESOURCES
+  // ===================================================================================
+  .grid-container.bg-grd-dark-blue-dark.my3.text-white(data-aos="fade-up")
+    .grid-x.grid-padding-x.align-center.pt3.pb2.px2.medium-px3
+      .cell.text-center
+        img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-read-report-white.svg" alt="CHANGE_ME")
+        h2.h3.mb2 Additional Resources
+
+      //- ===================================================================================
+      //- TILES
+      //- ===================================================================================
+      .grid-x.grid-margin-x.align-center
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources01.jpg",
+          eyebrow: "OFFERINGOVERVIEW",
+          title : "Data Modernization Method",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })(class="")
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources01.jpg",
+          eyebrow: "PERSPECTIVES",
+          title : "Getting Your Assets Ready for AI",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })(class="")
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources01.jpg",
+          eyebrow: "EBOOK",
+          title : "Data Modernization: The Foundation for Digital Transformation",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })(class="")
+
+  include includes/global/_take-the-first-step.pug
+

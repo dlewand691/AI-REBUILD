@@ -1,0 +1,221 @@
+mixin caseStudy-index(...elements)
+  // 
+    ===================================================================================
+    CASE STUDY TILE FOR INDEX PAGE
+    ===================================================================================
+  each item in elements
+    div(class="small-" + item.smColumns class="medium-" + item.mdColumns class="large-" + item.lgColumns class="")&attributes(attributes)
+      .grid-x.grid-padding-x.wh100.gradient-overlay-black.bg-blue-dark.panel-slide-down.hover-bg-grow(data-aos="fade-up")
+        .cell.auto.small-order-2.medium-order-1.p1.large-p2.small-align-self-middle.medium-align-self-bottom.z1
+          h6.mb0(data-aos="fade-up")!= item.eyebrow
+          p.mb0.medium-mb2(data-aos="fade-up")!= item.headline
+          a.small.arrow.p0.m0.font-wide.show-for-medium.link-coverAll(data-aos="fade-up")!= item.buttonText
+
+        unless item.hoverContent == false
+          // ===================================================================================
+          // HOVER CONTENT
+          // ===================================================================================
+          .panel.wh100.p-half.relative
+            .small-padding-collapse.bg-blue-dark.wh100.bd-radius-2
+              .flex-container.wh100
+                .card.bg-none.m0
+                  .card-section
+                    p!= item.hoverBodyCopy
+                  .card-divider.pt0
+                    a.small.m0.arrow.link-coverAll(href=item.url)!= item.hoverButtonText
+        // ===================================================================================
+        // BACKGROUND IMAGE
+        // ===================================================================================
+        img.lazyload.absolute.object-fit-cover.show-for-medium(data-sizes="auto" data-src=item.image alt=item.headline)
+        .small-3.cell.small-order-1.py1.pl1.pr0.hide-for-medium
+          img.w100.lazyload.object-fit-cover(data-sizes="auto" data-src=item.image alt=item.headline)
+  // -----  End of CASE STUDY INDEX TILE  -----------------------------------
+
+
+mixin caseStudy-tile(...elements)
+  // 
+    ===================================================================================
+    CASE STUDY TILE, INDIVIDUAL LANDING PAGES
+    ===================================================================================
+  each item in elements
+    .caseStudyTile.small-12.medium-6.large-6.cell.p1&attributes(attributes)
+      .hover-grow(data-aos="fade-up")
+        .flex-container.align-bottom.wh100.p1.text-white.bg-size-cover.gradient-overlay-black-full.lazyload(data-aos="fade-up" data-bg=item.image alt=item.title)
+          .relative.z1.w100.medium-pt5
+            h3.h5.pt5!= item.title
+            .flex-container.align-justify.pt2
+              a.small.arrow.font-wide.link-coverAll(href=item.url) VIEW CASE STUDY
+  // -----  End of CASE STUDY TILE, INDIVIDUAL LANDING PAGES  -----------------------------------
+
+
+mixin caseStudy-intro
+  //
+    ======================================================================
+    CASE STUDY LANDING PAGE INTRO
+    ======================================================================
+  .cell.text-center
+    img.mb1.lazyload(data-sizes="auto" data-src=eyebrowIcon  alt=headline)
+    h1.p.font-wide.mb3
+      span.text-bold AI IN ACTION 
+      | | #{eyebrow}
+    h2.h1.m0(data-aos="flip-hor-bottom-bck")!= headline
+    +dividerDash
+  .cell.medium-10.large-8.mb3
+    unless introParagraph01 == ""
+      p(data-aos="fade-right" data-aos-delay="1000")!= introParagraph01
+    unless introParagraph02 == ""
+      p(data-aos="fade-left" data-aos-delay="1500")!= introParagraph02
+
+mixin ltCarousel(...elements)
+  // 
+    ===================================================================================
+    LATEST THINKING CAROUSEL
+    ===================================================================================
+  each item in elements
+    .swiper-slide
+      unless item.image == ""
+        img.lazyload(data-src=item.image)
+      unless item.headline == ""
+        h5!= item.headline
+        p!= item.body
+        a.arrow!= item.buttonText
+      unless item.url == ""
+        a.link-coverAll(href=item.url)
+      // -----  End of LATEST THINKING CAROUSEL  -----------------------------------
+
+
+//- ======================================================================
+//- ADDITIONAL RESOURCE TILE DEFAULT CONTENT/LAYOUT
+//- ======================================================================
+mixin additional-resource-tile-default(...elements)
+  each item in elements
+    .cell.medium-auto.column-block.flex-basis-2col.bg-blue-dark.p2.hover-grow.bg-size-cover.relative.lazyload(data-bg=item.background)&attributes(attributes)
+      p.small.font-wide.text-blue-bright(data-aos="fade-up")!= item.eyebrow
+      h6.m0(data-aos="fade-up")!= item.title
+      a.link-coverAll(href!=attributes.href=item.link data-open!=attributes.data=item.revealID title=item.buttonText)!= item.buttonText
+
+
+mixin additional-resource-tile(...elements)
+  // 
+    ===================================================================================
+    ADDITIONAL RESOURCES
+    ===================================================================================
+  each item in elements
+    if item.useVideo == false
+      +additional-resource-tile-default(...elements)
+
+    else
+      +additional-resource-tile-default(...elements)
+      .reveal.bd0.medium-p3.full.ease-in-out(id=item.revealID data-reveal data-animation-in="slide-in-right" data-animation-out="slide-out-right" data-reset-on-close="true")
+        .plyr-video(data-plyr-provider="youtube" data-plyr-embed-id=item.youtubeUrl)
+        button.close-button.z2(data-close=item.revealID aria-label="Close modal" type="button")
+          h5.text-white
+            span(aria-hidden="true") 
+              i.close
+  // -----  End of ADDITIONAL RESOURCES  -----------------------------------
+
+
+//- ===================================================================================
+//- DIVIDER DASH
+//- ===================================================================================
+mixin dividerDash(alignment="center")
+  p.h1(class="text-" + alignment aria-hidden="true")&attributes(attributes) –
+//- -----  End of DIVIDER DASH  -----------------------------------
+
+
+//- ======================================================================
+//- CALLOUT PANEL DEFAULT CONTENT/LAYOUT
+//- ======================================================================
+mixin callout-panel-default(...elements)
+  each item in elements
+    .grid-container.flex-container.align-center(data-aos="fade-up")&attributes(attributes)
+      .grid-x.grid-padding-x.bg-gray-lighter(class=item.width)
+        .cell.auto.m2.medium-my3
+          img.lazyload.mb1(data-aos="fade-up" data-sizes="auto" data-src=item.icon alt="icon")
+          h3(data-aos="fade-up")!= item.headline
+          h5.text-normal.m0(data-aos="fade-up")!= item.bodyCopy
+        .cell.shrink.px2.pb2.medium-pb0.medium-my3.medium-bd-l-blue-1.flex-container.align-bottom
+          a.button.arrow(href!=attributes.href=item.link data-open!=attributes.data=item.revealID title=item.buttonText)!= item.buttonText
+
+
+mixin callout-panel(...elements)
+  // 
+    ===================================================================================
+    CALLOUT PANEL
+    ===================================================================================
+  each item in elements
+    if item.useVideo == false
+      +callout-panel-default(...elements)
+    else
+      +callout-panel-default(...elements)
+      .reveal.bd0.medium-p3.full.ease-in-out(id=item.revealID data-reveal data-animation-in="slide-in-right" data-animation-out="slide-out-right" data-reset-on-close="false")
+        .plyr-video(data-plyr-provider="youtube" data-plyr-embed-id=item.youtubeUrl)
+        button.close-button.z2(data-close=item.revealID aria-label="Close modal" type="button")
+          h5.text-white
+            span(aria-hidden="true") 
+              i.close
+  // -----  End of CALLOUT PANEL  -----------------------------------
+
+
+//- ======================================================================
+//- INTRO PANEL DEFAULT CONTENT/LAYOUT
+//- ======================================================================  
+mixin intro-panel-default(...elements)
+  each item in elements
+    .p2.large-mbn7
+      .grid-container.pt2.large-pt4.medium-pb7
+        .grid-x.grid-padding-x.text-white
+          //- unless item.logo == false
+            .cell.text-center
+              img.mb1.lazyload(data-sizes="auto" data-src="images/cog-logo-ai-white.svg" width="300" alt="logo")
+              br
+          .cell.medium-8.large-8
+            img.lazyload.mb1(data-sizes="auto" data-src=item.icon alt="icon")
+            h1.h6.font-wide!= item.eyebrow
+            h2.my2.medium-my3(data-aos="flip-hor-bottom-bck")!= item.headline
+            h5.text-normal.medium-my4(data-aos="fade-up" data-aos-delay="750")!= item.bodyCopy
+            unless item.button == false
+              a.small.button.arrow(href=item.url)!= item.buttonText
+
+mixin intro-panel(...elements)
+  // 
+    ===================================================================================
+    INTRO PANEL
+    ===================================================================================
+  each item in elements
+    if item.backgroundImage == ""
+      .bg-grd-dark-blue-dark.medium-pt3&attributes(attributes)
+        +intro-panel-default(...elements)
+    else
+      .bg-grd-dark-blue-dark.medium-pt3.bg-size-cover.lazyload(data-bg=item.backgroundImage)&attributes(attributes)
+        +intro-panel-default(...elements)
+  // -----  End of INTRO PANEL  -----------------------------------
+
+  mixin sideBox(...elements)
+    // 
+      ======================================================================
+      SIDE BOX
+      ======================================================================
+    each item in elements
+      .grid-container
+        .grid-x.grid-padding-x.medium-relative
+          .medium-8.large-4.px2.pt2.pb1.medium-absolute.pos-right.bg-blue-85.text-white.medium-mtn10(data-aos="fade-left" data-aos-delay="1250")
+            div!=item.bodyCopy
+
+//- ======================================================================
+//- CONSULTING CASE STUDY CAROUSEL
+//- ======================================================================
+mixin consulting-caseStudy(...elements)
+  each item in elements
+    .gradient-overlay-black.h100.hover-bg-grow
+      .card.m0.bd0.bg-transparent.z1.relative.h100
+        .card-section.flex-container.align-bottom
+          div
+            p.small.font-wide.mb-half!= item.eyebrow
+            h5.mb0!= item.headline
+        //- .card-divider.bg-transparent.pt0
+          p.small.arrow.text-blue-bright.text-bold.p0.m0.font-wide!= item.buttonText
+      // ===================================================================================
+      // BACKGROUND IMAGE
+      // ===================================================================================
+      img.lazyload.pos-top.absolute.object-fit-cover(data-sizes="auto" data-src=item.image alt=item.headline)

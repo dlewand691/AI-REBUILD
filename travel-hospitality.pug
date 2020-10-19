@@ -1,0 +1,37 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI in Travel & Hospitality | Cognizant"
+  - var metaDescription= "See how Cognizant helps Travel and Hospitality clients leverage data and AI to enhance and personalize customer experience and improve business outcomes."
+  - var metaKeywords= "ai in travel, ai in hospitality, travel ai"
+  - var backgroundImage = "images/case-studies-landing-backgrounds-assets/bg-caseStudyLanding-travel-hospitality.png"
+  - var eyebrowIcon = "images/icons/icon-travel-hospitality-white.svg"
+  - var eyebrow = "TRAVEL & HOSPITALITY"
+  - var headline = "Enhance and personalize customer experiences"
+  - var introParagraph01 = "Now, more than ever, revenue augmentation and customer loyalty are the paramount concerns in the travel sector. Cognizant AI helps providers leverage their data to address both by facilitating an increasingly fine-tuned customer experience and more streamlined operations."
+  - var introParagraph02 = "In a fast-moving space, AI is analyzing guest behaviors and preferences over the course of a client lifecycle to deliver an uber-personalized service packages. It underpins chatbots handling customer query responses across a number of languages and platforms and it helps keep maintenance schedules lean and unobtrusive to guests by corralling multiple data strands."
+
+block content
+  .bg-grd-blue-radial-bottom
+    .py3.bg-pos-top-center.bg-size-contain.lazyload(data-bg=backgroundImage)
+      .grid-container.medium-pt3.large-pt5
+        .grid-x.grid-padding-x.text-white.align-center
+          +caseStudy-intro
+
+          .large-8.cell.mb10
+            .grid-x.grid-padding-x.text-white.flex-container.pb2.medium-pb3
+              .cell.text-center
+                h3.medium-mb3 Case Studies
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-travel-hospitality-01.jpg",
+                title: "Bigdecisions Analytics Unlocks Fast Food Insights",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-travel-hospitality-02.jpg",
+                title: "Airline Improves Customer Experience with Loyalty Program Chatbot",
+                url: "CHANGE_ME"
+                })

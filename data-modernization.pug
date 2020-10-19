@@ -1,0 +1,130 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "Data Modernization | Cognizant"
+  - var metaDescription= "A modern data and analytics backbone is one of the best bets a business leader can make today. Learn more about how Cognizant Data Modernization helps."
+  - var metaKeywords= "data modernization, analytics modernization, ai data modernization"
+
+block content
+  +intro-panel({
+    backgroundImage: "",
+    logo: true,
+    icon: "images/icons/icon-data-white.svg",
+    eyebrow: "DATA MODERNIZATION",
+    headline: "Data drives business response and recovery",
+    bodyCopy: "A modern data and analytics backbone is one of the best bets a business leader can make today.",
+    button: false,
+    url: "CHANGE_ME",
+    buttonText: "CHANGE_ME"
+    })(class="")
+
+  +sideBox({
+    bodyCopy:"<h6>Every organization is facing extraordinary circumstances and unexpected disruption.</h6><p>Business success hinges upon the ability to anticipate market changes, quickly adapt operations and forge alternate pathways to deliver products and services to their clients.</p> <p>Companies need a clear way to transform how they source, interpret and consume that information. That requires flexible data structures and a modern data and analytics platform capable of quickly turning data resources into insightful, actionable intelligence.</p>"
+    })
+
+  //- ===================================================================================
+  //- IMAGE
+  //- ===================================================================================
+  .text-center.px2
+    //- img.w100.lazyload(data-sizes="auto" data-src="images/depth-pages-assets/bg-data-modernization.jpg" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover(loop muted data-poster="images/video/data-modernization.jpg" preload="")
+      source(src="images/video/data-modernization.mp4" type="video/mp4")
+      source(src="images/video/data-modernization.webm" type="video/webm")
+      source(src="images/video/data-modernization.ogg" type="video/ogg")
+
+
+  .grid-container.bg-grd-dark-blue-dark.text-white
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3(data-aos="fade-up") Modern Data Management
+          +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Data-driven enterprises consolidate siloed data sources and migrate legacy systems onto the cloud – to deliver analytics and intelligence that inform everything from operations process automation to customer experiences. 
+
+          Lower costs and democratized data increase speed of access and management enables dynamic forecasting and complete visibility into supply chains and improves security measures that ensure ongoing privacy compliance – like remote work. 
+
+  //- ===================================================================================
+  //- REPORT
+  //- ===================================================================================
+  +callout-panel({
+    useVideo: false,
+    width: "large-11",
+    icon: "images/icons/icon-download-report-blue.svg",
+    headline: "Data Modernization: The Foundation for Digital Transformation",
+    bodyCopy: "How leading organizations transformed their digital core to enable artificial intelligence (AI)",
+    buttonText: "DOWNLOAD EBOOK",
+    link: "https://www.cognizant.com/content/dam/cognizant_foundation/aicom/documents/adaptive-data-foundation-offering-overview.pdf",
+    revealID : null,
+    youtubeUrl: "CHANGE_ME"
+  })(class="")
+
+  // ===================================================================================
+  // CONTENT
+  // ===================================================================================
+  .grid-container.bg-grd-dark-blue-dark.text-white.medium-mbn5.my3.relative.z1
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3.m0(data-aos="fade-up") Driving Results
+          +dividerDash(data-aos="flip-left")
+        p Our data infrastructure provides a highly accessible, useful and compliant platform that delivers cost savings and powers the analytics to enhance personalization and optimize forecasting. With thousands of associates, Cognizant’s experts are able to mobilize quickly to realize our clients’ data modernization vision. Typical results include*: 
+        .grid-x.grid-padding-x
+          .cell.auto
+            table.stack
+              tbody.bg-none.bd0
+                tr.p0
+                  td.p0
+                    ul
+                      li A deployed platform within one month
+                      li 40% decrease in data storage costs
+                      li 30-60% faster time to market
+                  td.p0
+                    ul
+                      li ROI in six months
+                      li 4x faster transition
+
+        .grid-x.grid-padding-x
+          .cell
+            p Our data modernization solution pinpoints bottlenecks in supply chains and helps improve product assortment, pricing, forecasting and marketing channels, driving costs down and revenues up. New business models monetize data and generate direct revenues from data sets, insights and analytics-based services and a resilient data infrastructure and process capabilities enhance customer service and sales.
+
+            small *Based on actual client engagements. Individual results may vary
+
+  // ======================================================================
+  // CONTENT
+  // ======================================================================
+  .bg-size-cover.p2.medium-py5.text-white.mb2.medium-mb3(style="background: url(images/depth-pages-assets/bg-data-modernization02.jpg)")
+    .grid-container.mt1.medium-mt3
+      .grid-x.grid-padding-x
+        .cell.text-center.mb3
+          h2.h3(data-aos="fade-up") It’s time to take charge of your data
+          +dividerDash(data-aos="flip-left")
+          h5.text-normal How fast do you want to go?
+
+        .cell
+          .grid-x.grid-margin-x
+            .cell.auto.flex-container.bg-grd-lr-dark-blue(data-aos="fade-right")
+              .card.bd0.bg-transparent.p1.overflow-visible
+                .card-section
+                  .text-center.mb2
+                    img.lazyload.mb1.mtn4.relative.z1.bg-blue.box-shadow.rounded.bd-blue-4(data-sizes="auto" data-src="images/icons/icon-data-method-white.svg" style="border-width: 0.5rem !important;" alt="CHANGE_ME")
+                    h4 Custom
+                  h5 Data Modernization Method
+                  p An innovative combination of reference models, intellectual property and valued-added services that construct a maximum-value data ecosystem. It easily enables cloud or on-site capabilities with pre-engineered platform components, tools and accelerators to expedite data monetization. 
+                  p Unlock the value in legacy data stores and accelerate time to market with faster insight delivery through AI-enabled data engineering. 
+                .card-divider.align-bottom.bg-transparent
+                  a.arrow.small.font-wide(href="#") LEARN MORE
+            .cell.auto.flex-container.bg-grd-lr-dark-blue(data-aos="fade-left")
+              .card.bd0.bg-transparent.p1.overflow-visible
+                .card-section
+                  .text-center.mb2
+                    img.lazyload.mb1.mtn4.relative.z1.bg-blue.box-shadow.rounded.bd-blue-4(data-sizes="auto" data-src="images/icons/icon-data-platform-white.svg" style="border-width: 0.5rem !important;" alt="CHANGE_ME")
+                    h4 Prebuilt
+                  h5 Data Modernization Platform
+                  p The Platform is a pre-integrated, end-to-end solution from ingesting data to operationalizing analytics enterprise-wide.
+                  p It enables sophisticated customer data, business analytics, AI and machine learning solutions from a wide-range of information sources for timely, intuitive and context–specific decision-making.
+                .card-divider.align-bottom.bg-transparent
+                  a.arrow.small.font-wide(href="#") LEARN MORE
+
+  include includes/global/_take-the-first-step.pug

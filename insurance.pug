@@ -1,0 +1,61 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI in Insurance | Cognizant"
+  - var metaDescription= "See how Cognizant helps Insurance clients leverage data and AI to improve customer experience, maximize business outcomes, and more."
+  - var metaKeywords= "ai in insurance, insurance ai, insurance data"
+  - var backgroundImage = "images/case-studies-landing-backgrounds-assets/bg-caseStudyLanding-insurance.png"
+  - var eyebrowIcon = "images/icons/icon-insurance-white.svg"
+  - var eyebrow = "INSURANCE"
+  - var headline = "Identify the greatest opportunities and risks"
+  - var introParagraph01 = "The insurance industry, perhaps more than any other, is awash with data. Such abundance along with evolving expectations of customers expecting frictionless, on-demand services brings challenges but also significant opportunities."
+  - var introParagraph02 = "Speedier claims processing, improved broad-spectrum as well as targeted fraud detection, machine-learning assisted damage assessment and enhanced underwriting accuracy are just some of the advances enabled when AI assists with the heavy lifting. With established methodologies Cognizant is helping this data-rich sector make full use of its assets."
+
+block content
+  .bg-grd-blue-radial-bottom
+    .py3.bg-pos-top-center.bg-size-contain.lazyload(data-bg=backgroundImage)
+      .grid-container.medium-pt3.large-pt5
+        .grid-x.grid-padding-x.text-white.align-center
+          +caseStudy-intro
+
+          .large-8.cell.mb10
+            .grid-x.grid-padding-x.text-white.flex-container.pb2.medium-pb3
+              .cell.text-center
+                h3.medium-mb3 Case Studies
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-insurance-01.jpg",
+                title: "Staking a Claim for AI-Driven Email Automation",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-insurance-02.jpg",
+                title: "Indian Insurer Banks On AI To Protect Biometric Data",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-insurance-03.jpg",
+                title: "AI and Automation Improve Insurance Claims Process",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-insurance-04.jpg",
+                title: "Customer Care Done Right with Real Time AI",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-insurance-05.jpg",
+                title: "Assessing Risks and Rewards in the Flood Insurance Market",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-insurance-06.jpg",
+                title: "AI-Driven Solution for Improved, Predictive Underwriting",
+                url: "CHANGE_ME"
+                })

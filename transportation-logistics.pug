@@ -1,0 +1,37 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI in Transportation & Logistics | Cognizant"
+  - var metaDescription= "See how Cognizant helps Transportation and Logistics clients leverage data and AI to modernize complex systems."
+  - var metaKeywords= "ai in transportation, ai in logistics, logistics & transport ai."
+  - var backgroundImage = "images/case-studies-landing-backgrounds-assets/bg-caseStudyLanding-transportation-logistics.png"
+  - var eyebrowIcon = "images/icons/icon-transportation-logistics-white.svg"
+  - var eyebrow = "TRANSPORTATION & LOGISTICS"
+  - var headline = "Innovation that connects, tracks and informs"
+  - var introParagraph01 = "Changes in our global economy and advancements in technology are rapidly transforming the transportation and logistics sector. Businesses are facing pressures to reduce costs, improve efficiencies and scale rapidly to meet demand, all at the same time."
+  - var introParagraph02 = "Gain greater visibility into end-to-end operations helps eliminate bottlenecks in supply chains, better informs decision-making to optimize routing and automates to reduce the labor needed for repetitive tasks. Whether its carriers, mail and express businesses or logistic providers, we’re helping modernize and integrate their most complex systems with the latest advancements in data and artificial intelligence."
+
+block content
+  .bg-grd-blue-radial-bottom
+    .py3.bg-pos-top-center.bg-size-contain.lazyload(data-bg=backgroundImage)
+      .grid-container.medium-pt3.large-pt5
+        .grid-x.grid-padding-x.text-white.align-center
+          +caseStudy-intro
+
+          .large-8.cell.mb10
+            .grid-x.grid-padding-x.text-white.flex-container.pb2.medium-pb3
+              .cell.text-center
+                h3.medium-mb3 Case Studies
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-transportation-logistics-01.jpg",
+                title: "Data Mining for Efficient Mining Operations",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-transportation-logistics-02.jpg",
+                title: "Data Analytics Solution to Optimize Transportation Equipment Utilization",
+                url: "CHANGE_ME"
+                })

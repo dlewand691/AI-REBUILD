@@ -1,0 +1,172 @@
+// ===================================================================================
+// ██   ████████      ██████  █████  ██████   ██████  ██    ██ ███████ ███████ ██
+// ██      ██        ██      ██   ██ ██   ██ ██    ██ ██    ██ ██      ██      ██
+// ██      ██        ██      ███████ ██████  ██    ██ ██    ██ ███████ █████   ██
+// ██      ██        ██      ██   ██ ██   ██ ██    ██ ██    ██      ██ ██      ██
+// ███████ ██         ██████ ██   ██ ██   ██  ██████   ██████  ███████ ███████ ███████
+// ===================================================================================
+#thoughtLeadership.bg-white.pb3
+  .grid-container.pt5.pb2
+    .grid-x.grid-margin-x.align-middle
+      .cell.text-center
+        img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-thought-leadership-blue.svg" width="80" alt="CHANGE_ME")
+        p.text-blue.font-wide.medium-mb2 THOUGHT LEADERSHIP
+        h3 Implement change with game-changing thinking
+        p Understand the now and look to the future with ground breaking content.
+  .grid-container.pb5 
+    .grid-x.grid-margin-x.align-middle.align-center
+      .cell.small-5.large-12.pb1
+        .thoughtLeadership.overflow-hidden
+          .swiper-wrapper
+            +ltCarousel({
+              image: "images/thought-leadership-assets/ai-tl-01-forrester.png",
+              url: "https://www.cognizant.com/01",
+              headline: "",
+              body: "",
+              buttonText: ""
+            })
+            +ltCarousel({
+              image: "images/thought-leadership-assets/ai-tl-02-ai-maturity.png",
+              url: "https://www.cognizant.com/02",
+              headline: "",
+              body: "",
+              buttonText: ""
+            })
+            +ltCarousel({
+              image: "images/thought-leadership-assets/ai-tl-03-covid.png",
+              url: "https://www.cognizant.com/03",
+              headline: "",
+              body: "",
+              buttonText: ""
+            })
+            +ltCarousel({
+              image: "images/thought-leadership-assets/ai-tl-04-ai-journey.png",
+              url: "https://www.cognizant.com/04",
+              headline: "",
+              body: "",
+              buttonText: ""
+            })
+            +ltCarousel({
+              image: "images/thought-leadership-assets/ai-tl-05-perspective.png",
+              url: "https://www.cognizant.com/05",
+              headline: "",
+              body: "",
+              buttonText: ""
+            })
+            +ltCarousel({
+              image: "images/thought-leadership-assets/ai-tl-06-america.png",
+              url: "https://www.cognizant.com/06",
+              headline: "",
+              body: "",
+              buttonText: ""
+            })
+
+          .swiper-button-prev
+          .swiper-button-next 
+      .cell.small-7.large-8.xlarge-5
+        .thoughtLeadershipBottom.overflow-hidden
+          .swiper-wrapper.pb1.large-text-center
+            +ltCarousel({
+              image: "",
+              url: "https://www.cognizant.com/01",
+              headline: "The Forrester Wave&trade;: AI Consultancies ",
+              body: "Cognizant is named a leader in data and AI technologies and services, citing us as a right partner to help create a business running on AI",
+              buttonText: "READ THE REPORT"
+            })
+
+            +ltCarousel({
+              image: "",
+              url: "https://www.cognizant.com/02",
+              headline: "AI: From Data to ROI",
+              body: "If the COVID-19 crisis has revealed anything to business leaders, it’s the dire need for modern, intelligent decision making. Embracing AI doesn’t guarantee high ROI. Here’s what works for accelerating AI outcomes, according to our recent research.",
+              buttonText: "READ THE EBOOK"
+            })
+
+            +ltCarousel({
+              image: "",
+              url: "https://www.cognizant.com/03",
+              headline: "Using Evolutionary AI to deal with COVID-19 and more",
+              body: "Evolutionary AI offers a new model for determining the most effective prescriptions for meeting goals, whether to mitigate disease or optimize the business",
+              buttonText: "READ THE BLOG"
+            })
+
+            +ltCarousel({
+              image: "",
+              url: "https://www.cognizant.com/04",
+              headline: "Successful AI Journeys Depend on Best Practices",
+              body: "Bret Greenstein of Cognizant and Inder Kochar of Novartis Oncology talk about the challenges, opportunities and best practices around centering an enterprise around data and AI.",
+              buttonText: "LISTEN TO THE PODCAST"
+            })
+
+            +ltCarousel({
+              image: "",
+              url: "https://www.cognizant.com/05",
+              headline: "Data and Analytic Models Have a ‘Best Used by’ Date. Ignore Them at Your Peril.",
+              body: "By continually assuring the currency, accuracy and relevancy of business-critical data and analytic models, organizations can better anticipate and prescriptive solve whatever challenges they may encounter.",
+              buttonText: "READ THE PERPECTIVE"
+            })
+
+            +ltCarousel({
+              image: "",
+              url: "https://www.cognizant.com/06",
+              headline: "The US Needs an Effective National AI Strategy ",
+              body: "Congressman Will Hurd of Texas and Bret Greenstein of Cognizant to talk about what a national AI strategy should look like here in the United States.",
+              buttonText: "LISTEN TO THE PODCAST"
+            })
+
+          .thoughtLeadershipBottom-pagination.text-center
+
+
+// ===================================================================================
+//  ██████  █████  ██████   █████  ██████  ██ ██      ██ ████████ ██ ███████ ███████
+// ██      ██   ██ ██   ██ ██   ██ ██   ██ ██ ██      ██    ██    ██ ██      ██
+// ██      ███████ ██████  ███████ ██████  ██ ██      ██    ██    ██ █████   ███████
+// ██      ██   ██ ██      ██   ██ ██   ██ ██ ██      ██    ██    ██ ██           ██
+//  ██████ ██   ██ ██      ██   ██ ██████  ██ ███████ ██    ██    ██ ███████ ███████
+// ===================================================================================
+.align-middle.relative.bg-grd-dark-blue-dark
+  .z1.relative
+    include _ebook-sticky.pug
+    include _ebook.pug
+    .grid-container.py5.text-white
+      .grid-x.grid-margin-x.align-justify.align-middle
+        .small-12.medium-5.large-5.cell(data-aos="fade-right")
+          img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-multiple-capabilities-white.svg" alt="CHANGE_ME")
+          p.font-wide.medium-mb2 MULTIPLE CAPABILITIES
+          h2 Intelligence takes many forms
+          P Business challenges come in all shapes and sizes. Tackling them requires a range of capabilities. Cognizant’s AI is structured around three distinct capability profiles, helping you to explain, predict and respond across the business ecosystem. 
+        .small-12.medium-5.large-5.cell 
+          .media-object.mb1.medium-mb3(data-aos="fade-left")
+            .media-object-section
+              img.lazyload(data-sizes="auto" data-src="images/icons/icon-evolutionary-ai-white.svg" width="40" alt="CHANGE_ME")
+            .media-object-section
+              h4.text-heavy Evolutionary AI&trade;
+              p Discover entirely new objects and behaviours to yield solutions that do not yet exist. 
+              a.arrow.small(href="./evolutionary-ai.html" target="_blank" rel="noopener") DISCOVER MORE
+          .media-object.mb1.medium-mb3(data-aos="fade-left")
+            .media-object-section
+              img.lazyload(data-sizes="auto" data-src="images/icons/icon-conversational-ai-white.svg" width="40" alt="CHANGE_ME")
+            .media-object-section
+              h4.text-heavy Conversational AI
+              p Enable transformative voice-based interactive services. 
+              a.arrow.small(href="conversational-ai.html") DISCOVER MORE
+          .media-object.mb1.medium-mb3(data-aos="fade-left")
+            .media-object-section
+              img.lazyload(data-sizes="auto" data-src="images/icons/icon-causality-white.svg" width="40" alt="CHANGE_ME")
+            .media-object-section
+              h4.text-heavy Causality
+              p Assumption-free engine that learns and understands what drives behaviour and decision-making. 
+              a.arrow.small(href="./causality.html") DISCOVER MORE
+          .media-object.mb1.medium-mb3(data-aos="fade-left")
+            .media-object-section
+              img.lazyload(data-sizes="auto" data-src="images/icons/icon-deep-learning-white.svg" width="40" alt="CHANGE_ME")
+            .media-object-section
+              h4.text-heavy Deep Learning
+              p Infuse cognitive, human-like capabilities and intelligence into enterprise business functions and systems. 
+              a.arrow.small(href="./deep-learning.html") DISCOVER MORE
+  //- img.absolute.pos-top.wh100.lazyload.object-fit-contain(data-sizes="auto" data-src="images/video/tendrils.gif" alt="CHANGE_ME")
+  video.absolute.pos-top.pos-center.wh100.lazyload.object-fit-cover(autoplay muted data-poster="images/video/tendrils.jpg" preload="none")
+    source(src="images/video/tendrils.mp4" type="video/mp4")
+    source(src="images/video/tendrils.webm" type="video/webm")
+    source(src="images/video/tendrils.ogg" type="video/ogg")
+

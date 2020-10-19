@@ -1,0 +1,24 @@
+extends _template.pug
+include _mixins-sprint2.pug
+
+block vars
+  - var pageTitle = "Artificial Intelligence Solutions | Cognizant"
+  - var metaDescription= "See how Cognizant Artificial Intelligence solutions help companies isolate the data that matters and make it useful."
+  - var metaKeywords= "artificial intelligence solutions, ai solutions, ai for business"
+
+block content
+  include includes/landing/_intro.pug
+  include includes/landing/_horizontal-accordions-sprint2.pug
+  include includes/landing/_stat1-sprint2.pug
+  include includes/landing/_stat4-sprint2.pug
+  include includes/landing/_thought-leadership-sprint2.pug
+  include includes/landing/_stat2-sprint2.pug
+  include includes/landing/_stat5-sprint2.pug
+  include includes/landing/_case-studies-sprint2.pug
+
+block append scripts
+  //- .lazyload(data-script="js/min/curtains.min.js")
+  //- .lazyload(data-script="js/min/curtainjs-min.js")
+  //- script(src="node_modules/curtainsjs/dist/curtains.umd.min.js")
+  script(src="js/min/curtains.min.js")
+  script(src="js/min/curtainjs-min.js")

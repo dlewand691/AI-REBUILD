@@ -1,0 +1,21 @@
+.ebook {
+  background: $pink;
+  background: linear-gradient(170deg, $pink 0%, $purple 100%);
+  top       : -1rem;
+  @include breakpoint(large) {
+    top: -4rem;
+  }
+
+}
+
+.ebook-sticky {
+  &.sticky {
+    &.is-anchored {
+      display: none;
+    }
+
+    &.is-stuck {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "Operations Intelligence | Cognizant"
+  - var metaDescription= "CHANGE_ME"
+  - var metaKeywords= "CHANGE_ME"
+
+block content
+  +intro-panel({
+    backgroundImage: "",
+    logo: true,
+    icon: "images/icons/icon-operations-intelligence-white.svg",
+    eyebrow: "OPERATIONS INTELLIGENCE",
+    headline: "Operational intelligence to fuel efficient business processes",
+    bodyCopy: "Optimize operations to meet today’s ever-changing market.",
+    button: false,
+    url: "CHANGE_ME",
+    buttonText: "CHANGE_ME"
+    })
+
+  +sideBox({
+  bodyCopy: "<p>Businesses success in 2020 and beyond will require anticipation of market changes and adaptation of operations to forge alternate pathways to deliver products and services. Traditional analytics and reporting tools are unable to deal with the complexity of interlinked processes and a constantly changing business environment.</p>"
+  })
+
+  // ===================================================================================
+  // IMAGE
+  // ===================================================================================
+  .text-center.px2
+    //- img.w100.lazyload(data-sizes="auto" data-src="images/depth-pages-assets/bg-operations-intelligence.jpg" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover(loop muted data-poster="images/video/operations-intelligence.jpg" preload="")
+      source(src="images/video/operations-intelligence.mp4" type="video/mp4")
+      source(src="images/video/operations-intelligence.webm" type="video/webm")
+      source(src="images/video/operations-intelligence.ogg" type="video/ogg")
+
+  .grid-container.bg-grd-dark-blue-dark.text-white
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3.m0(data-aos="fade-up") Improve processes, increase certainty
+          +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Whether improving forecast models or optimizing inventory management, operating capabilities hinge on managing and optimizing data. Cognizant Operations Intelligence brings together data, analytics and intelligence to help businesses create new value for customers, respond quickly to dynamic market conditions and run at optimal efficiency. This helps companies improve day-to-day business and technology operations—shifting them from reactive to proactive.
+
+  .grid-container
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3.m0(data-aos="fade-up") Our Approach
+          +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Our offerings optimize decisions in today’s digital world by continuously ingesting, correlating and analyzing multiple data streams in different formats to identify patterns and trends, predict outcomes and inform business decision-makers of optimal actions to take.
+
+          Cognizant’s analytics integrates and validates data from multiple source systems to automate decisions and responses. Operations Intelligence answers critical questions about your operational process:
+
+        ul
+          li
+            strong What is happening in my business today? 
+            | Analyze the data that matters and deliver enterprise-wide intelligence that reduce costs, increase margins and improve profitability. Make the best decisions based on real-time intelligence. 
+
+          li
+            strong Why is it happening? 
+            | Identify what is driving customer decisions and how to create a bigger impact. Gain a clear view of all operations.
+
+          li
+            strong What will happen next? 
+            | Use predictive analytics to improve demand visibility and forecast accuracy. End-to-end supply chain accuracy has never been more important. 
+
+          li
+            strong What to do about it? 
+            | Prescribe actions that guide the buyer, marketer and seller to boost prices, profits and productivity.  
+
+  // ======================================================================
+  // STAT
+  // ======================================================================
+  .text-white.text-center.bg-grd-blue-radial.p2.medium-mbn5.medium-py8
+    .grid-x.grid-margin-x.align-stretch.medium-h100
+      .cell
+        img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-operations-intelligence-white.svg" alt="CHANGE_ME")
+        p.font-wide OPERATIONS INTELLIGENCE
+      .cell
+        h2 Increase overall forecase accuracy by
+      .cell
+        .responsive-embed.stat1
+          object.lazyload(data-sizes="auto" data-expand="-200" type="image/svg+xml" data-object="images/stat-operations-intelligence.svg")
+      .cell
+        p.small.m0 Based on actual client engagements. Individual results may vary.
+
+
+  // ===================================================================================
+  // REPORT
+  // ===================================================================================
+  .z1.relative
+    +callout-panel({
+      useVideo: false,
+      width: "large-10",
+      icon: "images/icons/icon-download-report-circle-blue.svg",
+      headline: "Operations intelligence",
+      bodyCopy: "Brochure | Resilient Modern Business Operations",
+      buttonText: "DOWNLOAD BROCHURE",
+      link: "CHANGE_ME",
+      revealID : null,
+      youtubeUrl: null
+    })(class="")
+
+
+  // ===================================================================================
+  // ADDITIONAL RESOURCES
+  // ===================================================================================
+  .grid-container.bg-grd-dark-blue-dark.my3.text-white(data-aos="fade-up")
+    .grid-x.grid-padding-x.align-center.pt3.pb2.px2.medium-px3
+      .cell.text-center
+        img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-read-report-white.svg" data-aos="fade-up" alt="CHANGE_ME")
+        h2.h3.mb2(data-aos="fade-up") Additional Resources
+
+      // ===================================================================================
+      // TILES
+      // ===================================================================================
+      .grid-x.grid-margin-x.align-center
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources01.jpg",
+          eyebrow: "CASE STUDY",
+          title : "AI Insights Improve Healthcare Operations and Decision Making",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources02.jpg",
+          eyebrow: "CASE STUDY",
+          title : "AI Accelerates Pharma Market Share Analytics",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+  include includes/global/_take-the-first-step.pug
+
+
+

@@ -1,0 +1,63 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI in Life Sciences | Cognizant"
+  - var metaDescription= "See how Cognizant helps Life Sciences clients leverage data and AI to be a competitive asset in ensuring drug safety, regulatory compliance and more."
+  - var metaKeywords= "ai in life sciences, life sciences ai, life sciences data"
+  - var backgroundImage = "images/case-studies-landing-backgrounds-assets/bg-caseStudyLanding-life-sciences.png"
+  - var eyebrowIcon = "images/icons/icon-life-sciences-white.svg"
+  - var eyebrow = "LIFE SCIENCES"
+  - var headline = "Accelerate medical innovation with intelligent solutions"
+  - var introParagraph01 = "Medical innovation, virtual medicine and intelligent drug discovery are some of the driving forces that life sciences companies need to evolve. Learn more about how Cognizant is helping clients enhance drug safety, improve productivity and ensure regulatory compliance."
+  - var introParagraph02 = ""
+
+block content
+  .bg-grd-blue-radial-bottom
+    .py3.bg-pos-top-center.bg-size-contain.lazyload(data-bg=backgroundImage)
+      .grid-container.medium-pt3.large-pt5
+        .grid-x.grid-padding-x.text-white.align-center
+          +caseStudy-intro
+
+          .large-8.cell.mb10
+            .grid-x.grid-padding-x.text-white.flex-container.pb2.medium-pb3
+              .cell.text-center
+                h3.medium-mb3 Case Studies
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-life-sciences-01.jpg",
+                title: "AI Accelerates Pharma Market Share Analytics",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-life-sciences-02.jpg",
+                title: "AI Keeps Sensitive Pharma Information Secure",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-life-sciences-03.jpg",
+                title: "BigDecisions Cuts Costs, Speeds Data to Pharma Sales Reps",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-life-sciences-04.jpg",
+                title: "Healthy Data? That Means Reliable, Defensible, Accessible.",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-life-sciences-05.jpg",
+                title: "How Unstructured Data Analysis Can Lead to Healthier Patient Behavior",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-life-sciences-06.jpg",
+                title: "Data Science Fast-Tracks Development Time for Cancer Treatments",
+                url: "CHANGE_ME"
+                })
+
+

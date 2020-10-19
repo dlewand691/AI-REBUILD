@@ -1,0 +1,152 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "Conversational AI | Cognizant"
+  - var metaDescription= "Deliver exceptional, personalized experiences with Conversational AI from Cognizant. Learn more."
+  - var metaKeywords= "conversational ai, conversational ai solutions, conversational ai technology"
+
+block content
+  +intro-panel({
+    backgroundImage: "",
+    logo: true,
+    icon: "images/icons/icon-conversational-ai-white.svg",
+    eyebrow: "CONVERSATIONAL AI",
+    headline: "Insightful, unmatcheduser experiences",
+    bodyCopy: "Deliver exceptional personalized experiences with Conversational AI.",
+    button: false,
+    url: "CHANGE_ME",
+    buttonText: "CHANGE_ME"
+    })
+
+  +sideBox({
+  bodyCopy: "<p>Conversational AI is changing the way we engage with customers – vastly improving reach, responsiveness and personalization. Marketing, commerce and support leaders are now leveraging these technologies broadly and widely to achieve remarkable gains in self-service, customer experience and operational insights.</p>"
+  })
+
+  // ===================================================================================
+  // IMAGE
+  // ===================================================================================
+  .text-center.px2
+    //- img.w100.lazyload(data-sizes="auto" data-src="images/depth-pages-assets/bg-conversational-ai.jpg" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover(loop muted data-poster="images/video/conversational-ai.jpg" preload="")
+      source(src="images/video/conversational-ai.mp4" type="video/mp4")
+      source(src="images/video/conversational-ai.webm" type="video/webm")
+      source(src="images/video/conversational-ai.ogg" type="video/ogg")
+
+  .grid-container.bg-grd-dark-blue-dark.text-white
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3.m0(data-aos="fade-up") Improve interactions across all your customer touchpoints
+          +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Successfully scaling intelligent assistants requires selecting the best customer facing processes, knowing the channels to prioritize, applying proven conversational design and developing a smart architecture strategy. We help large organizations operationalize and accelerate the adoption of these technologies to better meet today’s customer expectations, achieve rapid gains in efficiency and cost savings.
+
+
+  // ===================================================================================
+  // IMAGE
+  // ===================================================================================
+  .text-center.px2.medium-mbn5
+    //- img.w100.lazyload.large-6(data-sizes="auto" data-src="images/bg/bg-section-conversational-ai.svg" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover.large-6(loop muted data-poster="images/video/conversation-machine.jpg" preload="")
+      source(src="images/video/conversation-machine.mp4" type="video/mp4")
+      source(src="images/video/conversation-machine.webm" type="video/webm")
+      source(src="images/video/conversation-machine.ogg" type="video/ogg")
+
+  .bg-grd-dark-blue-dark
+    .grid-container.text-white.medium-myn5
+      .grid-x.grid-padding-x.align-center.py3.medium-py8.px2.large-px0
+        .cell.medium-9.large-7
+          .text-center
+            h2.h3.m0(data-aos="fade-up") Our Approach
+            +dividerDash(data-aos="flip-left")
+          :markdown-it(html typographer)
+            We bring years of experience to conversational AI solutions across multiple industries including healthcare, life sciences, banking, insurance, travel, hospitality, automotive, communications and retail clients. The goal is always to create differentiated customer experience, increase operational efficiency, and optimize all potential outcomes.   
+
+            ##### &nbsp;
+            ##### Relevance and Context Built In
+            Today’s bots are more contextual and personalized than ever before. Real-time textual and sentiment analytics identify customer tone and adjust or route conversations dynamically. By incorporating data intelligence, highly relevant recommendations and insights can be made. These conversational solutions anticipate questions and customer needs, responding with empathy to deliver higher engagement, efficiency, productivity and sales. 
+
+            ##### &nbsp;
+            ##### Customer Experience Perfected
+            User experience and conversational design are integral components to delivering personalized, insightful customer engagement. We craft solutions that clarify and amplify brand identity – with a natural dialogue flow – providing the rich and relevant experience today’s customers expect across the channels they prefer.
+
+            ##### &nbsp;
+            ##### Technology Innovation
+            Solving complex customer service challenges, creating new channels for commerce and providing individualized, contextual content typically includes integration with legacy applications, integrated voice response systems and accessing disparate data sources. From project inception through full implementation, we partner with our clients, leading cloud providers and innovative point solutions to deliver conversational programs that optimize existing investments and deliver innovation for long term success.
+
+
+
+  // ===================================================================================
+  // REPORT
+  // ===================================================================================
+  +callout-panel({
+    useVideo: true,
+    width: "large-10",
+    icon: "images/icons/icon-video-blue.svg",
+    headline: "Conversational AI: The Cognizant Difference",
+    bodyCopy: "Conversational technologies can now sense whether a client is frustrated or concerned and inform human agents to respond quickly and appropriately to resolve issues.",
+    buttonText: "WATCH VIDEO",
+    link: null,
+    revealID : "video01",
+    youtubeUrl: "CHANGE_ME"
+  })(class="")
+
+
+  // ===================================================================================
+  // ADDITIONAL RESOURCES
+  // ===================================================================================
+  .grid-container.bg-grd-dark-blue-dark.my3.text-white(data-aos="fade-up")
+    .grid-x.grid-padding-x.align-center.pt3.pb2.px2.medium-px3
+      .cell.text-center
+        img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-read-report-white.svg" alt="CHANGE_ME")
+        h2.h3.mb2 Additional Resources
+
+      // ===================================================================================
+      // TILES
+      // ===================================================================================
+      .grid-x.grid-margin-x.align-center
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources01.jpg",
+          eyebrow: "EBOOK",
+          title : "Achieve Unmatched User Experiences with Conversational AI",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources02.jpg",
+          eyebrow: "VIDEO",
+          title : "Drive-Through Innovation With Conversational AI",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources01.jpg",
+          eyebrow: "VIDEO",
+          title : "Creating On-Demand Customer Support with Conversational AI",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources02.jpg",
+          eyebrow: "CASE STUDY",
+          title : "Chatbot Improves Airline Customer Experience",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+  include includes/global/_take-the-first-step.pug
+
+
+

@@ -1,0 +1,15 @@
+mixin tl-mixin 
+  button.close-button.pt2(data-close="offCanvas" aria-label="Close modal" type="button")
+    h5.text-white.lh0.m0
+      span(aria-hidden="true") 
+      i.close
+
+  .grid-x.grid-padding-x.p1.large-p2.bg-grd-lr-dark-blue.text-white.align-middle.overflow-hidden(style="margin: 2vh 0; border-radius: .5rem 0 0 .5rem; height: 96vh;")
+    .cell.medium-auto.small-order-2.medium-order-1
+      p.small.font-wide!= contentType
+      h3.m0!= headline
+      +dividerDash("left")
+      p!= bodyCopy
+      a.arrow(href=link)!= linkText
+    .cell.medium-auto.small-order-1.medium-order-2
+      img.lazyload.object-fit-cover(data-sizes="auto" data-src=image alt=headline)

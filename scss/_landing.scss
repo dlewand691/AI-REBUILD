@@ -1,0 +1,18 @@
+.intro-section1 {
+  @include breakpoint(medium) {
+    min-height: 900px;
+  }
+}
+
+.stat1 {
+  @include breakpoint(medium) {
+    padding-bottom: 28%;
+  }
+}
+
+.stat2,
+.stat3 {
+  @include breakpoint(medium) {
+    padding-bottom: 30%;
+  }
+}

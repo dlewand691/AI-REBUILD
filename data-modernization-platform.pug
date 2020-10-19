@@ -1,0 +1,189 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "Data Platform - Powered by BigDecisions | Cognizant"
+  - var metaDescription= "Learn about the Cognizant Data Modernization Platform, which allows businesses to access, structure and analyze the data that provides the greatest value."
+  - var metaKeywords= "data platform, data modernization platform, bigdecisions"
+
+block content
+  +intro-panel({
+    backgroundImage: "",
+    logo: true,
+    icon: "images/icons/icon-data-platform-white.svg",
+    eyebrow: "DATA MODERNIZATION PLATFORM",
+    headline: "Your biggest insights powered by BigDecisions&reg;",
+    bodyCopy: "Access, structure and analyze the data that provides the greatest value.",
+    button: false,
+    url: "CHANGE_ME",
+    buttonText: "CHANGE_ME"
+  })(class="")
+
+  +sideBox({
+  bodyCopy:"<h6>Cognizant’s Data Modernization Platform powered by BigDecisions&reg; </h6><p>A proven system of intelligence for ingesting, structuring and analyzing big datasets. It is the fastest way to implement an analytics-driven architecture. It helps organizations fully operationalize AI, sourcing all the data that matters to the business and delivering enterprise-wide intelligence. The resulting insights enable effective and efficient use of data across the organization.</p>"
+  })
+
+  //- ===================================================================================
+  //- IMAGE
+  //- ===================================================================================
+  .text-center.px2
+    //- img.lazyload.w100(data-sizes="auto" data-src="images/depth-pages-assets/bg-data-platform.jpg" data-expand="500" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover(loop muted data-poster="images/video/data-platform.jpg" preload="")
+      source(src="images/video/data-platform.mp4" type="video/mp4")
+      source(src="images/video/data-platform.webm" type="video/webm")
+      source(src="images/video/data-platform.ogg" type="video/ogg")
+
+
+  //- .grid-container.bg-grd-dark-blue-dark.text-white.medium-p3.text-white.medium-mbn5
+  //-   .grid-x.align-center.p3
+  //-     .large-8.cell
+  .grid-container.bg-grd-dark-blue-dark.text-white.medium-mbn5.medium-pb5
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        :markdown-it(html typographer)
+          Our platform provides a proven, established pathway to optimize data migration, storage, structure, security and performance analytics. 
+          + Environment and data governance
+          + Ethical governance
+          + Universal data management & rapid data ingestion
+          + End-to-end interactive analytics
+          + Self-service data discovery and exploration
+          + Context sensitive metadata
+        .grid-x.grid-padding-x.small-up-1.medium-up-3
+          .cell
+            .text-center
+              img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-data-migrator-white.svg" alt="CHANGE_ME")
+              h6 Migrate Data Efficiently
+            p Moving to the cloud eliminates the cost associated with legacy systems, freeing both capital and human resources. 
+
+          .cell
+            .text-center
+              img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-data-accuracy-white.svg" alt="CHANGE_ME")
+              h6 Improve Data Accuracy and Flexibility
+            p Simplify how data is structured and accessed without risking privacy. Implement both proprietary and third-party analytics tools. Eliminate legacy systems and software. 
+
+          .cell
+            .text-center
+              img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-ai-deployment-white.svg" alt="CHANGE_ME")
+              h6 Deploy Analytics at Scale
+            p Experiment with analytics. Accumulate accurate data sets that can be used to deploy AI. 
+
+  .medium-mbn5.relative.z1
+    +callout-panel({
+      useVideo: false,
+      width: "large-10",
+      icon: "images/icons/icon-download-report-blue.svg",
+      headline: "The Road To Data Modernization",
+      bodyCopy: "A guide to removing barriers on the path to data-driven success",
+      buttonText: "DOWNLOAD REPORT",
+      link: "https://www.cognizant.com/content/dam/cognizant_foundation/aicom/documents/data-modernization-platform.pdf",
+      revealID : null,
+      youtubeUrl: "CHANGE_ME"
+      })(class="")
+
+  // ======================================================================
+  // STAT
+  // ======================================================================
+  .text-white.text-center.bg-grd-blue-radial.p2.medium-p5.medium-pt8
+    .grid-x.grid-margin-x.align-stretch.medium-h100
+      .cell
+        img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-data-platform-white.svg" alt="CHANGE_ME")
+        p.font-wide DATA MODERNIZATION PLATFORM
+      .cell
+        .responsive-embed.stat1
+          object.lazyload(data-sizes="auto" data-expand="-100" type="image/svg+xml" data-object="images/stat-data-platform.svg")
+      .cell
+        h2.mb2 less time
+        h5 than platforms built from the ground up
+      .cell
+        p.small.m0 Based on actual client engagements. Individual results may vary.
+
+  // ===================================================================================
+  // CONTENT
+  // ===================================================================================
+  .grid-container.mb1.my1.medium-my5
+    .grid-x.grid-padding-x.align-center
+      .large-10.cell
+        h2.h3.text-center(data-aos="fade-up") A rapidly deployable and scalable path to enterprise intelligence
+        +dividerDash(data-aos="flip-left")
+        h5.text-normal The Data Modernization Platform provides a scalable, pre-built, end-to-end solution from ingesting data to operationalizing enterprise-wide analytics. It is comprised of three modules:
+
+        .grid-x.grid-padding-x.small-up-1.medium-up-3.text-center
+          .cell.flex-container(data-aos="fade-left")
+            .card.bd0
+              .card-section
+                img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-data-migrator-blue.svg" data-expand="200" alt="CHANGE_ME")
+                h6 Enterprise Data Migrator
+                p.text-left This pre-built, proven migration engine facilitates modernization of existing data appliances / warehouses / mainframe systems to maximize performance and reduce costs through automated optimization and migration.
+              .card-divider
+                a.small.button.arrow(href="#") LEARN MORE
+          .cell.flex-container(data-aos="fade-up")
+            .card.bd0
+              .card-section
+                img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-data-lakes-blue.svg" data-expand="200" alt="CHANGE_ME")
+                h6 Enterprise Data Lakes
+                p.text-left Provides a seamless orchestration of the various information management and data sciences components coupled with out of the box, industry-grade workbenches required for a data lake build which can elevate it to become a system of intelligence.
+              .card-divider
+                a.small.button.arrow(href="#") LEARN MORE
+          .cell.flex-container(data-aos="fade-right")
+            .card.bd0
+              .card-section
+                img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-analytics-blue.svg" data-expand="200" alt="CHANGE_ME")
+                h6 Enterprise Analytics
+                p.text-left An end-to-end fast data and analytics platform to make sense of the huge volumes of data for accelerating analytics and proliferating business drivers to discover profound insights, make predictions, or generate recommendations.
+              .card-divider
+                a.small.button.arrow(href="#") LEARN MORE
+
+  // ===================================================================================
+  // ADDITIONAL RESOURCES
+  // ===================================================================================
+  .grid-container.bg-grd-dark-blue-dark.my3.text-white(data-aos="fade-up")
+    .grid-x.grid-padding-x.align-center.p3
+      .cell.text-center
+        img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-read-report-white.svg" alt="CHANGE_ME")
+        h2.h3.mb2 Additional Resources
+
+      //- ===================================================================================
+      //- TILES
+      //- ===================================================================================
+      .grid-x.grid-margin-x.align-center
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources01.jpg",
+          eyebrow: "OFFERING OVERVIEW",
+          title : "Cognizant Data Modernization Platform ",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })(class="")
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources02.jpg",
+          eyebrow: "WHITEPAPER",
+          title : "Data Modernization: The Foundation for Digital Transformation",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })(class="")
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources01.jpg",
+          eyebrow: "BLOG",
+          title : "How to Accelerate Business Change Using Data and AI",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })(class="")
+
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources02.jpg",
+          eyebrow: "PERSPECTIVES",
+          title : "Data Modernization: The Big Hurdles - and How to Clear Them",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })(class="")
+
+  include includes/global/_take-the-first-step.pug

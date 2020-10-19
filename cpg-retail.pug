@@ -1,0 +1,43 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI in CPG & Retail | Cognizant"
+  - var metaDescription= "See how Cognizant helps CPG and Retail clients leverage data and AI to inform user interactions, loyalty programs, and more."
+  - var metaKeywords= "ai in cpg, ai in retail, cpg retail ai"
+  - var backgroundImage = "images/case-studies-landing-backgrounds-assets/bg-caseStudyLanding-consumer-goods.png"
+  - var eyebrowIcon = "images/icons/icon-consumer-goods-white.svg"
+  - var eyebrow = "CONSUMER GOODS"
+  - var headline = "Inform user interactions and loyalty programs"
+  - var introParagraph01 = "Successful consumer product businesses are those that achieve optimal operational efficiency by identifying and reaching their customers with precision. Through increased command of huge and divergent datasets, AI can help CPG companies allocate resources for scaling operations, manage just-in-time supply chains and identify new markets."
+  - var introParagraph02 = "Personalization of product and packaging to individuals as well as creating a more relevant and enjoyable shopping experience through analysis of past behaviors and preferences are just some of the areas where we are helping organizations isolate and cater to customers complex needs."
+
+block content
+  .bg-grd-blue-radial-bottom
+    .py3.bg-pos-top-center.bg-size-contain.lazyload(data-bg=backgroundImage)
+      .grid-container.medium-pt3.large-pt5
+        .grid-x.grid-padding-x.text-white.align-center
+          +caseStudy-intro
+
+          .large-8.cell.mb10
+            .grid-x.grid-padding-x.text-white.flex-container.pb2.medium-pb3
+              .cell.text-center
+                h3.medium-mb3 Case Studies
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-consumer-goods-01.jpg",
+                title: "Retailer Improves Decision Making With Cloud Analytics",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-consumer-goods-02.jpg",
+                title: "Automaker Improves Customer Journey With Chatbots",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-consumer-goods-03.jpg",
+                title: "Digital Shelf Helps Consumer Goods Company Centralized Product Information",
+                url: "CHANGE_ME"
+                })

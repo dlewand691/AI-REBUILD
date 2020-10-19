@@ -1,0 +1,136 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "Deep Learning for Business Intelligence | Cognizant"
+  - var metaDescription= "See how Cognizant infuses cognitive, human-like capabilities and intelligence into enterprise business functions and systems using Deep Learning."
+  - var metaKeywords= "deep learning, ai deep learning, machine learning"
+
+block content
+
+  +intro-panel({
+    backgroundImage: "",
+    logo: true,
+    icon: "images/icons/icon-deep-learning-white.svg",
+    eyebrow: "DEEP LEARNING",
+    headline: "Integrate multiple layers of intelligence with Deep Learning",
+    bodyCopy: "Infuse cognitive, human-like capabilities and intelligence into enterprise business functions and systems.",
+    button: false,
+    url: "CHANGE_ME",
+    buttonText: "CHANGE_ME"
+  })
+
+  +sideBox({
+    bodyCopy: "<p>Cognizant helps companies tackle the most complex data analytics challenges.</p><p>Deep Learning is the fastest growing field in AI and it’s disrupting every industry. With advanced model-building techniques based on neural networks, it is solving the most challenging cases. This has created a lot of excitement and attracted a lot of attention in recent years.</p>"
+  })
+
+  // ===================================================================================
+  // IMAGE
+  // ===================================================================================
+  .text-center.px2
+    //- img.w100.lazyload(data-sizes="auto" data-src="images/depth-pages-assets/bg-deep-learning.jpg" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover(loop muted data-poster="images/video/deep-learning.jpg" preload="")
+      source(src="images/video/deep-learning.mp4" type="video/mp4")
+      source(src="images/video/deep-learning.webm" type="video/webm")
+      source(src="images/video/deep-learning.ogg" type="video/ogg")
+
+
+  .grid-container.bg-grd-dark-blue-dark.text-white
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3(data-aos="fade-up") Identify Complex Data Relationships
+          +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Our deep learning capabilities are discovering complex features and relationships in high-dimensional data and informing both decision systems and design structures.These models are composed of multiple processing layers designed to learn about the feature abstraction in the data. And, the paradigms have helped accomplish complicated tasks, achieving major breakthroughs in a number of domains.
+
+
+  .grid-container
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3(data-aos="fade-up") Our Approach
+        +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Fueled by the availability of staggering amounts of data and the dramatic drop in AI computing power requirements, this advanced technology is informing:
+
+        .grid-x.grid-padding-x.small-up-2.medium-up-6.text-center.text-blue
+          .cell.column-block
+            img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-image-blue.svg" alt="CHANGE_ME")
+            p.small IMAGES
+          .cell.column-block
+            img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-video-blue.svg" alt="CHANGE_ME")
+            p.small VIDEO
+          .cell.column-block
+            img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-sounds-blue.svg" alt="CHANGE_ME")
+            p.small SOUNDS
+          .cell.column-block
+            img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-voice-blue.svg" alt="CHANGE_ME")
+            p.small VOICE
+          .cell.column-block
+            img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-text-blue.svg" alt="CHANGE_ME")
+            p.small TEXT
+          .cell.column-block
+            img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-unstructured-data-blue.svg" alt="CHANGE_ME")
+            p.small UNSTRUCTURED DATA
+
+        :markdown-it(html typographer)
+          + Which platform providers we partner with to help our clients understand and properly interpret images, video, sounds, voice, text and all forms of unstructured data to get actionable insights.
+          + What we recommend in terms of optimal architecture to meets our clients’ security,	latency and cost needs.
+
+
+  // ===================================================================================
+  // LEAF
+  // ===================================================================================
+  .grid-container.bg-grd-dark-blue-dark.text-white.medium-mbn5.medium-pb5
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          img.lazyload.mb1(data-sizes="auto" data-src="images/icons/icon-leaf-white.svg" alt="CHANGE_ME")
+          p.small.font-wide.text-heavy.mb2 LEAF
+        :markdown-it(html typographer)
+          Through our differentiated Evolutionary AI™ technology, we optimize architectures automatically,  ustomizing them to client problems, significantly improving performance over hand-designed deep learning implementations. 
+
+          Our patented Evolutionary AI platform, LEAF, generates and enhances any neural network, making deep learning applications more powerful and broadly applicable to all the business requirements.  
+
+  // ===================================================================================
+  // REPORT
+  // ===================================================================================
+  +callout-panel({
+    useVideo: false,
+    width: "medium-10 large-10",
+    icon: "images/icons/icon-download-report-blue.svg",
+    headline: "Not All Data Is AI Ready: Avoid These 5 Bottlenecks to Aid Deep Learning",
+    bodyCopy: "AI systems built using deep learning are only as smart as the data that trains the models within. To ensure optimal intelligence, here’s how to set a firmer foundation for data quality.",
+    buttonText: "LEARN MORE",
+    link: "CHANGE_ME",
+    revealID : null,
+    youtubeUrl: "CHANGE_ME"
+  })(class="")
+
+  // ===================================================================================
+  // ADDITIONAL RESOURCES
+  // ===================================================================================
+  .grid-container.bg-grd-dark-blue-dark.my3.text-white(data-aos="fade-up")
+    .grid-x.grid-padding-x.align-center.pt3.pb2.px2.medium-px3
+      .cell.text-center
+        img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-read-report-white.svg" alt="CHANGE_ME")
+        h2.h3.mb2 Additional Resources
+
+      // ===================================================================================
+      // TILES
+      // ===================================================================================
+      .grid-x.grid-margin-x.align-center
+        +additional-resource-tile({
+          useVideo: false,
+          background : "images/additional-resources-assets/bg-additional-resources03.jpg",
+          eyebrow: "DIGITAL SYSTEMS & TECHNOLOGY",
+          title : "Applying Deep Learning to Transform Breast Cancer Diagnosis",
+          link: "CHANGE_ME",
+          revealID : null,
+          youtubeUrl: "CHANGE_ME"
+        })
+
+  include includes/global/_take-the-first-step.pug
+
+

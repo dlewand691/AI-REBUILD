@@ -1,0 +1,38 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI in Energy & Utilities | Cognizant"
+  - var metaDescription= "See how Cognizant helps Energy and Utilities clients leverage data and AI to be increase operational efficiency and agility."
+  - var metaKeywords= "ai in energy, ai in utilities, energy ai"
+  - var backgroundImage = "images/case-studies-landing-backgrounds-assets/bg-caseStudyLanding-energy-utilities.png"
+  - var eyebrowIcon = "images/icons/icon-energy-utilities-white.svg"
+  - var eyebrow = "ENERGY & UTILITIES"
+  - var headline = "Increase operational agility and efficiency"
+  - var introParagraph01 = "There is a growing need for greater operational efficiency and agility in both producers and suppliers. But the path to achieving those goals is not always a clear, direct route with all the legacy equipment and platforms that are prevalent in this industry."
+  - var introParagraph02 = "At Cognizant, we are helping our energy clients drive innovation, growth and productivity throughout their businesses by facilitating application and platform consolidation wherever possible. We’re also using AI to analyze unstructured data like drone images of field equipment to diagnose issues and request maintenance when necessary."
+
+block content
+  .bg-grd-blue-radial-bottom
+    .py3.bg-pos-top-center.bg-size-contain.lazyload(data-bg=backgroundImage)
+      .grid-container.medium-pt3.large-pt5
+        .grid-x.grid-padding-x.text-white.align-center
+          +caseStudy-intro
+
+          .large-8.cell.mb10
+            .grid-x.grid-padding-x.text-white.flex-container.pb2.medium-pb3
+              .cell.text-center
+                h3.medium-mb3 Case Studies
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-energy-utilities-01.jpg",
+                title: "Intelligent Chatbots For Improved Sales and Customer Satisfaction",
+                url: "CHANGE_ME"
+                })
+
+              +caseStudy-tile({
+                image: "images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-energy-utilities-02.jpg",
+                title: "AI Speeds Repairs, Cuts Costs for Electric Utility",
+                url: "CHANGE_ME"
+                })
+

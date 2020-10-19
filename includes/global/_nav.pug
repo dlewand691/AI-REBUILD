@@ -1,0 +1,137 @@
+// ===================================================================================
+// ███    ██  █████  ██    ██
+// ████   ██ ██   ██ ██    ██
+// ██ ██  ██ ███████ ██    ██
+// ██  ██ ██ ██   ██  ██  ██
+// ██   ████ ██   ██   ████
+// ===================================================================================
+.bg-blue-dark.py-half.show-for-medium-xxl.link-white.text-white
+  .grid-container.small
+    .grid-x.align-middle.align-justify
+      .cell.shrink
+        a.text-normal(href="https://www.cognizant.com") Cognizant.com
+        span.mx-qtr •
+        a.text-normal(href="/industries") Industries
+        span.mx-qtr •
+        a.text-normal(href="/services#") Services
+        span.mx-qtr •
+        a.text-normal(href="/latest-thinking") Latest Thinking
+      .cell.shrink
+        a.text-normal(href="/careers") Careers
+        span.mx-qtr •
+        a.text-normal(href="http://news.cognizant.com/") News
+        span.mx-qtr •
+        a.text-normal(href="/events") Events
+        span.mx-qtr •
+        a.text-normal(href="http://investors.cognizant.com/") Investors
+        span.mx-half |
+        a.text-normal(data-toggle="language-menu") 
+          i.globe.mr-qtr
+          | Worldwide
+        include _nav-worldwide.pug
+        a.text-normal(href="#") 
+          i.search.text-bold.ml-half
+          .show-for-sr Search
+
+#stickyTitleBar(data-sticky-container)
+  .sticky(data-sticky data-margin-top="0" data-top-anchor="stickyTitleBar:bottom" data-sticky-on="small")
+    .title-bar.bg-transparent.px-half(data-responsive-toggle="primary-nav", data-hide-for="large")
+      button.w100.hamburger.hamburger--spin(type="button", data-toggle)
+        .title-bar-title.flex-container.align-justify.align-middle
+          a(href="index.html")
+            img.cog-logo.lazyload(title="Cognizant Technology Solutions", alt="Cognizant Technology Solutions", data-sizes="auto" data-src="images/logo-cognizant-artificialIntelligence-white.svg")
+
+          h5.m0.text-right.flex-container.align-middle
+            span.hamburger-box
+              span.hamburger-inner
+            .show-for-sr Menu
+
+#stickyNav.w100.absolute(data-sticky-container)
+  .sticky(data-sticky data-margin-top="0" data-top-anchor="stickyNav:bottom" data-sticky-on="small")
+    #primary-nav.top-bar.grid-container.bg-transparent.px-half.stacked-for-medium-xxl(data-animate="hinge-in-from-top hinge-out-from-top")
+      .top-bar-left.show-for-large
+        a(href="index.html")
+          img.cog-logo.lazyload(title="Cognizant Technology Solutions", alt="Cognizant Technology Solutions", data-sizes="auto" data-src="images/logo-cognizant-artificialIntelligence-white.svg")
+      .top-bar-right
+        ul.vertical.large-horizontal.menu.large-align-right(data-responsive-menu="accordion large-dropdown" data-multi-expand="false")
+          li
+            a Data & AI Services
+            ul.menu.vertical
+              li
+                .grid-container
+                  .grid-x.grid-padding-x
+                    .cell.auto
+                      a.text-normal(href="./data-modernization.html") Data Modernization
+                    .cell.auto
+                      a.text-normal(href="./data-modernization.html") Data Modernization
+              //- li
+              //-   a.text-normal(href="./data-modernization-method.html") Data Method
+              //- li
+              //-   a.text-normal(href="./data-modernization-platform.html") Data Platform
+              li
+                a.text-normal(href="./customer-intelligence.html") Customer Intelligence
+              li
+                a.text-normal(href="./operations-intelligence.html") Operations Intelligence
+              li
+                a.text-normal(href="./consulting.html") Consulting
+          li
+            a AI Capabilities
+            ul.menu.vertical
+              li
+                a.text-normal(href="./evolutionary-ai.html") Evolutionary AI
+              li
+                a.text-normal(href="./conversational-ai.html") Conversational AI
+              li
+                a.text-normal(href="./causality.html") Causality
+              li
+                a.text-normal(href="./deep-learning.html") Deep Learning
+          li
+            a Latest Thinking
+            ul.menu.vertical
+              li
+                a.text-normal(href="#") eBook
+                  i.file-acrobat.text-bold.mx-qtr
+                  span.tiny (PDF, 2.6mb)
+              li
+                a.text-normal(href="index.html#thoughtLeadership") Thought Leadership
+              li
+                a.text-normal(href="https://www.cognizant.com/ai/blog" target="_blank" rel="noopener") Blog
+                  i.launch.text-bold.ml-qtr
+          li
+            a Client Stories
+            ul.menu.vertical
+              li
+                a.text-normal(href="./banking-capital-markets.html") Banking & Capital Markets
+              li
+                a.text-normal(href="./insurance.html") Insurance
+              li
+                a.text-normal(href="./healthcare.html") Healthcare
+              li
+                a.text-normal(href="./life-sciences.html") Life Sciences
+              li
+                a.text-normal(href="./communications-media-tech.html") Communications, Media & Technology
+              li
+                a.text-normal(href="./cpg-retail.html") Consumer Goods & Retail
+              li
+                a.text-normal(href="./travel-hospitality.html") Travel & Hospitality
+              li
+                a.text-normal(href="./energy-utilities.html") Energy & Utilities
+              li
+                a.text-normal(href="./transportation-logistics.html") Transportation & Logistics
+          li.hide-for-medium-xxl
+            hr.my1.lighter
+            .grid-x.grid-padding-x
+              .cell.auto
+                a.text-white.text-normal.m0.p-half(href="https://www.cognizant.com") Cognizant.com
+                a.text-white.text-normal.m0.p-half(href="/industries") Industries
+                a.text-white.text-normal.m0.p-half(href="/services#") Services
+                a.text-white.text-normal.m0.p-half(href="/latest-thinking") Latest Thinking
+              .cell.auto
+                a.text-white.text-normal.m0.p-half(href="/careers") Careers
+                a.text-white.text-normal.m0.p-half(href="http://news.cognizant.com/") News
+                a.text-white.text-normal.m0.p-half(href="/events") Events
+                a.text-white.text-normal.m0.p-half(href="http://investors.cognizant.com/") Investors
+              .cell
+                a.text-white.text-normal.m0.px-half(href="#") 
+                  | Search  
+                  i.search.text-bold.ml-half

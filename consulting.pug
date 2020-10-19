@@ -1,0 +1,142 @@
+extends _template.pug
+include _mixins.pug
+
+block vars
+  - var pageTitle = "AI & Data Platform Consulting | Cognizant "
+  - var metaDescription= "Cognizant AI Consulting helps identify the key business imperatives that drive actions and map out the initiatives required from data platforms to achieve them. See how."
+  - var metaKeywords= "data platform consulting, ai consulting, ai data consulting"
+
+block content
+  +intro-panel({
+    backgroundImage: "",
+    logo: true,
+    icon: "images/icons/icon-consulting-white.svg",
+    eyebrow: "CONSULTING",
+    headline: "Engage, collaborate, evolve, implement",
+    bodyCopy: "We identify the key business imperatives that drive actions and then map out the initiatives required from data platforms to achieve them.",
+    button: false,
+    url: "CHANGE_ME",
+    buttonText: "CHANGE_ME"
+    })
+
+  +sideBox({
+  bodyCopy: "<p>When you look for solutions to business problems in non-traditional areas you get outcomes that far exceed expectations.</p><p>Cognizant strategic consulting connects business outcome with technology, powering the digital transformation that is driving today’s data economy.</p>"
+  })
+
+  //- ===================================================================================
+  //- IMAGE
+  //- ===================================================================================
+  .text-center.px2
+    //- img.w100.lazyload(data-sizes="auto" data-src="images/depth-pages-assets/bg-consulting.jpg" alt="CHANGE_ME")
+    video.video-pause.lazyload.object-fit-cover(loop muted data-poster="images/video/consulting.jpg" preload="")
+      source(src="images/video/consulting.mp4" type="video/mp4")
+      source(src="images/video/consulting.webm" type="video/webm")
+      source(src="images/video/consulting.ogg" type="video/ogg")
+
+  .grid-container.bg-grd-dark-blue-dark.text-white.medium-mbn5.medium-pb5
+    .grid-x.grid-padding-x.align-center.py3.medium-py5.px2.large-px0
+      .cell.medium-9.large-7
+        .text-center
+          h2.h3(data-aos="fade-up") Our Approach
+          +dividerDash(data-aos="flip-left")
+        :markdown-it(html typographer)
+          Our consulting team brings a strategic perspective to our clients’ most complex and pressing challenges.  We partner with them to build data strategies and roadmaps to achieve their specific goals.
+
+          This includes business models and approaches that embrace a data-driven culture between employees, suppliers, management and customers. We recommend both the personnel and the analytical approaches to drive fact-based, decision-making culture – all centered around data.
+
+          With an eye on data governance, security and organizational models, our team delivers exceptional value while preserving brand reputation and meeting compliance requirements.
+
+  //- ===================================================================================
+  //- REPORT
+  //- ===================================================================================
+  +callout-panel({
+    useVideo: false,
+    width: "large-10",
+    icon: "images/icons/icon-consulting-blue.svg",
+    headline: "Take the first step",
+    bodyCopy: "<h5>Make contact to collaborate.</h5> <h5 class='text-normal'>Together let’s see where Cognizant Artificial Intelligence can take your organization.</h5>",
+    buttonText: "CONTACT US",
+    link: "CONTACT US",
+    revealID : null,
+    youtubeUrl: "CHANGE_ME"
+  })(class="")
+
+  // ===================================================================================
+  // ADDITIONAL RESOURCES
+  // ===================================================================================
+  .bg-grd-dark-blue-dark.my3.p2.medium-p3.large-p5
+    .grid-x.grid-padding-x.align-center.text-white
+      .cell.text-center
+        img.mb1.lazyload(data-sizes="auto" data-src="images/icons/icon-read-report-white.svg" alt="CHANGE_ME")
+        h2.h3.mb2 Case Studies
+
+    .grid-container
+      .grid-x.grid-padding-x
+        .cell
+          //- ======================================================================
+          //- TABS
+          //- ======================================================================
+          ul#caseStudy-tabs.tabs.large-flex-container.text-white.bg-none.bd0(data-responsive-accordion-tabs="tabs medium-accordion large-tabs")
+            li.large-3.tabs-title.is-active.large-flex-container.m0
+              a.p0.large-p-half.bg-none.large-flex-container(href="#panel1" aria-selected="true")
+                +consulting-caseStudy({
+                  eyebrow: "LIFE SCIENCES",
+                  headline: "Accelerate medical innovation with intelligent solutions",
+                  buttonText: "MORE",
+                  image: "images/case-studies-index-tile-backgrounds-assets/life-sciences.jpg",
+                })(class="")
+            li.large-3.tabs-title.large-flex-container.m0
+              a.p0.large-p-half.bg-none.large-flex-container(data-tabs-target="panel2" href="#panel2")
+                +consulting-caseStudy({
+                  eyebrow: "BANKING & CAPITAL MARKETS",
+                  headline: "Increase financial intelligence",
+                  buttonText: "MORE",
+                  image: "images/case-studies-index-tile-backgrounds-assets/banking-capital-markets.jpg",
+                })(class="")
+            li.large-3.tabs-title.large-flex-container.m0
+              a.p0.large-p-half.bg-none.large-flex-container(data-tabs-target="panel3" href="#panel3")
+                +consulting-caseStudy({
+                  eyebrow: "TRANSPORT & LOGISTICS",
+                  headline: "Innovation that connects, tracks and informs",
+                  buttonText: "MORE",
+                  image: "images/case-studies-index-tile-backgrounds-assets/transport-logistics.jpg",
+                })(class="")
+            li.large-3.tabs-title.large-flex-container.m0
+              a.p0.large-p-half.bg-none.large-flex-container(data-tabs-target="panel4" href="#panel4")
+                +consulting-caseStudy({
+                  eyebrow: "TRAVEL & HOSPITALITY",
+                  headline: "Enhance and personalize customer experiences",
+                  buttonText: "MORE",
+                  image: "images/case-studies-index-tile-backgrounds-assets/travel-hospitality.jpg",
+                })(class="")
+
+          .tabs-content.bg-none.text-white.bd0(data-tabs-content="caseStudy-tabs")
+            #panel1.tabs-panel.bg-none.text-white.bd-white-15-1.large-bd0.is-active.p2
+              .grid-x.grid-padding-x.align-center
+                .cell.large-8
+                  :markdown-it(html typographer)
+                    ***01*** A life science company’s products and devices are at the heart of their commitment to advancing health and happiness. But, fragmented product masters can cause delays and mistakes. An accurate and well-structured list of products, compounds and devices is necessary to produce, monitor inventory and sales as well as to quickly adjust to market changes.
+
+                    Because Master Data touches so many points, the solution starts with a strategic view of the expectations and concerns of the users. That determines the technology required to support the resulting business goals and remove data silos. Adopting and embracing the new Product Master Data system removed barriers and increased productivity.
+            #panel2.tabs-panel.bg-none.text-white.bd-white-15-1.large-bd0.p2
+              .grid-x.grid-padding-x.align-center
+                .cell.large-8
+                  :markdown-it(html typographer)
+                    ***02*** A life science company’s products and devices are at the heart of their commitment to advancing health and happiness. But, fragmented product masters can cause delays and mistakes. An accurate and well-structured list of products, compounds and devices is necessary to produce, monitor inventory and sales as well as to quickly adjust to market changes.
+            #panel3.tabs-panel.bg-none.text-white.bd-white-15-1.large-bd0.p2
+              .grid-x.grid-padding-x.align-center
+                .cell.large-8
+                  :markdown-it(html typographer)
+                    ***03*** A life science company’s products and devices are at the heart of their commitment to advancing health and happiness. But, fragmented product masters can cause delays and mistakes. An accurate and well-structured list of products, compounds and devices is necessary to produce, monitor inventory and sales as well as to quickly adjust to market changes.
+
+                    Because Master Data touches so many points, the solution starts with a strategic view of the expectations and concerns of the users. That determines the technology required to support the resulting business goals and remove data silos. Adopting and embracing the new Product Master Data system removed barriers and increased productivity.
+            #panel4.tabs-panel.bg-none.text-white.bd-white-15-1.large-bd0.p2
+              .grid-x.grid-padding-x.align-center
+                .cell.large-8
+                  :markdown-it(html typographer)
+                    ***04*** A life science company’s products and devices are at the heart of their commitment to advancing health and happiness. But, fragmented product masters can cause delays and mistakes. An accurate and well-structured list of products, compounds and devices is necessary to produce, monitor inventory and sales as well as to quickly adjust to market changes.
+
+                    Because Master Data touches so many points, the solution starts with a strategic view of the expectations and concerns of the users. That determines the technology required to support the resulting business goals and remove data silos. Adopting and embracing the new Product Master Data system removed barriers and increased productivity.
+
+
+  include includes/global/_take-the-first-step.pug
