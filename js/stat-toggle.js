@@ -3,8 +3,8 @@ window.onload = function () {
     var stat4sprint2id = document.getElementById("stat4-sprint2");
 
     // hide both on initial load
-    // stat1id.style.display = "none";
-    // stat4sprint2id.style.display = "none";
+    stat1id.style.display = "none";
+    stat4sprint2id.style.display = "none";
 
     var arr = ["stat1", "stat4-sprint2"]
     var sorted_arr = arr.sort(() => Math.random() - 0.5);
@@ -13,7 +13,9 @@ window.onload = function () {
     var stat_hide = document.getElementById(sorted_arr[1]);
 
     stat_show.style.display = "block";
-    stat_hide.style.display = "none";
+    // stat_hide.style.display = "none";
+    stat_hide.style.display = "hidden";
+    stat_hide.style.display = "absolute";
 
     var stat2id = document.getElementById("stat2");
     var stat5sprint2id = document.getElementById("stat5-sprint2");
