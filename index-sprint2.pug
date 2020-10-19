@@ -9,11 +9,13 @@ block vars
 block content
   include includes/landing/_intro.pug
   include includes/landing/_horizontal-accordions-sprint2.pug
-  include includes/landing/_stat1-sprint2.pug
-  include includes/landing/_stat4-sprint2.pug
+  //- include includes/landing/_stat1-sprint2.pug
+  //- include includes/landing/_stat4-sprint2.pug
+  include includes/landing/_stat1_stat4-sprint2.pug
   include includes/landing/_thought-leadership-sprint2.pug
-  include includes/landing/_stat2-sprint2.pug
-  include includes/landing/_stat5-sprint2.pug
+  //- include includes/landing/_stat2-sprint2.pug
+  //- include includes/landing/_stat5-sprint2.pug
+  include includes/landing/_stat2_stat5-sprint2.pug
   include includes/landing/_case-studies-sprint2.pug
 
 block append scripts
@@ -22,3 +24,4 @@ block append scripts
   //- script(src="node_modules/curtainsjs/dist/curtains.umd.min.js")
   script(src="js/min/curtains.min.js")
   script(src="js/min/curtainjs-min.js")
+  script(src="js/toggle-stat.js")
