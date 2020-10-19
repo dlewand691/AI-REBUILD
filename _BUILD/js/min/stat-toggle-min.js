@@ -1,0 +1,2 @@
+window.onload=function(){document.getElementById("stat1"),document.getElementById("stat4-sprint2");var t=["stat1","stat4-sprint2"].sort(()=>Math.random()-.5),e=document.getElementById(t[0]),n=document.getElementById(t[1]);e.style.display="block",n.style.display="none";document.getElementById("stat2"),document.getElementById("stat5-sprint2");var d=["stat2","stat5-sprint2"].sort(()=>Math.random()-.5),s=document.getElementById(d[0]),o=document.getElementById(d[1]);s.style.display="none",o.style.display="block"};
+//# sourceMappingURL=stat-toggle-min.js.map

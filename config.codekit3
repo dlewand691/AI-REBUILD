@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "32186",
 "files": {
+	"/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/.gitattributes",
+		"oF": 0
+		},
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -1174,14 +1182,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/_BUILD/htaccess.txt",
-		"oF": 0
-		},
-	"/images/_AI ARTWORK.sketch": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/_BUILD/images/_AI ARTWORK.sketch",
 		"oF": 0
 		},
 	"/images/additional-resources-assets/bg-additional-resources01.jpg": {
@@ -8242,14 +8242,6 @@
 		"plM": 54982694665215,
 		"prP": 0
 		},
-	"/images/stat-4x-performance-improvement.keyshape": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/_BUILD/images/stat-4x-performance-improvement.keyshape",
-		"oF": 0
-		},
 	"/images/stat-4x-performance-improvement.png": {
 		"ft": 32768,
 		"iS": 1043796,
@@ -8270,14 +8262,6 @@
 		"opt": 1,
 		"plM": 54982694665215,
 		"prP": 0
-		},
-	"/images/stat-data-platform.keyshape": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/_BUILD/images/stat-data-platform.keyshape",
-		"oF": 1
 		},
 	"/images/stat-data-platform.png": {
 		"ft": 32768,
@@ -8300,14 +8284,6 @@
 		"plM": 54982694665215,
 		"prP": 0
 		},
-	"/images/stat-operations-intelligence.keyshape": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/_BUILD/images/stat-operations-intelligence.keyshape",
-		"oF": 1
-		},
 	"/images/stat-operations-intelligence.png": {
 		"ft": 32768,
 		"iS": 331251,
@@ -8328,14 +8304,6 @@
 		"opt": 1,
 		"plM": 54982694665215,
 		"prP": 0
-		},
-	"/images/stat-total-cost-of-data.keyshape": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/_BUILD/images/stat-total-cost-of-data.keyshape",
-		"oF": 0
 		},
 	"/images/stat-total-cost-of-data.png": {
 		"ft": 32768,
@@ -8358,14 +8326,6 @@
 		"plM": 54982694665215,
 		"prP": 0
 		},
-	"/images/stat1.keyshape": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/_BUILD/images/stat1.keyshape",
-		"oF": 1
-		},
 	"/images/stat1.png": {
 		"ft": 32768,
 		"iS": 90755,
@@ -8387,14 +8347,6 @@
 		"plM": 54982694665215,
 		"prP": 0
 		},
-	"/images/stat2.keyshape": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/_BUILD/images/stat2.keyshape",
-		"oF": 1
-		},
 	"/images/stat2.png": {
 		"ft": 32768,
 		"iS": 87726,
@@ -8415,14 +8367,6 @@
 		"opt": 1,
 		"plM": 54982694665215,
 		"prP": 0
-		},
-	"/images/stat3.keyshape": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/_BUILD/images/stat3.keyshape",
-		"oF": 0
 		},
 	"/images/stat3.png": {
 		"ft": 32768,
@@ -9254,6 +9198,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/includes/landing/_stat1_stat4-sprint2.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_BUILD/includes/landing/_stat1_stat4-sprint2.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/includes/landing/_stat2-sprint2.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -9271,6 +9225,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/_BUILD/includes/landing/_stat2.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/includes/landing/_stat2_stat5-sprint2.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_BUILD/includes/landing/_stat2_stat5-sprint2.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -9474,6 +9438,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/_BUILD/js/min/intertia-scroll-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/js/stat-toggle.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_BUILD/js/min/stat-toggle-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
