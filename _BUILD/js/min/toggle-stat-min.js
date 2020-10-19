@@ -1,2 +1,2 @@
 function shuffle_stat(t,s){return[document.getElementById(t),document.getElementById(s)].sort(()=>Math.random()-.5)}function display_stat(t){t[0].style.display="block",t[1].style.display="none"}window.onload=function(){var t=shuffle_stat("stat1","stat4-sprint2"),s=shuffle_stat("stat2","stat5-sprint2");display_stat(t),display_stat(s)};
-//# sourceMappingURL=stat-toggle-min.js.map
+//# sourceMappingURL=toggle-stat-min.js.map
