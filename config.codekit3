@@ -1184,6 +1184,14 @@
 		"oAP": "/_BUILD/htaccess.txt",
 		"oF": 0
 		},
+	"/images/_AI ARTWORK.sketch": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_BUILD/images/_AI ARTWORK.sketch",
+		"oF": 0
+		},
 	"/images/additional-resources-assets/bg-additional-resources01.jpg": {
 		"ft": 16384,
 		"iS": 43322,
@@ -1227,6 +1235,14 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 80
+		},
+	"/images/additional-resources.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/additional-resources.psd",
+		"oF": 0
 		},
 	"/images/bg/bg-customer-intelligence-target.svg": {
 		"ft": 2097152,
@@ -1402,6 +1418,14 @@
 		"opt": 1,
 		"q": 80
 		},
+	"/images/case-studies-index-tile-backgrounds.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/case-studies-index-tile-backgrounds.psd",
+		"oF": 0
+		},
 	"/images/case-studies-landing-backgrounds-assets/bg-caseStudyLanding-banking-capital-markets.png": {
 		"ft": 32768,
 		"iS": 552821,
@@ -1500,6 +1524,14 @@
 		"opt": 1,
 		"oT": 1,
 		"q": 80
+		},
+	"/images/case-studies-landing-backgrounds.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/case-studies-landing-backgrounds.psd",
+		"oF": 0
 		},
 	"/images/case-studies-landing-tile-backgrounds-assets/bg-caseStudy-banking-capital-markets-01.jpg": {
 		"ft": 16384,
@@ -1864,6 +1896,14 @@
 		"opt": 1,
 		"q": 80
 		},
+	"/images/case-studies-landing-tile-backgrounds.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/case-studies-landing-tile-backgrounds.psd",
+		"oF": 0
+		},
 	"/images/circle-line.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2056,6 +2096,14 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 80
+		},
+	"/images/depth-pages.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/depth-pages.psd",
+		"oF": 0
 		},
 	"/images/dna-tendrils.svg": {
 		"ft": 2097152,
@@ -7261,6 +7309,14 @@
 		"opt": 1,
 		"q": 80
 		},
+	"/images/horizontal-accordions.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/horizontal-accordions.psd",
+		"oF": 0
+		},
 	"/images/icons/cog-logo-ai-blue.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -8242,6 +8298,14 @@
 		"plM": 54982694665215,
 		"prP": 0
 		},
+	"/images/stat-4x-performance-improvement.keyshape": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/stat-4x-performance-improvement.keyshape",
+		"oF": 0
+		},
 	"/images/stat-4x-performance-improvement.png": {
 		"ft": 32768,
 		"iS": 1043796,
@@ -8262,6 +8326,14 @@
 		"opt": 1,
 		"plM": 54982694665215,
 		"prP": 0
+		},
+	"/images/stat-data-platform.keyshape": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_BUILD/images/stat-data-platform.keyshape",
+		"oF": 1
 		},
 	"/images/stat-data-platform.png": {
 		"ft": 32768,
@@ -8284,6 +8356,14 @@
 		"plM": 54982694665215,
 		"prP": 0
 		},
+	"/images/stat-operations-intelligence.keyshape": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_BUILD/images/stat-operations-intelligence.keyshape",
+		"oF": 1
+		},
 	"/images/stat-operations-intelligence.png": {
 		"ft": 32768,
 		"iS": 331251,
@@ -8304,6 +8384,14 @@
 		"opt": 1,
 		"plM": 54982694665215,
 		"prP": 0
+		},
+	"/images/stat-total-cost-of-data.keyshape": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/stat-total-cost-of-data.keyshape",
+		"oF": 0
 		},
 	"/images/stat-total-cost-of-data.png": {
 		"ft": 32768,
@@ -8326,6 +8414,14 @@
 		"plM": 54982694665215,
 		"prP": 0
 		},
+	"/images/stat1.keyshape": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_BUILD/images/stat1.keyshape",
+		"oF": 1
+		},
 	"/images/stat1.png": {
 		"ft": 32768,
 		"iS": 90755,
@@ -8347,6 +8443,14 @@
 		"plM": 54982694665215,
 		"prP": 0
 		},
+	"/images/stat2.keyshape": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_BUILD/images/stat2.keyshape",
+		"oF": 1
+		},
 	"/images/stat2.png": {
 		"ft": 32768,
 		"iS": 87726,
@@ -8367,6 +8471,14 @@
 		"opt": 1,
 		"plM": 54982694665215,
 		"prP": 0
+		},
+	"/images/stat3.keyshape": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/stat3.keyshape",
+		"oF": 0
 		},
 	"/images/stat3.png": {
 		"ft": 32768,
@@ -8399,6 +8511,14 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 80
+		},
+	"/images/tendrils.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/tendrils.psd",
+		"oF": 0
 		},
 	"/images/thought-leadership-assets/ai-tl-01-forrester.png": {
 		"ft": 32768,
@@ -8531,6 +8651,22 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 80
+		},
+	"/images/thought-leadership-carousel-overlays.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/thought-leadership-carousel-overlays.psd",
+		"oF": 0
+		},
+	"/images/thought-leadership.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/images/thought-leadership.psd",
+		"oF": 0
 		},
 	"/images/transparent.gif": {
 		"ft": 4194304,
