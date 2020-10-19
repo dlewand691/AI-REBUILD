@@ -9605,6 +9605,48 @@
 		"oAP": "/_BUILD/node_modules",
 		"oF": 0
 		},
+	"/notch-background.png": {
+		"ft": 32768,
+		"iS": 5801,
+		"oA": 0,
+		"oAP": "/_BUILD/notch-background.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 80
+		},
+	"/notch-background.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/notch-background.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 54982694665215,
+		"prP": 0
+		},
+	"/notch-background70.png": {
+		"ft": 32768,
+		"iS": 6149,
+		"oA": 0,
+		"oAP": "/_BUILD/notch-background70.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 80
+		},
+	"/notch-background70.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/_BUILD/notch-background70.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 54982694665215,
+		"prP": 0
+		},
 	"/operations-intelligence.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -9828,7 +9870,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/favicons/apple-touch-icon-120x120.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 624398434.30496502
+	"lastBuiltDate": 624835010.68938303
 	},
 "projectSettings": {
 	"abortBuildOnError": 0,

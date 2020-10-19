@@ -77918,4 +77918,11 @@ h6::after {
   opacity: 1;
 }
 
+#stat1,
+#stat2,
+#stat4-sprint2,
+#stat5-sprint2 {
+  display: none;
+}
+
 /*# sourceMappingURL=app.css.map */
