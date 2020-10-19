@@ -16525,6 +16525,11 @@ strong {
   font-weight: 900 !important;
 }
 
+.text-thin-italic {
+  font-weight: 100;
+  font-style: italic !important;
+}
+
 .text-light-italic {
   font-weight: 300;
   font-style: italic !important;
