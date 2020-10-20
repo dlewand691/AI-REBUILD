@@ -19,6 +19,7 @@ $accordion-horizontal-transition-speed: 0.5s;
 .accordion-horizontal {
   overflow-y    : scroll;
   flex-direction: column;
+  flex-wrap: nowrap;
   // height: 100vh;
 
   @include breakpoint(small) {
