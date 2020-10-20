@@ -49,6 +49,7 @@ $accordion-horizontal-transition-speed: 0.5s;
   .cell {
     // height: 100%;
     height: xy-cell-size(4);
+    flex-shrink: 1;
     @include breakpoint(small) {
       // height: xy-cell-size(4);
     }
