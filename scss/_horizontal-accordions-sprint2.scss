@@ -17,10 +17,8 @@ $accordion-horizontal-transition-speed: 0.5s;
 
 // OVERALL ACCORDION SECTION
 .accordion-horizontal {
-  overflow-y    : scroll;
   flex-direction: column;
   flex-wrap: nowrap;
-  // height: 100vh;
 
   @include breakpoint(small) {
     > .cell:nth-of-type(2) {

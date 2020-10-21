@@ -77346,7 +77346,6 @@ button.swiper-pagination-bullet {
 }
 /* easeInOutCubic */
 .accordion-horizontal {
-  overflow-y: scroll;
   flex-direction: column;
   flex-wrap: nowrap;
 }
