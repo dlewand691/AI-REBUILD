@@ -15,8 +15,8 @@
         p Understand the now and look to the future with ground breaking content.
   .grid-container.pb5 
     .grid-x.grid-margin-x.align-middle.align-center
-      .cell.small-5.large-12.pb1
-        .thoughtLeadership.overflow-hidden
+      .cell.small-5.large-12.pb1.relative
+        .thoughtLeadership.overflow-hidden.arrows-outside
           .swiper-wrapper
             +ltCarousel({
               image: "images/thought-leadership-assets/ai-tl-01-forrester.png",
@@ -61,8 +61,10 @@
               buttonText: ""
             })
 
-          .swiper-button-prev
-          .swiper-button-next 
+          .swiper-button-prev.hide-for-large
+          .swiper-button-next.hide-for-large 
+        .swiper-button-prev.show-for-large
+        .swiper-button-next.show-for-large 
       .cell.small-7.large-8.xlarge-5
         .thoughtLeadershipBottom.overflow-hidden
           .swiper-wrapper.pb1.large-text-center

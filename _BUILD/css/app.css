@@ -75165,10 +75165,10 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
-.arrows-outside .swiper-button-next {
+.arrows-outside ~ .swiper-button-next {
   right: -1.5rem;
 }
-.arrows-outside .swiper-button-prev {
+.arrows-outside ~ .swiper-button-prev {
   left: -1.5rem;
 }
 
