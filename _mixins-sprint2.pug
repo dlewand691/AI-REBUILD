@@ -80,7 +80,7 @@ mixin ltCarousel(...elements)
         p!= item.body
         a.arrow!= item.buttonText
       unless item.url == ""
-        a.link-coverAll(href=item.url)
+        a.link-coverAll(data-open=item.url)
       // -----  End of LATEST THINKING CAROUSEL  -----------------------------------
 
 

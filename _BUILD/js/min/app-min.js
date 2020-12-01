@@ -20295,15 +20295,15 @@ For background images, use data-bg attribute:
   }
 });
 /**
- * Swiper 6.3.2
+ * Swiper 6.3.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
- * http://swiperjs.com
+ * https://swiperjs.com
  *
  * Copyright 2014-2020 Vladimir Kharlampidi
  *
  * Released under the MIT License
  *
- * Released on: September 28, 2020
+ * Released on: October 30, 2020
  */
 !function (e, t) {
   "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (e = e || self).Swiper = t();
@@ -20530,15 +20530,15 @@ For background images, use data-bg attribute:
     return i = e, (t = s).prototype = Object.create(i.prototype), t.prototype.constructor = t, t.__proto__ = i, s;
   }(u(Array));
 
-  function v(e) {
+  function f(e) {
     void 0 === e && (e = []);
     var t = [];
     return e.forEach(function (e) {
-      Array.isArray(e) ? t.push.apply(t, v(e)) : t.push(e);
+      Array.isArray(e) ? t.push.apply(t, f(e)) : t.push(e);
     }), t;
   }
 
-  function f(e, t) {
+  function v(e, t) {
     return Array.prototype.filter.call(e, t);
   }
 
@@ -20586,7 +20586,7 @@ For background images, use data-bg attribute:
     addClass: function () {
       for (var e = arguments.length, t = new Array(e), i = 0; i < e; i++) t[i] = arguments[i];
 
-      var s = v(t.map(function (e) {
+      var s = f(t.map(function (e) {
         return e.split(" ");
       }));
       return this.forEach(function (e) {
@@ -20597,7 +20597,7 @@ For background images, use data-bg attribute:
     removeClass: function () {
       for (var e = arguments.length, t = new Array(e), i = 0; i < e; i++) t[i] = arguments[i];
 
-      var s = v(t.map(function (e) {
+      var s = f(t.map(function (e) {
         return e.split(" ");
       }));
       return this.forEach(function (e) {
@@ -20608,10 +20608,10 @@ For background images, use data-bg attribute:
     hasClass: function () {
       for (var e = arguments.length, t = new Array(e), i = 0; i < e; i++) t[i] = arguments[i];
 
-      var s = v(t.map(function (e) {
+      var s = f(t.map(function (e) {
         return e.split(" ");
       }));
-      return f(this, function (e) {
+      return v(this, function (e) {
         return s.filter(function (t) {
           return e.classList.contains(t);
         }).length > 0;
@@ -20620,7 +20620,7 @@ For background images, use data-bg attribute:
     toggleClass: function () {
       for (var e = arguments.length, t = new Array(e), i = 0; i < e; i++) t[i] = arguments[i];
 
-      var s = v(t.map(function (e) {
+      var s = f(t.map(function (e) {
         return e.split(" ");
       }));
       this.forEach(function (e) {
@@ -20684,11 +20684,11 @@ For background images, use data-bg attribute:
             proxyListener: l
           }), u.addEventListener(c, l, n);
         } else for (d = 0; d < h.length; d += 1) {
-          var v = h[d];
-          u.dom7Listeners || (u.dom7Listeners = {}), u.dom7Listeners[v] || (u.dom7Listeners[v] = []), u.dom7Listeners[v].push({
+          var f = h[d];
+          u.dom7Listeners || (u.dom7Listeners = {}), u.dom7Listeners[f] || (u.dom7Listeners[f] = []), u.dom7Listeners[f].push({
             listener: r,
             proxyListener: o
-          }), u.addEventListener(v, o, n);
+          }), u.addEventListener(f, o, n);
         }
       }
 
@@ -20707,8 +20707,8 @@ For background images, use data-bg attribute:
         var p = this[h],
             u = void 0;
         if (!a && p.dom7Listeners ? u = p.dom7Listeners[d] : a && p.dom7LiveListeners && (u = p.dom7LiveListeners[d]), u && u.length) for (var c = u.length - 1; c >= 0; c -= 1) {
-          var v = u[c];
-          r && v.listener === r || r && v.listener && v.listener.dom7proxy && v.listener.dom7proxy === r ? (p.removeEventListener(d, v.proxyListener, n), u.splice(c, 1)) : r || (p.removeEventListener(d, v.proxyListener, n), u.splice(c, 1));
+          var f = u[c];
+          r && f.listener === r || r && f.listener && f.listener.dom7proxy && f.listener.dom7proxy === r ? (p.removeEventListener(d, f.proxyListener, n), u.splice(c, 1)) : r || (p.removeEventListener(d, f.proxyListener, n), u.splice(c, 1));
         }
       }
 
@@ -20965,7 +20965,7 @@ For background images, use data-bg attribute:
       return m(t);
     },
     filter: function (e) {
-      return m(f(this, e));
+      return m(v(this, e));
     },
     remove: function () {
       for (var e = 0; e < this.length; e += 1) this[e].parentNode && this[e].parentNode.removeChild(this[e]);
@@ -21063,9 +21063,9 @@ For background images, use data-bg attribute:
           p = r.match(/(iPad).*OS\s([\d_]+)/),
           u = r.match(/(iPod)(.*OS\s([\d_]+))?/),
           c = !p && r.match(/(iPhone\sOS|iOS)\s([\d_]+)/),
-          v = "Win32" === a,
-          f = "MacIntel" === a;
-      return !p && f && i.touch && ["1024x1366", "1366x1024", "834x1194", "1194x834", "834x1112", "1112x834", "768x1024", "1024x768"].indexOf(o + "x" + d) >= 0 && ((p = r.match(/(Version)\/([\d.]+)/)) || (p = [0, 1, "13_0_0"]), f = !1), h && !v && (n.os = "android", n.android = !0), (p || c || u) && (n.os = "ios", n.ios = !0), n;
+          f = "Win32" === a,
+          v = "MacIntel" === a;
+      return !p && v && i.touch && ["1024x1366", "1366x1024", "834x1194", "1194x834", "834x1112", "1112x834", "768x1024", "1024x768", "820x1180", "1180x820", "810x1080", "1080x810"].indexOf(o + "x" + d) >= 0 && ((p = r.match(/(Version)\/([\d.]+)/)) || (p = [0, 1, "13_0_0"]), v = !1), h && !f && (n.os = "android", n.android = !0), (p || c || u) && (n.os = "ios", n.ios = !0), n;
     }(e)), w;
   }
 
@@ -21181,7 +21181,7 @@ For background images, use data-bg attribute:
       var o = e;
       o.originalEvent && (o = o.originalEvent);
       var d = m(o.target);
-      if (("wrapper" !== a.touchEventsTarget || d.closest(this.wrapperEl).length) && (s.isTouchEvent = "touchstart" === o.type, (s.isTouchEvent || !("which" in o) || 3 !== o.which) && !(!s.isTouchEvent && "button" in o && o.button > 0 || s.isTouched && s.isMoved))) if (a.noSwiping && d.closest(a.noSwipingSelector ? a.noSwipingSelector : "." + a.noSwipingClass)[0]) this.allowClick = !0;else if (!a.swipeHandler || d.closest(a.swipeHandler)[0]) {
+      if ("wrapper" !== a.touchEventsTarget || d.closest(this.wrapperEl).length) if (s.isTouchEvent = "touchstart" === o.type, s.isTouchEvent || !("which" in o) || 3 !== o.which) if (!(!s.isTouchEvent && "button" in o && o.button > 0)) if (!s.isTouched || !s.isMoved) if (!!a.noSwipingClass && "" !== a.noSwipingClass && o.target && o.target.shadowRoot && e.path && e.path[0] && (d = m(e.path[0])), a.noSwiping && d.closest(a.noSwipingSelector ? a.noSwipingSelector : "." + a.noSwipingClass)[0]) this.allowClick = !0;else if (!a.swipeHandler || d.closest(a.swipeHandler)[0]) {
         n.currentX = "touchstart" === o.type ? o.targetTouches[0].pageX : o.pageX, n.currentY = "touchstart" === o.type ? o.targetTouches[0].pageY : o.pageY;
         var h = n.currentX,
             p = n.currentY,
@@ -21196,10 +21196,10 @@ For background images, use data-bg attribute:
             isScrolling: void 0,
             startMoving: void 0
           }), n.startX = h, n.startY = p, s.touchStartTime = x(), this.allowClick = !0, this.updateSize(), this.swipeDirection = void 0, a.threshold > 0 && (s.allowThresholdMove = !1), "touchstart" !== o.type) {
-            var v = !0;
-            d.is(s.formElements) && (v = !1), t.activeElement && m(t.activeElement).is(s.formElements) && t.activeElement !== d[0] && t.activeElement.blur();
-            var f = v && this.allowTouchMove && a.touchStartPreventDefault;
-            (a.touchStartForcePreventDefault || f) && o.preventDefault();
+            var f = !0;
+            d.is(s.formElements) && (f = !1), t.activeElement && m(t.activeElement).is(s.formElements) && t.activeElement !== d[0] && t.activeElement.blur();
+            var v = f && this.allowTouchMove && a.touchStartPreventDefault;
+            (a.touchStartForcePreventDefault || v) && o.preventDefault();
           }
 
           this.emit("touchStart", o);
@@ -21243,13 +21243,13 @@ For background images, use data-bg attribute:
             if (void 0 === i.isScrolling) this.isHorizontal() && a.currentY === a.startY || this.isVertical() && a.currentX === a.startX ? i.isScrolling = !1 : p * p + u * u >= 25 && (c = 180 * Math.atan2(Math.abs(u), Math.abs(p)) / Math.PI, i.isScrolling = this.isHorizontal() ? c > s.touchAngle : 90 - c > s.touchAngle);
             if (i.isScrolling && this.emit("touchMoveOpposite", l), void 0 === i.startMoving && (a.currentX === a.startX && a.currentY === a.startY || (i.startMoving = !0)), i.isScrolling) i.isTouched = !1;else if (i.startMoving) {
               this.allowClick = !1, !s.cssMode && l.cancelable && l.preventDefault(), s.touchMoveStopPropagation && !s.nested && l.stopPropagation(), i.isMoved || (s.loop && this.loopFix(), i.startTranslate = this.getTranslate(), this.setTransition(0), this.animating && this.$wrapperEl.trigger("webkitTransitionEnd transitionend"), i.allowMomentumBounce = !1, !s.grabCursor || !0 !== this.allowSlideNext && !0 !== this.allowSlidePrev || this.setGrabCursor(!0), this.emit("sliderFirstMove", l)), this.emit("sliderMove", l), i.isMoved = !0;
-              var v = this.isHorizontal() ? p : u;
-              a.diff = v, v *= s.touchRatio, n && (v = -v), this.swipeDirection = v > 0 ? "prev" : "next", i.currentTranslate = v + i.startTranslate;
-              var f = !0,
+              var f = this.isHorizontal() ? p : u;
+              a.diff = f, f *= s.touchRatio, n && (f = -f), this.swipeDirection = f > 0 ? "prev" : "next", i.currentTranslate = f + i.startTranslate;
+              var v = !0,
                   g = s.resistanceRatio;
 
-              if (s.touchReleaseOnEdges && (g = 0), v > 0 && i.currentTranslate > this.minTranslate() ? (f = !1, s.resistance && (i.currentTranslate = this.minTranslate() - 1 + Math.pow(-this.minTranslate() + i.startTranslate + v, g))) : v < 0 && i.currentTranslate < this.maxTranslate() && (f = !1, s.resistance && (i.currentTranslate = this.maxTranslate() + 1 - Math.pow(this.maxTranslate() - i.startTranslate - v, g))), f && (l.preventedByNestedSwiper = !0), !this.allowSlideNext && "next" === this.swipeDirection && i.currentTranslate < i.startTranslate && (i.currentTranslate = i.startTranslate), !this.allowSlidePrev && "prev" === this.swipeDirection && i.currentTranslate > i.startTranslate && (i.currentTranslate = i.startTranslate), s.threshold > 0) {
-                if (!(Math.abs(v) > s.threshold || i.allowThresholdMove)) return void (i.currentTranslate = i.startTranslate);
+              if (s.touchReleaseOnEdges && (g = 0), f > 0 && i.currentTranslate > this.minTranslate() ? (v = !1, s.resistance && (i.currentTranslate = this.minTranslate() - 1 + Math.pow(-this.minTranslate() + i.startTranslate + f, g))) : f < 0 && i.currentTranslate < this.maxTranslate() && (v = !1, s.resistance && (i.currentTranslate = this.maxTranslate() + 1 - Math.pow(this.maxTranslate() - i.startTranslate - f, g))), v && (l.preventedByNestedSwiper = !0), !this.allowSlideNext && "next" === this.swipeDirection && i.currentTranslate < i.startTranslate && (i.currentTranslate = i.startTranslate), !this.allowSlidePrev && "prev" === this.swipeDirection && i.currentTranslate > i.startTranslate && (i.currentTranslate = i.startTranslate), s.threshold > 0) {
+                if (!(Math.abs(f) > s.threshold || i.allowThresholdMove)) return void (i.currentTranslate = i.startTranslate);
                 if (!i.allowThresholdMove) return i.allowThresholdMove = !0, a.startX = a.currentX, a.startY = a.currentY, i.currentTranslate = i.startTranslate, void (a.diff = this.isHorizontal() ? a.currentX - a.startX : a.currentY - a.startY);
               }
 
@@ -21292,10 +21292,10 @@ For background images, use data-bg attribute:
       if (s.freeModeMomentum) {
         if (i.velocities.length > 1) {
           var c = i.velocities.pop(),
-              v = i.velocities.pop(),
-              f = c.position - v.position,
-              m = c.time - v.time;
-          t.velocity = f / m, t.velocity /= 2, Math.abs(t.velocity) < s.freeModeMinimumVelocity && (t.velocity = 0), (m > 150 || x() - c.time > 300) && (t.velocity = 0);
+              f = i.velocities.pop(),
+              v = c.position - f.position,
+              m = c.time - f.time;
+          t.velocity = v / m, t.velocity /= 2, Math.abs(t.velocity) < s.freeModeMinimumVelocity && (t.velocity = 0), (m > 150 || x() - c.time > 300) && (t.velocity = 0);
         } else t.velocity = 0;
 
         t.velocity *= s.freeModeMomentumVelocityRatio, i.velocities.length = 0;
@@ -21394,6 +21394,7 @@ For background images, use data-bg attribute:
     speed: 300,
     cssMode: !1,
     updateOnWindowResize: !0,
+    nested: !1,
     width: null,
     height: null,
     preventInteractionOnTransition: !1,
@@ -21593,18 +21594,18 @@ For background images, use data-bg attribute:
             u = [],
             c = [];
 
-        function v(e, i) {
+        function f(e, i) {
           return !t.cssMode || i !== d.length - 1;
         }
 
-        var f = t.slidesOffsetBefore;
-        "function" == typeof f && (f = t.slidesOffsetBefore.call(this));
+        var v = t.slidesOffsetBefore;
+        "function" == typeof v && (v = t.slidesOffsetBefore.call(this));
         var m = t.slidesOffsetAfter;
         "function" == typeof m && (m = t.slidesOffsetAfter.call(this));
         var g = this.snapGrid.length,
             w = this.snapGrid.length,
             y = t.spaceBetween,
-            b = -f,
+            b = -v,
             E = 0,
             x = 0;
 
@@ -21655,16 +21656,23 @@ For background images, use data-bg attribute:
                       R = parseFloat(B.getPropertyValue("margin-left") || 0),
                       W = parseFloat(B.getPropertyValue("margin-right") || 0),
                       q = B.getPropertyValue("box-sizing");
-                  C = q && "border-box" === q ? Y + R + W : Y + V + F + R + W;
+                  if (q && "border-box" === q) C = Y + R + W;else {
+                    var j = L[0],
+                        _ = j.clientWidth;
+                    C = Y + V + F + R + W + (j.offsetWidth - _);
+                  }
                 } else {
-                  var j = parseFloat(B.getPropertyValue("height") || 0),
-                      _ = parseFloat(B.getPropertyValue("padding-top") || 0),
-                      U = parseFloat(B.getPropertyValue("padding-bottom") || 0),
-                      K = parseFloat(B.getPropertyValue("margin-top") || 0),
-                      Z = parseFloat(B.getPropertyValue("margin-bottom") || 0),
-                      J = B.getPropertyValue("box-sizing");
-
-                  C = J && "border-box" === J ? j + K + Z : j + _ + U + K + Z;
+                  var U = parseFloat(B.getPropertyValue("height") || 0),
+                      K = parseFloat(B.getPropertyValue("padding-top") || 0),
+                      Z = parseFloat(B.getPropertyValue("padding-bottom") || 0),
+                      J = parseFloat(B.getPropertyValue("margin-top") || 0),
+                      Q = parseFloat(B.getPropertyValue("margin-bottom") || 0),
+                      ee = B.getPropertyValue("box-sizing");
+                  if (ee && "border-box" === ee) C = U + J + Q;else {
+                    var te = L[0],
+                        ie = te.clientHeight;
+                    C = U + K + Z + J + Q + (te.offsetHeight - ie);
+                  }
                 }
                 H && (L[0].style.transform = H), X && (L[0].style.webkitTransform = X), t.roundLengths && (C = Math.floor(C));
               } else C = (s - (t.slidesPerView - 1) * y) / t.slidesPerView, t.roundLengths && (C = Math.floor(C)), d[$] && (this.isHorizontal() ? d[$].style.width = C + "px" : d[$].style.height = C + "px");
@@ -21686,9 +21694,9 @@ For background images, use data-bg attribute:
           }), t.centeredSlides)) {
             M = [];
 
-            for (var Q = 0; Q < p.length; Q += 1) {
-              var ee = p[Q];
-              t.roundLengths && (ee = Math.floor(ee)), p[Q] < this.virtualSize + p[0] && M.push(ee);
+            for (var se = 0; se < p.length; se += 1) {
+              var ae = p[se];
+              t.roundLengths && (ae = Math.floor(ae)), p[se] < this.virtualSize + p[0] && M.push(ae);
             }
 
             p = M;
@@ -21697,42 +21705,42 @@ For background images, use data-bg attribute:
           if (!t.centeredSlides) {
             M = [];
 
-            for (var te = 0; te < p.length; te += 1) {
-              var ie = p[te];
-              t.roundLengths && (ie = Math.floor(ie)), p[te] <= this.virtualSize - s && M.push(ie);
+            for (var re = 0; re < p.length; re += 1) {
+              var ne = p[re];
+              t.roundLengths && (ne = Math.floor(ne)), p[re] <= this.virtualSize - s && M.push(ne);
             }
 
             p = M, Math.floor(this.virtualSize - s) - Math.floor(p[p.length - 1]) > 1 && p.push(this.virtualSize - s);
           }
 
-          if (0 === p.length && (p = [0]), 0 !== t.spaceBetween && (this.isHorizontal() ? a ? d.filter(v).css({
+          if (0 === p.length && (p = [0]), 0 !== t.spaceBetween && (this.isHorizontal() ? a ? d.filter(f).css({
             marginLeft: y + "px"
-          }) : d.filter(v).css({
+          }) : d.filter(f).css({
             marginRight: y + "px"
-          }) : d.filter(v).css({
+          }) : d.filter(f).css({
             marginBottom: y + "px"
           })), t.centeredSlides && t.centeredSlidesBounds) {
-            var se = 0;
+            var le = 0;
             c.forEach(function (e) {
-              se += e + (t.spaceBetween ? t.spaceBetween : 0);
+              le += e + (t.spaceBetween ? t.spaceBetween : 0);
             });
-            var ae = (se -= t.spaceBetween) - s;
+            var oe = (le -= t.spaceBetween) - s;
             p = p.map(function (e) {
-              return e < 0 ? -f : e > ae ? ae + m : e;
+              return e < 0 ? -v : e > oe ? oe + m : e;
             });
           }
 
           if (t.centerInsufficientSlides) {
-            var re = 0;
+            var de = 0;
 
             if (c.forEach(function (e) {
-              re += e + (t.spaceBetween ? t.spaceBetween : 0);
-            }), (re -= t.spaceBetween) < s) {
-              var ne = (s - re) / 2;
+              de += e + (t.spaceBetween ? t.spaceBetween : 0);
+            }), (de -= t.spaceBetween) < s) {
+              var he = (s - de) / 2;
               p.forEach(function (e, t) {
-                p[t] = e - ne;
+                p[t] = e - he;
               }), u.forEach(function (e, t) {
-                u[t] = e + ne;
+                u[t] = e + he;
               });
             }
           }
@@ -21961,43 +21969,50 @@ For background images, use data-bg attribute:
     },
     slide: {
       slideTo: function (e, t, i, s) {
-        void 0 === e && (e = 0), void 0 === t && (t = this.params.speed), void 0 === i && (i = !0);
-        var a = this,
-            r = e;
-        r < 0 && (r = 0);
-        var n = a.params,
-            l = a.snapGrid,
-            o = a.slidesGrid,
-            d = a.previousIndex,
-            h = a.activeIndex,
-            p = a.rtlTranslate,
-            u = a.wrapperEl;
-        if (a.animating && n.preventInteractionOnTransition) return !1;
-        var c = Math.min(a.params.slidesPerGroupSkip, r),
-            v = c + Math.floor((r - c) / a.params.slidesPerGroup);
-        v >= l.length && (v = l.length - 1), (h || n.initialSlide || 0) === (d || 0) && i && a.emit("beforeSlideChangeStart");
-        var f,
-            m = -l[v];
-        if (a.updateProgress(m), n.normalizeSlideIndex) for (var g = 0; g < o.length; g += 1) -Math.floor(100 * m) >= Math.floor(100 * o[g]) && (r = g);
+        if (void 0 === e && (e = 0), void 0 === t && (t = this.params.speed), void 0 === i && (i = !0), "number" != typeof e && "string" != typeof e) throw new Error("The 'index' argument cannot have type other than 'number' or 'string'. [" + typeof e + "] given.");
 
-        if (a.initialized && r !== h) {
-          if (!a.allowSlideNext && m < a.translate && m < a.minTranslate()) return !1;
-          if (!a.allowSlidePrev && m > a.translate && m > a.maxTranslate() && (h || 0) !== r) return !1;
+        if ("string" == typeof e) {
+          var a = parseInt(e, 10);
+          if (!isFinite(a)) throw new Error("The passed-in 'index' (string) couldn't be converted to 'number'. [" + e + "] given.");
+          e = a;
         }
 
-        if (f = r > h ? "next" : r < h ? "prev" : "reset", p && -m === a.translate || !p && m === a.translate) return a.updateActiveIndex(r), n.autoHeight && a.updateAutoHeight(), a.updateSlidesClasses(), "slide" !== n.effect && a.setTranslate(m), "reset" !== f && (a.transitionStart(i, f), a.transitionEnd(i, f)), !1;
+        var r = this,
+            n = e;
+        n < 0 && (n = 0);
+        var l = r.params,
+            o = r.snapGrid,
+            d = r.slidesGrid,
+            h = r.previousIndex,
+            p = r.activeIndex,
+            u = r.rtlTranslate,
+            c = r.wrapperEl;
+        if (r.animating && l.preventInteractionOnTransition) return !1;
+        var f = Math.min(r.params.slidesPerGroupSkip, n),
+            v = f + Math.floor((n - f) / r.params.slidesPerGroup);
+        v >= o.length && (v = o.length - 1), (p || l.initialSlide || 0) === (h || 0) && i && r.emit("beforeSlideChangeStart");
+        var m,
+            g = -o[v];
+        if (r.updateProgress(g), l.normalizeSlideIndex) for (var w = 0; w < d.length; w += 1) -Math.floor(100 * g) >= Math.floor(100 * d[w]) && (n = w);
 
-        if (n.cssMode) {
-          var w,
-              y = a.isHorizontal(),
-              b = -m;
-          if (p && (b = u.scrollWidth - u.offsetWidth - b), 0 === t) u[y ? "scrollLeft" : "scrollTop"] = b;else if (u.scrollTo) u.scrollTo(((w = {})[y ? "left" : "top"] = b, w.behavior = "smooth", w));else u[y ? "scrollLeft" : "scrollTop"] = b;
+        if (r.initialized && n !== p) {
+          if (!r.allowSlideNext && g < r.translate && g < r.minTranslate()) return !1;
+          if (!r.allowSlidePrev && g > r.translate && g > r.maxTranslate() && (p || 0) !== n) return !1;
+        }
+
+        if (m = n > p ? "next" : n < p ? "prev" : "reset", u && -g === r.translate || !u && g === r.translate) return r.updateActiveIndex(n), l.autoHeight && r.updateAutoHeight(), r.updateSlidesClasses(), "slide" !== l.effect && r.setTranslate(g), "reset" !== m && (r.transitionStart(i, m), r.transitionEnd(i, m)), !1;
+
+        if (l.cssMode) {
+          var y,
+              b = r.isHorizontal(),
+              E = -g;
+          if (u && (E = c.scrollWidth - c.offsetWidth - E), 0 === t) c[b ? "scrollLeft" : "scrollTop"] = E;else if (c.scrollTo) c.scrollTo(((y = {})[b ? "left" : "top"] = E, y.behavior = "smooth", y));else c[b ? "scrollLeft" : "scrollTop"] = E;
           return !0;
         }
 
-        return 0 === t ? (a.setTransition(0), a.setTranslate(m), a.updateActiveIndex(r), a.updateSlidesClasses(), a.emit("beforeTransitionStart", t, s), a.transitionStart(i, f), a.transitionEnd(i, f)) : (a.setTransition(t), a.setTranslate(m), a.updateActiveIndex(r), a.updateSlidesClasses(), a.emit("beforeTransitionStart", t, s), a.transitionStart(i, f), a.animating || (a.animating = !0, a.onSlideToWrapperTransitionEnd || (a.onSlideToWrapperTransitionEnd = function (e) {
-          a && !a.destroyed && e.target === this && (a.$wrapperEl[0].removeEventListener("transitionend", a.onSlideToWrapperTransitionEnd), a.$wrapperEl[0].removeEventListener("webkitTransitionEnd", a.onSlideToWrapperTransitionEnd), a.onSlideToWrapperTransitionEnd = null, delete a.onSlideToWrapperTransitionEnd, a.transitionEnd(i, f));
-        }), a.$wrapperEl[0].addEventListener("transitionend", a.onSlideToWrapperTransitionEnd), a.$wrapperEl[0].addEventListener("webkitTransitionEnd", a.onSlideToWrapperTransitionEnd))), !0;
+        return 0 === t ? (r.setTransition(0), r.setTranslate(g), r.updateActiveIndex(n), r.updateSlidesClasses(), r.emit("beforeTransitionStart", t, s), r.transitionStart(i, m), r.transitionEnd(i, m)) : (r.setTransition(t), r.setTranslate(g), r.updateActiveIndex(n), r.updateSlidesClasses(), r.emit("beforeTransitionStart", t, s), r.transitionStart(i, m), r.animating || (r.animating = !0, r.onSlideToWrapperTransitionEnd || (r.onSlideToWrapperTransitionEnd = function (e) {
+          r && !r.destroyed && e.target === this && (r.$wrapperEl[0].removeEventListener("transitionend", r.onSlideToWrapperTransitionEnd), r.$wrapperEl[0].removeEventListener("webkitTransitionEnd", r.onSlideToWrapperTransitionEnd), r.onSlideToWrapperTransitionEnd = null, delete r.onSlideToWrapperTransitionEnd, r.transitionEnd(i, m));
+        }), r.$wrapperEl[0].addEventListener("transitionend", r.onSlideToWrapperTransitionEnd), r.$wrapperEl[0].addEventListener("webkitTransitionEnd", r.onSlideToWrapperTransitionEnd))), !0;
       },
       slideToLoop: function (e, t, i, s) {
         void 0 === e && (e = 0), void 0 === t && (t = this.params.speed), void 0 === i && (i = !0);
@@ -22516,13 +22531,16 @@ For background images, use data-bg attribute:
         });
         e.emit("_containerClasses", t.join(" "));
       }
+    }, r.getSlideClasses = function (e) {
+      var t = this;
+      return e.className.split(" ").filter(function (e) {
+        return 0 === e.indexOf("swiper-slide") || 0 === e.indexOf(t.params.slideClass);
+      }).join(" ");
     }, r.emitSlidesClasses = function () {
       var e = this;
       e.params._emitClasses && e.el && e.slides.each(function (t) {
-        var i = t.className.split(" ").filter(function (t) {
-          return 0 === t.indexOf("swiper-slide") || 0 === t.indexOf(e.params.slideClass);
-        });
-        e.emit("_slideClass", t, i.join(" "));
+        var i = e.getSlideClasses(t);
+        e.emit("_slideClass", t, i);
       });
     }, r.slidesPerViewDynamic = function () {
       var e = this.params,
@@ -22623,8 +22641,8 @@ For background images, use data-bg attribute:
           p = d.to,
           u = d.slides,
           c = d.slidesGrid,
-          v = d.renderSlide,
-          f = d.offset;
+          f = d.renderSlide,
+          v = d.offset;
       t.updateActiveIndex();
       var m,
           g,
@@ -22644,7 +22662,7 @@ For background images, use data-bg attribute:
         to: E,
         offset: x,
         slidesGrid: t.slidesGrid
-      }), h === b && p === E && !e) return t.slidesGrid !== c && x !== f && t.slides.css(m, x + "px"), void t.updateProgress();
+      }), h === b && p === E && !e) return t.slidesGrid !== c && x !== v && t.slides.css(m, x + "px"), void t.updateProgress();
       if (t.params.virtual.renderExternal) return t.params.virtual.renderExternal.call(t, {
         offset: x,
         from: b,
@@ -22662,11 +22680,11 @@ For background images, use data-bg attribute:
       for (var P = 0; P < u.length; P += 1) P >= b && P <= E && (void 0 === p || e ? M.push(P) : (P > p && M.push(P), P < h && C.push(P)));
 
       M.forEach(function (e) {
-        t.$wrapperEl.append(v(u[e], e));
+        t.$wrapperEl.append(f(u[e], e));
       }), C.sort(function (e, t) {
         return t - e;
       }).forEach(function (e) {
-        t.$wrapperEl.prepend(v(u[e], e));
+        t.$wrapperEl.prepend(f(u[e], e));
       }), t.$wrapperEl.children(".swiper-slide").css(m, x + "px"), T();
     },
     renderSlide: function (e, t) {
@@ -22764,13 +22782,13 @@ For background images, use data-bg attribute:
           p = 37 === n,
           u = 39 === n,
           c = 38 === n,
-          v = 40 === n;
-      if (!this.allowSlideNext && (this.isHorizontal() && u || this.isVertical() && v || h)) return !1;
+          f = 40 === n;
+      if (!this.allowSlideNext && (this.isHorizontal() && u || this.isVertical() && f || h)) return !1;
       if (!this.allowSlidePrev && (this.isHorizontal() && p || this.isVertical() && c || d)) return !1;
 
       if (!(a.shiftKey || a.altKey || a.ctrlKey || a.metaKey || i.activeElement && i.activeElement.nodeName && ("input" === i.activeElement.nodeName.toLowerCase() || "textarea" === i.activeElement.nodeName.toLowerCase()))) {
-        if (this.params.keyboard.onlyInViewport && (d || h || p || u || c || v)) {
-          var f = !1;
+        if (this.params.keyboard.onlyInViewport && (d || h || p || u || c || f)) {
+          var v = !1;
           if (this.$el.parents("." + this.params.slideClass).length > 0 && 0 === this.$el.parents("." + this.params.slideActiveClass).length) return;
           var m = t.innerWidth,
               g = t.innerHeight,
@@ -22779,13 +22797,13 @@ For background images, use data-bg attribute:
 
           for (var y = [[w.left, w.top], [w.left + this.width, w.top], [w.left, w.top + this.height], [w.left + this.width, w.top + this.height]], b = 0; b < y.length; b += 1) {
             var E = y[b];
-            E[0] >= 0 && E[0] <= m && E[1] >= 0 && E[1] <= g && (f = !0);
+            E[0] >= 0 && E[0] <= m && E[1] >= 0 && E[1] <= g && (v = !0);
           }
 
-          if (!f) return;
+          if (!v) return;
         }
 
-        this.isHorizontal() ? ((d || h || p || u) && (a.preventDefault ? a.preventDefault() : a.returnValue = !1), ((h || u) && !s || (d || p) && s) && this.slideNext(), ((d || p) && !s || (h || u) && s) && this.slidePrev()) : ((d || h || c || v) && (a.preventDefault ? a.preventDefault() : a.returnValue = !1), (h || v) && this.slideNext(), (d || c) && this.slidePrev()), this.emit("keyPress", n);
+        this.isHorizontal() ? ((d || h || p || u) && (a.preventDefault ? a.preventDefault() : a.returnValue = !1), ((h || u) && !s || (d || p) && s) && this.slideNext(), ((d || p) && !s || (h || u) && s) && this.slidePrev()) : ((d || h || c || f) && (a.preventDefault ? a.preventDefault() : a.returnValue = !1), (h || f) && this.slideNext(), (d || c) && this.slidePrev()), this.emit("keyPress", n);
       }
     },
     enable: function () {
@@ -22896,18 +22914,18 @@ For background images, use data-bg attribute:
 
           if (p >= i.minTranslate() && (p = i.minTranslate()), p <= i.maxTranslate() && (p = i.maxTranslate()), i.setTransition(0), i.setTranslate(p), i.updateProgress(), i.updateActiveIndex(), i.updateSlidesClasses(), (!u && i.isBeginning || !c && i.isEnd) && i.updateSlidesClasses(), i.params.freeModeSticky) {
             clearTimeout(i.mousewheel.timeout), i.mousewheel.timeout = void 0;
-            var v = i.mousewheel.recentWheelEvents;
-            v.length >= 15 && v.shift();
-            var f = v.length ? v[v.length - 1] : void 0,
-                g = v[0];
-            if (v.push(o), f && (o.delta > f.delta || o.direction !== f.direction)) v.splice(0);else if (v.length >= 15 && o.time - g.time < 500 && g.delta - o.delta >= 1 && o.delta <= 6) {
+            var f = i.mousewheel.recentWheelEvents;
+            f.length >= 15 && f.shift();
+            var v = f.length ? f[f.length - 1] : void 0,
+                g = f[0];
+            if (f.push(o), v && (o.delta > v.delta || o.direction !== v.direction)) f.splice(0);else if (f.length >= 15 && o.time - g.time < 500 && g.delta - o.delta >= 1 && o.delta <= 6) {
               var w = r > 0 ? .8 : .2;
-              i.mousewheel.lastEventBeforeSnap = o, v.splice(0), i.mousewheel.timeout = E(function () {
+              i.mousewheel.lastEventBeforeSnap = o, f.splice(0), i.mousewheel.timeout = E(function () {
                 i.slideToClosest(i.params.speed, !0, void 0, w);
               }, 0);
             }
             i.mousewheel.timeout || (i.mousewheel.timeout = E(function () {
-              i.mousewheel.lastEventBeforeSnap = o, v.splice(0), i.slideToClosest(i.params.speed, !0, void 0, .5);
+              i.mousewheel.lastEventBeforeSnap = o, f.splice(0), i.slideToClosest(i.params.speed, !0, void 0, .5);
             }, 500));
           }
 
@@ -23018,11 +23036,11 @@ For background images, use data-bg attribute:
                 p = h.index();
 
             if (h.addClass(t.bulletActiveClass), t.dynamicBullets) {
-              for (var u = d.eq(n), c = d.eq(l), v = n; v <= l; v += 1) d.eq(v).addClass(t.bulletActiveClass + "-main");
+              for (var u = d.eq(n), c = d.eq(l), f = n; f <= l; f += 1) d.eq(f).addClass(t.bulletActiveClass + "-main");
 
               if (this.params.loop) {
                 if (p >= d.length - t.dynamicMainBullets) {
-                  for (var f = t.dynamicMainBullets; f >= 0; f -= 1) d.eq(d.length - f).addClass(t.bulletActiveClass + "-main");
+                  for (var v = t.dynamicMainBullets; v >= 0; v -= 1) d.eq(d.length - v).addClass(t.bulletActiveClass + "-main");
 
                   d.eq(d.length - t.dynamicMainBullets - 1).addClass(t.bulletActiveClass + "-prev");
                 } else u.prev().addClass(t.bulletActiveClass + "-prev").prev().addClass(t.bulletActiveClass + "-prev-prev"), c.next().addClass(t.bulletActiveClass + "-next").next().addClass(t.bulletActiveClass + "-next-next");
@@ -23399,14 +23417,14 @@ For background images, use data-bg attribute:
           p,
           u,
           c,
-          v,
           f,
+          v,
           m,
           g = this.zoom,
           w = this.params.zoom,
           y = g.gesture,
           b = g.image;
-      (y.$slideEl || (this.params.virtual && this.params.virtual.enabled && this.virtual ? y.$slideEl = this.$wrapperEl.children("." + this.params.slideActiveClass) : y.$slideEl = this.slides.eq(this.activeIndex), y.$imageEl = y.$slideEl.find("img, svg, canvas, picture, .swiper-zoom-target"), y.$imageWrapEl = y.$imageEl.parent("." + w.containerClass)), y.$imageEl && 0 !== y.$imageEl.length) && (y.$slideEl.addClass("" + w.zoomedSlideClass), void 0 === b.touchesStart.x && e ? (t = "touchend" === e.type ? e.changedTouches[0].pageX : e.pageX, i = "touchend" === e.type ? e.changedTouches[0].pageY : e.pageY) : (t = b.touchesStart.x, i = b.touchesStart.y), g.scale = y.$imageWrapEl.attr("data-swiper-zoom") || w.maxRatio, g.currentScale = y.$imageWrapEl.attr("data-swiper-zoom") || w.maxRatio, e ? (f = y.$slideEl[0].offsetWidth, m = y.$slideEl[0].offsetHeight, s = y.$slideEl.offset().left + f / 2 - t, a = y.$slideEl.offset().top + m / 2 - i, l = y.$imageEl[0].offsetWidth, o = y.$imageEl[0].offsetHeight, d = l * g.scale, h = o * g.scale, c = -(p = Math.min(f / 2 - d / 2, 0)), v = -(u = Math.min(m / 2 - h / 2, 0)), (r = s * g.scale) < p && (r = p), r > c && (r = c), (n = a * g.scale) < u && (n = u), n > v && (n = v)) : (r = 0, n = 0), y.$imageWrapEl.transition(300).transform("translate3d(" + r + "px, " + n + "px,0)"), y.$imageEl.transition(300).transform("translate3d(0,0,0) scale(" + g.scale + ")"));
+      (y.$slideEl || (this.params.virtual && this.params.virtual.enabled && this.virtual ? y.$slideEl = this.$wrapperEl.children("." + this.params.slideActiveClass) : y.$slideEl = this.slides.eq(this.activeIndex), y.$imageEl = y.$slideEl.find("img, svg, canvas, picture, .swiper-zoom-target"), y.$imageWrapEl = y.$imageEl.parent("." + w.containerClass)), y.$imageEl && 0 !== y.$imageEl.length) && (y.$slideEl.addClass("" + w.zoomedSlideClass), void 0 === b.touchesStart.x && e ? (t = "touchend" === e.type ? e.changedTouches[0].pageX : e.pageX, i = "touchend" === e.type ? e.changedTouches[0].pageY : e.pageY) : (t = b.touchesStart.x, i = b.touchesStart.y), g.scale = y.$imageWrapEl.attr("data-swiper-zoom") || w.maxRatio, g.currentScale = y.$imageWrapEl.attr("data-swiper-zoom") || w.maxRatio, e ? (v = y.$slideEl[0].offsetWidth, m = y.$slideEl[0].offsetHeight, s = y.$slideEl.offset().left + v / 2 - t, a = y.$slideEl.offset().top + m / 2 - i, l = y.$imageEl[0].offsetWidth, o = y.$imageEl[0].offsetHeight, d = l * g.scale, h = o * g.scale, c = -(p = Math.min(v / 2 - d / 2, 0)), f = -(u = Math.min(m / 2 - h / 2, 0)), (r = s * g.scale) < p && (r = p), r > c && (r = c), (n = a * g.scale) < u && (n = u), n > f && (n = f)) : (r = 0, n = 0), y.$imageWrapEl.transition(300).transform("translate3d(" + r + "px, " + n + "px,0)"), y.$imageEl.transition(300).transform("translate3d(0,0,0) scale(" + g.scale + ")"));
     },
     out: function () {
       var e = this.zoom,
@@ -23530,9 +23548,9 @@ For background images, use data-bg attribute:
         e.lazy.loadInSlide(i);
       });else if (l > 1) for (var h = a; h < a + l; h += 1) o(h) && e.lazy.loadInSlide(h);else e.lazy.loadInSlide(a);
       if (n.loadPrevNext) if (l > 1 || n.loadPrevNextAmount && n.loadPrevNextAmount > 1) {
-        for (var p = n.loadPrevNextAmount, u = l, c = Math.min(a + u + Math.max(p, u), s.length), v = Math.max(a - Math.max(u, p), 0), f = a + l; f < c; f += 1) o(f) && e.lazy.loadInSlide(f);
+        for (var p = n.loadPrevNextAmount, u = l, c = Math.min(a + u + Math.max(p, u), s.length), f = Math.max(a - Math.max(u, p), 0), v = a + l; v < c; v += 1) o(v) && e.lazy.loadInSlide(v);
 
-        for (var g = v; g < a; g += 1) o(g) && e.lazy.loadInSlide(g);
+        for (var g = f; g < a; g += 1) o(g) && e.lazy.loadInSlide(g);
       } else {
         var w = t.children("." + i.slideNextClass);
         w.length > 0 && e.lazy.loadInSlide(d(w));
@@ -23787,7 +23805,8 @@ For background images, use data-bg attribute:
           t = e.slides.eq(e.activeIndex),
           i = e.params.autoplay.delay;
       t.attr("data-swiper-autoplay") && (i = t.attr("data-swiper-autoplay") || e.params.autoplay.delay), clearTimeout(e.autoplay.timeout), e.autoplay.timeout = E(function () {
-        e.params.autoplay.reverseDirection ? e.params.loop ? (e.loopFix(), e.slidePrev(e.params.speed, !0, !0), e.emit("autoplay")) : e.isBeginning ? e.params.autoplay.stopOnLastSlide ? e.autoplay.stop() : (e.slideTo(e.slides.length - 1, e.params.speed, !0, !0), e.emit("autoplay")) : (e.slidePrev(e.params.speed, !0, !0), e.emit("autoplay")) : e.params.loop ? (e.loopFix(), e.slideNext(e.params.speed, !0, !0), e.emit("autoplay")) : e.isEnd ? e.params.autoplay.stopOnLastSlide ? e.autoplay.stop() : (e.slideTo(0, e.params.speed, !0, !0), e.emit("autoplay")) : (e.slideNext(e.params.speed, !0, !0), e.emit("autoplay")), e.params.cssMode && e.autoplay.running && e.autoplay.run();
+        var t;
+        e.params.autoplay.reverseDirection ? e.params.loop ? (e.loopFix(), t = e.slidePrev(e.params.speed, !0, !0), e.emit("autoplay")) : e.isBeginning ? e.params.autoplay.stopOnLastSlide ? e.autoplay.stop() : (t = e.slideTo(e.slides.length - 1, e.params.speed, !0, !0), e.emit("autoplay")) : (t = e.slidePrev(e.params.speed, !0, !0), e.emit("autoplay")) : e.params.loop ? (e.loopFix(), t = e.slideNext(e.params.speed, !0, !0), e.emit("autoplay")) : e.isEnd ? e.params.autoplay.stopOnLastSlide ? e.autoplay.stop() : (t = e.slideTo(0, e.params.speed, !0, !0), e.emit("autoplay")) : (t = e.slideNext(e.params.speed, !0, !0), e.emit("autoplay")), (e.params.cssMode && e.autoplay.running || !1 === t) && e.autoplay.run();
       }, i);
     },
     start: function () {
@@ -23858,23 +23877,23 @@ For background images, use data-bg attribute:
       })) : 0 === (e = t.find(".swiper-cube-shadow")).length && (e = m('<div class="swiper-cube-shadow"></div>'), t.append(e)));
 
       for (var c = 0; c < s.length; c += 1) {
-        var v = s.eq(c),
-            f = c;
-        p && (f = parseInt(v.attr("data-swiper-slide-index"), 10));
-        var g = 90 * f,
+        var f = s.eq(c),
+            v = c;
+        p && (v = parseInt(f.attr("data-swiper-slide-index"), 10));
+        var g = 90 * v,
             w = Math.floor(g / 360);
         n && (g = -g, w = Math.floor(-g / 360));
-        var y = Math.max(Math.min(v[0].progress, 1), -1),
+        var y = Math.max(Math.min(f[0].progress, 1), -1),
             b = 0,
             E = 0,
             x = 0;
-        f % 4 == 0 ? (b = 4 * -w * l, x = 0) : (f - 1) % 4 == 0 ? (b = 0, x = 4 * -w * l) : (f - 2) % 4 == 0 ? (b = l + 4 * w * l, x = l) : (f - 3) % 4 == 0 && (b = -l, x = 3 * l + 4 * l * w), n && (b = -b), h || (E = b, b = 0);
+        v % 4 == 0 ? (b = 4 * -w * l, x = 0) : (v - 1) % 4 == 0 ? (b = 0, x = 4 * -w * l) : (v - 2) % 4 == 0 ? (b = l + 4 * w * l, x = l) : (v - 3) % 4 == 0 && (b = -l, x = 3 * l + 4 * l * w), n && (b = -b), h || (E = b, b = 0);
         var T = "rotateX(" + (h ? 0 : -g) + "deg) rotateY(" + (h ? g : 0) + "deg) translate3d(" + b + "px, " + E + "px, " + x + "px)";
 
-        if (y <= 1 && y > -1 && (u = 90 * f + 90 * y, n && (u = 90 * -f - 90 * y)), v.transform(T), d.slideShadows) {
-          var C = h ? v.find(".swiper-slide-shadow-left") : v.find(".swiper-slide-shadow-top"),
-              S = h ? v.find(".swiper-slide-shadow-right") : v.find(".swiper-slide-shadow-bottom");
-          0 === C.length && (C = m('<div class="swiper-slide-shadow-' + (h ? "left" : "top") + '"></div>'), v.append(C)), 0 === S.length && (S = m('<div class="swiper-slide-shadow-' + (h ? "right" : "bottom") + '"></div>'), v.append(S)), C.length && (C[0].style.opacity = Math.max(-y, 0)), S.length && (S[0].style.opacity = Math.max(y, 0));
+        if (y <= 1 && y > -1 && (u = 90 * v + 90 * y, n && (u = 90 * -v - 90 * y)), f.transform(T), d.slideShadows) {
+          var C = h ? f.find(".swiper-slide-shadow-left") : f.find(".swiper-slide-shadow-top"),
+              S = h ? f.find(".swiper-slide-shadow-right") : f.find(".swiper-slide-shadow-bottom");
+          0 === C.length && (C = m('<div class="swiper-slide-shadow-' + (h ? "left" : "top") + '"></div>'), f.append(C)), 0 === S.length && (S = m('<div class="swiper-slide-shadow-' + (h ? "right" : "bottom") + '"></div>'), f.append(S)), C.length && (C[0].style.opacity = Math.max(-y, 0)), S.length && (S[0].style.opacity = Math.max(y, 0));
         }
       }
 
@@ -23942,22 +23961,22 @@ For background images, use data-bg attribute:
       for (var e = this.width, t = this.height, i = this.slides, s = this.slidesSizesGrid, a = this.params.coverflowEffect, r = this.isHorizontal(), n = this.translate, l = r ? e / 2 - n : t / 2 - n, o = r ? a.rotate : -a.rotate, d = a.depth, h = 0, p = i.length; h < p; h += 1) {
         var u = i.eq(h),
             c = s[h],
-            v = (l - u[0].swiperSlideOffset - c / 2) / c * a.modifier,
-            f = r ? o * v : 0,
-            g = r ? 0 : o * v,
-            w = -d * Math.abs(v),
+            f = (l - u[0].swiperSlideOffset - c / 2) / c * a.modifier,
+            v = r ? o * f : 0,
+            g = r ? 0 : o * f,
+            w = -d * Math.abs(f),
             y = a.stretch;
         "string" == typeof y && -1 !== y.indexOf("%") && (y = parseFloat(a.stretch) / 100 * c);
-        var b = r ? 0 : y * v,
-            E = r ? y * v : 0,
-            x = 1 - (1 - a.scale) * Math.abs(v);
-        Math.abs(E) < .001 && (E = 0), Math.abs(b) < .001 && (b = 0), Math.abs(w) < .001 && (w = 0), Math.abs(f) < .001 && (f = 0), Math.abs(g) < .001 && (g = 0), Math.abs(x) < .001 && (x = 0);
-        var T = "translate3d(" + E + "px," + b + "px," + w + "px)  rotateX(" + g + "deg) rotateY(" + f + "deg) scale(" + x + ")";
+        var b = r ? 0 : y * f,
+            E = r ? y * f : 0,
+            x = 1 - (1 - a.scale) * Math.abs(f);
+        Math.abs(E) < .001 && (E = 0), Math.abs(b) < .001 && (b = 0), Math.abs(w) < .001 && (w = 0), Math.abs(v) < .001 && (v = 0), Math.abs(g) < .001 && (g = 0), Math.abs(x) < .001 && (x = 0);
+        var T = "translate3d(" + E + "px," + b + "px," + w + "px)  rotateX(" + g + "deg) rotateY(" + v + "deg) scale(" + x + ")";
 
-        if (u.transform(T), u[0].style.zIndex = 1 - Math.abs(Math.round(v)), a.slideShadows) {
+        if (u.transform(T), u[0].style.zIndex = 1 - Math.abs(Math.round(f)), a.slideShadows) {
           var C = r ? u.find(".swiper-slide-shadow-left") : u.find(".swiper-slide-shadow-top"),
               S = r ? u.find(".swiper-slide-shadow-right") : u.find(".swiper-slide-shadow-bottom");
-          0 === C.length && (C = m('<div class="swiper-slide-shadow-' + (r ? "left" : "top") + '"></div>'), u.append(C)), 0 === S.length && (S = m('<div class="swiper-slide-shadow-' + (r ? "right" : "bottom") + '"></div>'), u.append(S)), C.length && (C[0].style.opacity = v > 0 ? v : 0), S.length && (S[0].style.opacity = -v > 0 ? -v : 0);
+          0 === C.length && (C = m('<div class="swiper-slide-shadow-' + (r ? "left" : "top") + '"></div>'), u.append(C)), 0 === S.length && (S = m('<div class="swiper-slide-shadow-' + (r ? "right" : "bottom") + '"></div>'), u.append(S)), C.length && (C[0].style.opacity = f > 0 ? f : 0), S.length && (S[0].style.opacity = -f > 0 ? -f : 0);
         }
       }
     },
@@ -25379,10 +25398,10 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   AOS.init({
-    duration: 750,
+    // duration: 750,
     // mirror: false,
-    startEvent: "load",
-    offset: "150"
+    startEvent: "load" // offset: "150"
+
   });
 }); // -----  End of AOS- ANIMATE ON SCROLL  ----------
 // ======================================================================
@@ -25598,7 +25617,11 @@ var thoughtLeadership = new Swiper(".thoughtLeadership", {
   }
 });
 thoughtLeadership.controller.control = thoughtLeadershipBottom;
-thoughtLeadershipBottom.controller.control = thoughtLeadership; // -----  End of SWIPER  -----------------------------------
+thoughtLeadershipBottom.controller.control = thoughtLeadership;
+$('[data-reveal]').on('closed.zf.reveal', function () {
+  console.log('Those tabs sure did change!'); // thoughtLeadership.init();
+  // thoughtLeadershipBottom.init();
+}); // -----  End of SWIPER  -----------------------------------
 // ===================================================================================
 // LAZY LOAD SVG OBJECT TAG
 // ===================================================================================

@@ -7,7 +7,7 @@
 		"uuidString": "3743361C-5366-486A-B90B-366380B5F561"
 		}
 	],
-"creatorBuild": "33070",
+"creatorBuild": "33081",
 "files": {
 	"/.gitattributes": {
 		"cB": 0,
@@ -1322,7 +1322,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/additional-resources.psd",
 		"oF": 0
 		},
@@ -1532,7 +1532,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/case-studies-index-tile-backgrounds.psd",
 		"oF": 0
 		},
@@ -1657,7 +1657,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/case-studies-landing-backgrounds.psd",
 		"oF": 0
 		},
@@ -2094,7 +2094,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/case-studies-landing-tile-backgrounds.psd",
 		"oF": 0
 		},
@@ -2321,7 +2321,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/depth-pages.psd",
 		"oF": 0
 		},
@@ -7541,7 +7541,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/horizontal-accordions.psd",
 		"oF": 0
 		},
@@ -8532,7 +8532,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/stat-4x-performance-improvement.keyshape",
 		"oF": 0
 		},
@@ -8565,7 +8565,7 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/_BUILD/images/stat-data-platform.keyshape",
-		"oF": 1
+		"oF": 0
 		},
 	"/images/stat-data-platform.png": {
 		"ft": 32768,
@@ -8596,7 +8596,7 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/_BUILD/images/stat-operations-intelligence.keyshape",
-		"oF": 1
+		"oF": 0
 		},
 	"/images/stat-operations-intelligence.png": {
 		"ft": 32768,
@@ -8625,7 +8625,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/stat-total-cost-of-data.keyshape",
 		"oF": 0
 		},
@@ -8658,7 +8658,7 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/_BUILD/images/stat1.keyshape",
-		"oF": 1
+		"oF": 0
 		},
 	"/images/stat1.png": {
 		"ft": 32768,
@@ -8689,7 +8689,7 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/_BUILD/images/stat2.keyshape",
-		"oF": 1
+		"oF": 0
 		},
 	"/images/stat2.png": {
 		"ft": 32768,
@@ -8718,7 +8718,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/stat3.keyshape",
 		"oF": 0
 		},
@@ -8762,7 +8762,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/tendrils.psd",
 		"oF": 0
 		},
@@ -8926,7 +8926,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/thought-leadership-carousel-overlays.psd",
 		"oF": 0
 		},
@@ -8934,7 +8934,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_BUILD/images/thought-leadership.psd",
 		"oF": 0
 		},
@@ -10463,7 +10463,7 @@
 	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
-	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
+	"browserslistString": ">0.2% and last 3 versions, Firefox ESR, not dead, not IE 11",
 	"buildFolderActive": 1,
 	"buildFolderName": "_BUILD",
 	"cleanBuild": 1,
@@ -12167,6 +12167,50 @@
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
+		{
+			"autoOutputAction": 1,
+			"autoOutputPathFilenamePattern": "*.ai",
+			"autoOutputPathRelativePath": "",
+			"autoOutputPathReplace1": "",
+			"autoOutputPathReplace2": "",
+			"autoOutputPathStyle": 0,
+			"fileExtension": "ai",
+			"shouldRunCacheBuster": 0,
+			"shouldRunHTMLMinifier": 0
+			},
+		{
+			"autoOutputAction": 1,
+			"autoOutputPathFilenamePattern": "*.keyshape",
+			"autoOutputPathRelativePath": "",
+			"autoOutputPathReplace1": "",
+			"autoOutputPathReplace2": "",
+			"autoOutputPathStyle": 0,
+			"fileExtension": "keyshape",
+			"shouldRunCacheBuster": 0,
+			"shouldRunHTMLMinifier": 0
+			},
+		{
+			"autoOutputAction": 1,
+			"autoOutputPathFilenamePattern": "*.psd",
+			"autoOutputPathRelativePath": "",
+			"autoOutputPathReplace1": "",
+			"autoOutputPathReplace2": "",
+			"autoOutputPathStyle": 0,
+			"fileExtension": "psd",
+			"shouldRunCacheBuster": 0,
+			"shouldRunHTMLMinifier": 0
+			},
+		{
+			"autoOutputAction": 1,
+			"autoOutputPathFilenamePattern": "*.sketch",
+			"autoOutputPathRelativePath": "",
+			"autoOutputPathReplace1": "",
+			"autoOutputPathReplace2": "",
+			"autoOutputPathStyle": 0,
+			"fileExtension": "sketch",
+			"shouldRunCacheBuster": 0,
+			"shouldRunHTMLMinifier": 0
+			}
 		],
 	"npmAbbreviatedPath": "",
 	"npmCreatePackageLock": 1,
@@ -12178,7 +12222,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "/storage/framework/sessions,*.psd,node_modules,_logs,logs,log,.idea,_cache,cache,/_archive,*.keyshape,*.sketch,*.ai",
+	"skippedFoldersString": "/storage/framework/sessions,node_modules,_logs,logs,log,_cache,cache,/_archive",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,

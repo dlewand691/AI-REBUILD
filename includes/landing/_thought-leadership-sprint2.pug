@@ -20,42 +20,42 @@
           .swiper-wrapper
             +ltCarousel({
               image: "images/thought-leadership-assets/ai-tl-01-forrester.png",
-              url: "https://www.cognizant.com/01",
+              url: "exampleModal1",
               headline: "",
               body: "",
               buttonText: ""
             })
             +ltCarousel({
               image: "images/thought-leadership-assets/ai-tl-02-ai-maturity.png",
-              url: "https://www.cognizant.com/02",
+              url: "exampleModal1",
               headline: "",
               body: "",
               buttonText: ""
             })
             +ltCarousel({
               image: "images/thought-leadership-assets/ai-tl-03-covid.png",
-              url: "https://www.cognizant.com/03",
+              url: "exampleModal1",
               headline: "",
               body: "",
               buttonText: ""
             })
             +ltCarousel({
               image: "images/thought-leadership-assets/ai-tl-04-ai-journey.png",
-              url: "https://www.cognizant.com/04",
+              url: "exampleModal1",
               headline: "",
               body: "",
               buttonText: ""
             })
             +ltCarousel({
               image: "images/thought-leadership-assets/ai-tl-05-perspective.png",
-              url: "https://www.cognizant.com/05",
+              url: "exampleModal1",
               headline: "",
               body: "",
               buttonText: ""
             })
             +ltCarousel({
               image: "images/thought-leadership-assets/ai-tl-06-america.png",
-              url: "https://www.cognizant.com/06",
+              url: "exampleModal1",
               headline: "",
               body: "",
               buttonText: ""
@@ -65,12 +65,20 @@
           .swiper-button-next.hide-for-large 
         .swiper-button-prev.show-for-large
         .swiper-button-next.show-for-large 
+
+      #exampleModal1.reveal(data-reveal data-animation-in="scale-in-up" data-animation-out="scale-out-down")
+        h1 Awesome. I Have It.
+        p.lead Your couch. It is mine.
+        p I'm a cool paragraph that lives inside of an even cooler modal. Wins!
+        button.close-button(data-close, aria-label="Close reveal", type="button")
+          span(aria-hidden="true") ×
+
       .cell.small-7.large-8.xlarge-5
         .thoughtLeadershipBottom.overflow-hidden
           .swiper-wrapper.pb1.large-text-center
             +ltCarousel({
               image: "",
-              url: "https://www.cognizant.com/01",
+              url: "exampleModal1",
               headline: "The Forrester Wave&trade;: AI Consultancies ",
               body: "Cognizant is named a leader in data and AI technologies and services, citing us as a right partner to help create a business running on AI",
               buttonText: "READ THE REPORT"
@@ -78,7 +86,7 @@
 
             +ltCarousel({
               image: "",
-              url: "https://www.cognizant.com/02",
+              url: "exampleModal1",
               headline: "AI: From Data to ROI",
               body: "If the COVID-19 crisis has revealed anything to business leaders, it’s the dire need for modern, intelligent decision making. Embracing AI doesn’t guarantee high ROI. Here’s what works for accelerating AI outcomes, according to our recent research.",
               buttonText: "READ THE EBOOK"
@@ -86,7 +94,7 @@
 
             +ltCarousel({
               image: "",
-              url: "https://www.cognizant.com/03",
+              url: "exampleModal1",
               headline: "Using Evolutionary AI to deal with COVID-19 and more",
               body: "Evolutionary AI offers a new model for determining the most effective prescriptions for meeting goals, whether to mitigate disease or optimize the business",
               buttonText: "READ THE BLOG"
@@ -94,7 +102,7 @@
 
             +ltCarousel({
               image: "",
-              url: "https://www.cognizant.com/04",
+              url: "exampleModal1",
               headline: "Successful AI Journeys Depend on Best Practices",
               body: "Bret Greenstein of Cognizant and Inder Kochar of Novartis Oncology talk about the challenges, opportunities and best practices around centering an enterprise around data and AI.",
               buttonText: "LISTEN TO THE PODCAST"
@@ -102,7 +110,7 @@
 
             +ltCarousel({
               image: "",
-              url: "https://www.cognizant.com/05",
+              url: "exampleModal1",
               headline: "Data and Analytic Models Have a ‘Best Used by’ Date. Ignore Them at Your Peril.",
               body: "By continually assuring the currency, accuracy and relevancy of business-critical data and analytic models, organizations can better anticipate and prescriptive solve whatever challenges they may encounter.",
               buttonText: "READ THE PERPECTIVE"
@@ -110,7 +118,7 @@
 
             +ltCarousel({
               image: "",
-              url: "https://www.cognizant.com/06",
+              url: "exampleModal1",
               headline: "The US Needs an Effective National AI Strategy ",
               body: "Congressman Will Hurd of Texas and Bret Greenstein of Cognizant to talk about what a national AI strategy should look like here in the United States.",
               buttonText: "LISTEN TO THE PODCAST"

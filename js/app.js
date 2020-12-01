@@ -85,6 +85,12 @@ var thoughtLeadership = new Swiper(".thoughtLeadership", {
 thoughtLeadership.controller.control=thoughtLeadershipBottom
 thoughtLeadershipBottom.controller.control=thoughtLeadership
 
+$('[data-reveal]').on('closed.zf.reveal', function() {
+  console.log('Those tabs sure did change!');
+  // thoughtLeadership.init();
+  // thoughtLeadershipBottom.init();
+});
+
 // -----  End of SWIPER  -----------------------------------
 
 
